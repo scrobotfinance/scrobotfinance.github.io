@@ -22,7 +22,17 @@ const Frame = () => {
             Governance
           </a>
         </div>
-        <img className="relative w-48 h-8" alt="" src="/group-14072.svg" />
+        <div className="flex flex-row items-center gap-4">
+          <a href="#" className="text-black mr-[48px] no-underline">
+            <img className="w-8 h-8" alt="" src="/telegram-icon.svg" />
+          </a>
+          <a href="#" className="text-black mr-[48px] no-underline">
+            <img className="w-8 h-8" alt="" src="/github-icon.svg" />
+          </a>
+          <a href="#" className="text-black no-underline">
+            <img className="w-8 h-8" alt="" src="/twitter-icon.svg" />
+          </a>
+        </div>
       </div>
     </div>
   );
