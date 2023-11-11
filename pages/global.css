@@ -3,8 +3,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Sf Pro Display";
+  src: url('../public/fonts/SF-Pro-Display-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   @apply leading-[normal] m-0;
+  font-family: "Sf Pro Display" , sans-serif;
 }
 *,
 ::before,
