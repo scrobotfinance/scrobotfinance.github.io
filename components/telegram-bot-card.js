@@ -2,7 +2,7 @@ import ButtonSmall from "./button-small";
 
 const TelegramBotCard = () => {
   return (
-    <div className="relative w-[1920px] h-[1080px] text-center text-13xl text-garbi-version-2-30-white font-sf-pro-display-heading-h6">
+    <div className="relative w-[1920px] h-[1080px] text-center text-13xl text-garbi-version-2-30-white">
       <div className="absolute top-[0px] left-[0px] bg-garbi-version-2-60-black w-[1920px] h-[1080px] overflow-hidden">
         <img
           className="absolute top-[203px] left-[calc(50%_-_235px)] w-[470px] h-[475px] object-cover"
@@ -59,7 +59,6 @@ const TelegramBotCard = () => {
               buttonSmallBackgroundColor="#2997ff"
               readMoreFontSize="16px"
               readMoreLineHeight="120%"
-              readMoreFontFamily="'SF Pro Display'"
               readMoreColor="#fff"
             />
           </div>

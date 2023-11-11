@@ -4,7 +4,7 @@ import DeFiXBotFeaturesSection from "../components/de-fi-x-bot-features-section"
 
 const Frame = () => {
   return (
-    <div className="relative bg-apple-style-white-2 w-full overflow-hidden flex flex-col items-center justify-center text-left text-base text-apple-style-dark-2 font-sf-pro-display-heading-h6">
+    <div className="relative bg-apple-style-white-2 w-full overflow-hidden flex flex-col items-center justify-center text-left text-base text-apple-style-dark-2">
       <TelegramBotCard />
       <DeFiXBotSection />
       <DeFiXBotFeaturesSection />
