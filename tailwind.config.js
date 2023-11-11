@@ -19,7 +19,6 @@ module.exports = {
       },
       spacing: {},
       fontFamily: {
-        "sf-pro-display-heading-h6": "'SF Pro Display'",
         "roboto-semibold-sb20": "Roboto",
       },
     },

@@ -29,7 +29,6 @@ const TelegramBotCard = () => {
             buttonSmallBackgroundColor="#2997ff"
             readMoreFontSize="16px"
             readMoreLineHeight="120%"
-            readMoreFontFamily="'SF Pro Display'"
             readMoreColor="#f5f5f7"
           />
         </div>
