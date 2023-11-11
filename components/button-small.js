@@ -41,8 +41,8 @@ const ButtonSmall = ({
   }, [readMoreFontSize, readMoreLineHeight, readMoreFontFamily, readMoreColor]);
 
   return (
-    <div
-      className="rounded-[34px] flex flex-row items-center justify-center py-4 px-8 text-left text-xl text-dark-theme-10-2 font-roboto-semibold-sb20 border-[2px] border-solid border-dark-theme-10-2"
+    <button
+      className="rounded-[34px] cursor-pointer flex flex-row items-center justify-center py-4 px-8 text-left text-xl text-dark-theme-10-2 border-[2px] border-solid border-dark-theme-10-2"
       style={buttonSmallStyle}
     >
       <div
@@ -51,7 +51,7 @@ const ButtonSmall = ({
       >
         {buttonText}
       </div>
-    </div>
+    </button>
   );
 };
 

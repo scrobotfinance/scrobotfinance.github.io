@@ -37,19 +37,19 @@ const TelegramBotCard = () => {
       <div className="absolute top-[0px] left-[0px] bg-apple-style-dark-3 w-[1920px] h-[99px] overflow-hidden text-left text-base">
         <div className="absolute top-[calc(50%_-_25.5px)] left-[332.4px] w-[1255px] h-[51px]">
           <div className="absolute top-[calc(50%_-_25.5px)] left-[536px] w-[719px] flex flex-row items-center justify-start gap-[48px]">
-            <div className="relative leading-[120%] font-semibold">
+            <a href="#" className="text-white no-underline relative leading-[120%] font-semibold">
               Features
-            </div>
-            <div className="relative leading-[120%] font-semibold">
+            </a>
+            <a href="#" className="text-white no-underline relative leading-[120%] font-semibold">
               Token Utility
-            </div>
-            <div className="relative leading-[120%] font-semibold">
+            </a>
+            <a href="#" className="text-white no-underline relative leading-[120%] font-semibold">
               DefiXBot
-            </div>
-            <div className="relative leading-[120%] font-semibold">Airdrop</div>
-            <div className="relative leading-[120%] font-semibold">
+            </a>
+            <a href="#" className="text-white no-underline relative leading-[120%] font-semibold">Airdrop</a>
+            <a href="#" className="text-white no-underline relative leading-[120%] font-semibold">
               Community
-            </div>
+            </a>
             <ButtonSmall
               buttonText="Get Started"
               buttonSmallBorderRadius="8px"
@@ -64,11 +64,13 @@ const TelegramBotCard = () => {
               readMoreColor="#fff"
             />
           </div>
-          <img
-            className="absolute top-[9px] left-[0px] w-[261px] h-[34px]"
-            alt=""
-            src="/group-14073.svg"
-          />
+          <a href="#">
+            <img
+              className="absolute top-[9px] left-[0px] w-[261px] h-[34px]"
+              alt=""
+              src="/group-14073.svg"
+            />
+          </a>
         </div>
       </div>
     </div>
