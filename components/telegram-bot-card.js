@@ -11,13 +11,10 @@ const TelegramBotCard = () => {
         />
         <div className="absolute top-[782px] left-[calc(50%_-_628px)] w-[1256px] h-[234px]">
           <div className="absolute top-[53px] left-[calc(50%_-_628px)] leading-[120%] font-semibold inline-block w-[1256px]">
-            Dive into decentralized finance without the complexity. Our free
-            Telegram bot handles all the technicalities for you, allowing you to
-            trade swiftly and affordably with just a few taps
+            Explore decentralized finance without the complications. Our user-friendly Telegram bot takes care of all the technical details, enabling you to trade quickly and cost-effectively with just a few taps.
           </div>
           <div className="absolute top-[0px] left-[calc(50%_-_628px)] text-5xl leading-[120%] font-semibold inline-block w-[1256px]">
-            The Simplest Gateway to DeFi—No Blockchain Jargon, Just Quick and
-            Affordable Trading on Telegram
+            Embark on your DeFi journey effortlessly—No confusing blockchain talk, just fast and budget-friendly trading on Telegram.
           </div>
           <ButtonSmall
             buttonText="Start Trading"
