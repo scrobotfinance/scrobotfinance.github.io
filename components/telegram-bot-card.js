@@ -36,7 +36,7 @@ const TelegramBotCard = () => {
       </div>
       <div className="absolute top-[0px] left-[0px] bg-apple-style-dark-3 w-[1920px] h-[99px] overflow-hidden text-left text-base">
         <div className="absolute top-[calc(50%_-_25.5px)] left-[332.4px] w-[1255px] h-[51px]">
-          <div className="absolute top-[calc(50%_-_25.5px)] left-[536px] w-[719px] flex flex-row items-center justify-start gap-[48px]">
+          <div className="absolute top-[calc(50%_-_25.5px)] left-[536px] w-[759px] flex flex-row items-center justify-start gap-[48px]">
             <a href="#" className="text-white no-underline relative leading-[120%] font-semibold">
               Features
             </a>
