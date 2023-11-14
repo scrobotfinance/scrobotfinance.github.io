@@ -12,7 +12,7 @@ useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting || entry.intersectionRatio > 0) {
+          if (entry.isIntersecting || entry.intersectionRatio >= 1.0) {
             const targetElement = entry.target;
             targetElement.classList.add("animate");
             observer.unobserve(targetElement);
@@ -20,7 +20,7 @@ useEffect(() => {
         }
       },
       {
-        threshold: 0.15,
+        threshold: 1.0,
       }
     );
 

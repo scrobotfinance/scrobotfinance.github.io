@@ -37,11 +37,15 @@ const Tokenomic = () => {
     >
       <div className="relative w-[1576px] h-[763px]">
         <img
-          className="absolute top-[calc(50%_-_381.5px)] left-[800px] w-[776px] h-[763px] object-cover"
+          className="absolute top-[calc(50%_-_381.5px)] left-[800px] w-[776px] h-[763px] object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-right] opacity-[0]"
           alt=""
           src="/group-1407-10@2x.png"
+          data-animate-on-scroll
         />
-        <div className="absolute top-[165px] left-[0px] w-[640px] h-[434px]">
+        <div
+          className="absolute top-[165px] left-[0px] w-[640px] h-[434px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-left] opacity-[0]"
+          data-animate-on-scroll
+        >
           <div className="absolute top-[80px] left-[0px] leading-[120%] font-semibold inline-block w-[640px]">
             ScroBot, powered by $SBOT token on Scroll blockchain, with a limited
             supply of 1,250,000 $SBOT
