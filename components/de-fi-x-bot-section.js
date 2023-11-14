@@ -66,7 +66,7 @@ const DeFiXBotSection = () => {
             Collective Governance and Profit Distribution
           </b>
           <div className="absolute top-[120px] left-[0px] text-5xl leading-[120%] font-semibold text-apple-style-dark-4 inline-block w-[640px]">
-            Hold $SB tokens to become a vital part of our ecosystem. Beyond proposing and voting on platform enhancements, you also share in the bot's profits, creating a sense of community ownership and participation.
+            Hold $SBOT tokens to become a vital part of our ecosystem. Beyond proposing and voting on platform enhancements, you also share in the bot's profits, creating a sense of community ownership and participation.
           </div>
         </div>
       </div>

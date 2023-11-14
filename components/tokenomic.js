@@ -31,7 +31,7 @@ const Tokenomic = () => {
     };
   }, []);
   return (
-    <div
+    <div id="tokenomic"
       className="bg-apple-style-white-2 h-[1003px] flex flex-col items-start justify-start py-[120px] px-[172px] box-border [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0] text-left text-5xl text-apple-style-dark-4 font-sf-pro-display-heading-h6"
       data-animate-on-scroll
     >

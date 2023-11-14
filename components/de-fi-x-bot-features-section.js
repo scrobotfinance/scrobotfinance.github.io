@@ -31,7 +31,7 @@ const DeFiXBotFeaturesSection = () => {
     };
   }, []);
   return (
-    <div className="bg-garbi-version-2-30-white flex flex-col items-center justify-start py-[120px] px-[332px] gap-[48px] text-center text-21xl text-garbi-version-2-60-black font-sf-pro-display-heading-h6">
+    <div id="features" className="bg-garbi-version-2-30-white flex flex-col items-center justify-start py-[120px] px-[332px] gap-[48px] text-center text-21xl text-garbi-version-2-60-black font-sf-pro-display-heading-h6">
       <div
         className="relative w-[1256px] h-[178px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-top] opacity-[0]"
         data-animate-on-scroll
@@ -56,7 +56,7 @@ const DeFiXBotFeaturesSection = () => {
           <img
             className="absolute top-[64px] left-[18px] w-10 h-10 overflow-hidden"
             alt=""
-            src="/materialsymbolsnestclockfarsightanalogoutlinerounded.svg"
+            src="/clock.svg"
           />
           <div className="absolute top-[120px] left-[18px] leading-[120%] font-semibold inline-block w-[260px]">
             Decentralized Exchange (Dex) Trading
@@ -64,11 +64,6 @@ const DeFiXBotFeaturesSection = () => {
           <div className="absolute top-[189px] left-[calc(50%_-_130px)] text-base leading-[150%] inline-block w-[260px]">
             Streamlined and Stylish: Effortlessly navigate platforms like KyberSwap, SyncSwap..., complete with advanced features such as Limit Orders and exclusive Early Access Tokens—all within an intuitive interface.
           </div>
-          <img
-            className="absolute top-[69px] left-[18px] w-10 h-10"
-            alt=""
-            src="/clock.svg"
-          />
         </div>
         <div className="absolute top-[0px] left-[320px] bg-apple-style-white-2 w-[296px] h-[380px] overflow-hidden">
           <div className="absolute top-[125px] left-[calc(50%_-_130px)] leading-[120%] font-semibold inline-block w-[260px]">
