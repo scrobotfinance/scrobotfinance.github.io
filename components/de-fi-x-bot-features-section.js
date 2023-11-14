@@ -1,6 +1,6 @@
 const DeFiXBotFeaturesSection = () => {
   return (
-    <div className="relative bg-apple-style-white-2 w-[1920px] h-[865px] text-center text-21xl text-garbi-version-2-60-black font-sf-pro-display-heading-h6">
+    <div className="relative bg-garbi-version-2-30-white w-[1920px] h-[865px] text-center text-21xl text-garbi-version-2-60-black font-sf-pro-display-heading-h6">
       <div className="absolute top-[120px] left-[calc(50%_-_628px)] w-[1256px] h-[186px]">
         <b className="absolute top-[0px] left-[calc(50%_-_628px)] leading-[120%] inline-block w-[1256px]">
           <p className="m-0">{``}</p>
@@ -15,7 +15,7 @@ const DeFiXBotFeaturesSection = () => {
         </div>
       </div>
       <div className="absolute top-[394px] left-[332px] w-[1256px] h-[351px] text-left text-xl">
-        <div className="absolute top-[0px] left-[0px] bg-garbi-version-2-30-white w-[296px] h-[380px] overflow-hidden">
+        <div className="absolute top-[0px] left-[0px] bg-apple-style-white-2 w-[296px] h-[380px] overflow-hidden">
           <div className="absolute top-[125px] left-[calc(50%_-_130px)] leading-[120%] font-semibold inline-block w-[260px]">
             Decentralized Exchange (Dex) Trading
           </div>
@@ -28,7 +28,7 @@ const DeFiXBotFeaturesSection = () => {
             src="/clock.svg"
           />
         </div>
-        <div className="absolute top-[0px] left-[320px] bg-garbi-version-2-30-white w-[296px] h-[380px] overflow-hidden">
+        <div className="absolute top-[0px] left-[320px] bg-apple-style-white-2 w-[296px] h-[380px] overflow-hidden">
           <div className="absolute top-[125px] left-[calc(50%_-_130px)] leading-[120%] font-semibold inline-block w-[260px]">
             Effortless Entry to DeFi Apps
           </div>
@@ -41,7 +41,7 @@ const DeFiXBotFeaturesSection = () => {
             src="/sniper.svg"
           />
         </div>
-        <div className="absolute top-[0px] left-[640px] bg-garbi-version-2-30-white w-[296px] h-[380px] overflow-hidden">
+        <div className="absolute top-[0px] left-[640px] bg-apple-style-white-2 w-[296px] h-[380px] overflow-hidden">
           <div className="absolute top-[125px] left-[calc(50%_-_130px)] leading-[120%] font-semibold inline-block w-[260px]">
             AI-Enhanced Trading Assistance
           </div>
@@ -54,7 +54,7 @@ const DeFiXBotFeaturesSection = () => {
             src="/transfer.svg"
           />
         </div>
-        <div className="absolute top-[0px] left-[960px] bg-garbi-version-2-30-white w-[296px] h-[380px] overflow-hidden">
+        <div className="absolute top-[0px] left-[960px] bg-apple-style-white-2 w-[296px] h-[380px] overflow-hidden">
           <div className="absolute top-[125px] left-[calc(50%_-_130px)] leading-[120%] font-semibold inline-block w-[260px]">
             Tailored for Scroll Layer 2 from the Get-Go
           </div>
