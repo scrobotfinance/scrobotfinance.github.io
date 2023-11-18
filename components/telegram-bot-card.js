@@ -2,8 +2,8 @@ import ButtonSmall from "./button-small";
 
 const TelegramBotCard = () => {
   return (
-    <div className="relative w-[1920px] h-[1080px] text-center text-13xl text-garbi-version-2-30-white">
-      <div className="absolute top-[0px] left-[0px] bg-garbi-version-2-60-black w-[1920px] h-[1080px] overflow-hidden">
+    <div className="relative w-full h-[1080px] text-center text-13xl text-garbi-version-2-30-white">
+      <div className="absolute top-[0px] left-[0px] bg-garbi-version-2-60-black w-full h-[1080px] overflow-hidden">
         
         <div className="container mx-auto py-[24px] bg-apple-style-dark-3  overflow-hidden text-left text-base">
           <div className="grid grid-cols-4 gap-4">
