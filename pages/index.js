@@ -49,10 +49,6 @@ useEffect(() => {
             Documentation
           </a>
           <a href="#" className="text-black no-underline relative leading-[120%] font-semibold">
-            Contact us
-          </a>
-          <a href="#" className="text-black no-underline relative leading-[120%] font-semibold">Contracts</a>
-          <a href="#" className="text-black no-underline relative leading-[120%] font-semibold">
             Governance
           </a>
         </div>

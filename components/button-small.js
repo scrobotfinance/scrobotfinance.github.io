@@ -6,6 +6,7 @@ const ButtonSmall = ({
   buttonSmallBorder,
   buttonSmallPosition,
   buttonSmallTop,
+  buttonSmallBottom,
   buttonSmallLeft,
   buttonSmallBackgroundColor,
   readMoreFontSize,
@@ -19,6 +20,7 @@ const ButtonSmall = ({
       border: buttonSmallBorder,
       position: buttonSmallPosition,
       top: buttonSmallTop,
+      bottom : buttonSmallBottom,
       left: buttonSmallLeft,
       backgroundColor: buttonSmallBackgroundColor,
     };
@@ -27,6 +29,7 @@ const ButtonSmall = ({
     buttonSmallBorder,
     buttonSmallPosition,
     buttonSmallTop,
+    buttonSmallBottom,
     buttonSmallLeft,
     buttonSmallBackgroundColor,
   ]);
