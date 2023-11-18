@@ -31,25 +31,25 @@ const DeFiXBotFeaturesSection = () => {
     };
   }, []);
   return (
-    <div id="features" className="bg-garbi-version-2-30-white flex flex-col items-center justify-start py-[120px] px-[332px] gap-[48px] text-center text-21xl text-garbi-version-2-60-black font-sf-pro-display-heading-h6">
+    <div id="features" className="container mx-auto bg-garbi-version-2-30-white py-[120px]  text-center text-21xl text-garbi-version-2-60-black">
       <div
-        className="relative w-[1256px] h-[178px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-top] opacity-[0]"
+        className=" h-[178px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-top] opacity-[0]"
         data-animate-on-scroll
       >
-        <b className="absolute top-[0px] left-[calc(50%_-_628px)] leading-[120%] inline-block w-[1256px]">
+        <b className=" leading-[120%] inline-block w-[1256px]">
           <p className="m-0">{``}</p>
           <p className="m-0">
             Enhance Your DeFi Adventure with Our Comprehensive Telegram Companion
           </p>
         </b>
-        <div className="absolute top-[128px] left-[calc(50%_-_628px)] w-[1256px] h-[58px] text-5xl text-apple-style-dark-4">
-          <div className="absolute top-[0px] left-[calc(50%_-_628px)] leading-[120%] font-semibold inline-block w-[1256px]">
+        <div className=" h-[58px] text-5xl text-apple-style-dark-4">
+          <div className="leading-[120%] font-semibold inline-block ">
               Enjoy a seamless, feature-packed DeFi journey—all within the comfort of Telegram. Let's dive into the five core aspects that make ScroBot the ultimate destination for your DeFi endeavors. And the best part? it's free to use.
           </div>
         </div>
       </div>
       <div
-        className="relative w-[1256px] h-[376px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] text-left text-xl"
+        className="grid grid-cols-4 gap-4 w-full h-[376px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] text-left text-xl"
         data-animate-on-scroll
       >
         <div className="absolute top-[0px] left-[0px] rounded-2xl bg-apple-style-white-2 w-[296px] h-[376px] overflow-hidden">

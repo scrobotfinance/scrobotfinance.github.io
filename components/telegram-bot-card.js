@@ -32,6 +32,7 @@ const TelegramBotCard = () => {
                 buttonSmallBorder="unset"
                 buttonSmallPosition="unset"
                 buttonSmallTop="unset"
+                buttonSmallBottom="unset"
                 buttonSmallLeft="unset"
                 buttonSmallBackgroundColor="#2997ff"
                 readMoreFontSize="16px"
