@@ -26,7 +26,7 @@ module.exports = {
       base: "16px",
       xl: "20px",
       "5xl": "24px",
-      "21xl": "35px",
+      "21xl": "40px",
       "13xl": "32px",
       inherit: "inherit",
     },
