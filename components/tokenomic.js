@@ -36,14 +36,8 @@ const Tokenomic = () => {
       data-animate-on-scroll
     >
       <div className="relative container mx-auto grid grid-cols-2 gap-4">
-        <img
-          className="absolute top-[calc(50%_-_381.5px)] left-[800px] w-[776px] h-[763px] object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-right] opacity-[0]"
-          alt=""
-          src="/group-1407-10@2x.png"
-          data-animate-on-scroll
-        />
         <div
-          className="absolute top-[165px] left-[0px] w-[640px] h-[434px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-left] opacity-[0]"
+          className=" [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-left] opacity-[0]"
           data-animate-on-scroll
         >
           <div className="absolute top-[80px] left-[0px] leading-[120%] font-semibold inline-block w-[640px]">
@@ -57,6 +51,14 @@ const Tokenomic = () => {
           <b className="absolute top-[0px] left-[0px] text-21xl leading-[120%] inline-block text-garbi-version-2-60-black w-[640px]">
             Tokenomic
           </b>
+        </div>
+        <div className="img">
+          <img
+            className=" w-full h-auto object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-right] opacity-[0]"
+            alt=""
+            src="/group-1407-10@2x.png"
+            data-animate-on-scroll
+          />
         </div>
       </div>
     </div>
