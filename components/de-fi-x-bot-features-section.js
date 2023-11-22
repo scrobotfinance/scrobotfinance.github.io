@@ -49,60 +49,71 @@ const DeFiXBotFeaturesSection = () => {
         </div>
       </div>
       <div
-        className="grid grid-cols-4 gap-4 w-full h-[376px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] text-left text-xl"
+        className="grid grid-cols-4 gap-4 w-full [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] text-left text-xl"
         data-animate-on-scroll
       >
-        <div className="absolute top-[0px] left-[0px] rounded-2xl bg-apple-style-white-2 w-[296px] h-[376px] overflow-hidden">
-          <img
-            className="absolute top-[64px] left-[18px] w-10 h-10 overflow-hidden"
-            alt=""
-            src="/clock.svg"
-          />
-          <div className="absolute top-[120px] left-[18px] leading-[120%] font-semibold inline-block w-[260px]">
+        <div className=" rounded-2xl bg-apple-style-white-2  py-[48px] px-[18px] overflow-hidden">
+          <div className="icon w-full mb-[16px]">
+            <img
+              className=" w-10 h-10 overflow-hidden"
+              alt=""
+              src="/clock.svg"
+            />
+          </div>
+          <div className=" leading-[120%] font-semibold inline-block mb-[16px]">
             Decentralized Exchange (Dex) Trading
           </div>
-          <div className="absolute top-[189px] left-[calc(50%_-_130px)] text-base leading-[150%] inline-block w-[260px]">
+          <div className=" text-base leading-[150%] inline-block mb-[16px]">
             Streamlined and Stylish: Effortlessly navigate platforms like KyberSwap, SyncSwap..., complete with advanced features such as Limit Orders and exclusive Early Access Tokens—all within an intuitive interface.
           </div>
         </div>
-        <div className="absolute top-[0px] left-[320px] rounded-2xl bg-apple-style-white-2 w-[296px] h-[380px] overflow-hidden">
-          <div className="absolute top-[125px] left-[calc(50%_-_130px)] leading-[120%] font-semibold inline-block w-[260px]">
+        <div className=" rounded-2xl bg-apple-style-white-2 overflow-hidden py-[48px] px-[18px]">
+          <div className="icon w-full mb-[16px]">
+            <img
+              className=" w-10 h-10 overflow-hidden"
+              alt=""
+              src="/sniper.svg"
+            />
+          </div>
+          <div className=" leading-[120%] font-semibold inline-block mb-[16px]">
             Effortless Entry to DeFi Apps
           </div>
-          <div className="absolute top-[189px] left-[calc(50%_-_130px)] text-base leading-[150%] inline-block w-[260px]">
+          <div className=" text-base leading-[150%] inline-block mb-[16px]">
             Your DeFi Hub: Engage with popular DeFi platforms like Aave, Comp... and Compound without the headaches. Our bot's user-friendly setup ensures that interacting with DeFi apps is a breeze for everyone.
           </div>
-          <img
-            className="absolute top-[69px] left-[18px] w-10 h-10 overflow-hidden"
-            alt=""
-            src="/sniper.svg"
-          />
+
         </div>
-        <div className="absolute top-[0px] left-[640px] rounded-2xl bg-apple-style-white-2 w-[296px] h-[380px] overflow-hidden">
-          <div className="absolute top-[125px] left-[calc(50%_-_130px)] leading-[120%] font-semibold inline-block w-[260px]">
+        <div className=" rounded-2xl bg-apple-style-white-2 overflow-hidden py-[48px] px-[18px]">
+          <div className="icon w-full mb-[16px]">
+            <img
+              className=" w-10 h-10 overflow-hidden"
+              alt=""
+              src="/transfer.svg"
+            />
+          </div>
+          <div className=" leading-[120%] font-semibold inline-block mb-[16px]">
             AI-Enhanced Trading Assistance
           </div>
-          <div className="absolute top-[189px] left-[calc(50%_-_130px)] text-base leading-[150%] inline-block w-[260px]">
+          <div className=" text-base leading-[150%] inline-block mb-[16px]">
             Smart Support at Your Service: Experience the next level with ScroBot's AI-backed features. Our bot is here to assist and optimize your trading strategies, bringing an extra layer of intelligence to your DeFi journey.
           </div>
-          <img
-            className="absolute top-[69px] left-[18px] w-10 h-10 overflow-hidden"
-            alt=""
-            src="/transfer.svg"
-          />
+          
         </div>
-        <div className="absolute top-[0px] left-[960px] rounded-2xl bg-apple-style-white-2 w-[296px] h-[380px] overflow-hidden">
-          <div className="absolute top-[125px] left-[calc(50%_-_130px)] leading-[120%] font-semibold inline-block w-[260px]">
+        <div className=" rounded-2xl bg-apple-style-white-2 overflow-hidden py-[48px] px-[18px]">
+          <div className="icon w-full mb-[16px]">
+            <img
+              className=" w-10 h-10"
+              alt=""
+              src="/base.svg"
+            />
+          </div>
+          <div className=" leading-[120%] font-semibold inline-block mb-[16px]">
             Tailored for Scroll Layer 2 from the Get-Go
           </div>
-          <div className="absolute top-[189px] left-[calc(50%_-_130px)] text-base leading-[150%] inline-block w-[260px]">
+          <div className=" text-base leading-[150%] inline-block mb-[16px]">
             Inaugural Support for Scroll: From day one, ScroBot is crafted to seamlessly integrate with Scroll Layer 2, offering users an immediate gateway into this dynamic ecosystem.
           </div>
-          <img
-            className="absolute top-[69px] left-[18px] w-10 h-10"
-            alt=""
-            src="/base.svg"
-          />
+          
         </div>
       </div>
     </div>
