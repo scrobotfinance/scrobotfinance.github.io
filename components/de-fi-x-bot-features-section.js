@@ -36,10 +36,13 @@ const DeFiXBotFeaturesSection = () => {
         className=" h-[178px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-top] opacity-[0]"
         data-animate-on-scroll
       >
-        <b className=" leading-[120%] inline-block w-[1256px]">
+        <b className=" leading-[120%] inline-block ">
           <p className="m-0">{``}</p>
           <p className="m-0">
-            Enhance Your DeFi Adventure with Our Comprehensive Telegram Companion
+            Enhance Your DeFi Adventure
+          </p>
+          <p className="m-0">
+            With Our Comprehensive Telegram Companion
           </p>
         </b>
         <div className=" h-[58px] text-5xl text-apple-style-dark-4">
