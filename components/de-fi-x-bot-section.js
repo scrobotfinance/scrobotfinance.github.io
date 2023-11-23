@@ -32,7 +32,7 @@ const DeFiXBotSection = () => {
   }, []);
   return (
     <div
-      className="bg-garbi-version-2-30-white container mx-auto grid grid-cols-2 gap-4 overflow-hidden flex flex-row items-center justify-center py-[120px] box-border gap-[160px] [&.animate]:animate-[2s_ease_0s_1_normal_forwards_fade-in] opacity-[0] text-left text-21xl text-garbi-version-2-60-black font-sf-pro-display-heading-h6"
+      className="bg-garbi-version-2-30-white container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 overflow-hidden flex flex-row items-center justify-center py-[120px] box-border gap-[160px] [&.animate]:animate-[2s_ease_0s_1_normal_forwards_fade-in] opacity-[0] text-left text-21xl text-garbi-version-2-60-black font-sf-pro-display-heading-h6"
       data-animate-on-scroll
     >
       <div className="img" >

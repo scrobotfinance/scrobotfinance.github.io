@@ -45,14 +45,14 @@ const DeFiXBotFeaturesSection = () => {
             With Our Comprehensive Telegram Companion
           </p>
         </b>
-        <div className=" h-[58px] text-5xl text-apple-style-dark-4 ">
+        <div className=" text-5xl text-apple-style-dark-4 ">
           <div className="leading-[120%] font-semibold inline-block ">
               Enjoy a seamless, feature-packed DeFi journey—all within the comfort of Telegram. Let's dive into the five core aspects that make ScroBot the ultimate destination for your DeFi endeavors. And the best part? it's free to use.
           </div>
         </div>
       </div>
       <div
-        className="grid grid-cols-4 gap-4 w-full [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] text-left text-xl"
+        className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4 w-full [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] text-left text-xl"
         data-animate-on-scroll
       >
         <div className=" rounded-2xl bg-apple-style-white-2  py-[48px] px-[18px] overflow-hidden">
@@ -111,10 +111,10 @@ const DeFiXBotFeaturesSection = () => {
             />
           </div>
           <div className=" leading-[120%] font-semibold inline-block mb-[16px]">
-            Tailored for Scroll Layer 2 from the Get-Go
+            Revenue Sharing
           </div>
           <div className=" text-base leading-[150%] inline-block mb-[16px]">
-            Inaugural Support for Scroll: From day one, ScroBot is crafted to seamlessly integrate with Scroll Layer 2, offering users an immediate gateway into this dynamic ecosystem.
+            Earn 80% of platform fees by staking $SBOT tokens in your wallet. Weekly profit distributions reward loyal ScroBot users, promoting ongoing community involvement.
           </div>
           
         </div>

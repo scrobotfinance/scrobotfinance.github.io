@@ -32,10 +32,10 @@ const Tokenomic = () => {
   }, []);
   return (
     <div id="tokenomic"
-      className="bg-apple-style-white-2 w-full h-[1003px] flex flex-col items-start justify-start py-[120px] box-border [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0] text-left text-5xl text-apple-style-dark-4 font-sf-pro-display-heading-h6"
+      className="bg-apple-style-white-2 w-full flex flex-col items-start justify-start py-[120px] box-border [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0] text-left text-5xl text-apple-style-dark-4 font-sf-pro-display-heading-h6"
       data-animate-on-scroll
     >
-      <div className="relative flex items-center container mx-auto grid grid-cols-2 gap-4">
+      <div className="relative flex items-center container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
         <div
           className="[&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-left] opacity-[0]"
           data-animate-on-scroll
