@@ -33,10 +33,10 @@ const DeFiXBotFeaturesSection = () => {
   return (
     <div id="features" className="container mx-auto bg-garbi-version-2-30-white py-[120px]  text-center text-21xl text-garbi-version-2-60-black">
       <div
-        className=" h-[178px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-top] opacity-[0]"
+        className="mb-[69px] [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-top] opacity-[0]"
         data-animate-on-scroll
       >
-        <b className=" leading-[120%] inline-block ">
+        <b className=" leading-[120%] inline-block mb-[24px]">
           <p className="m-0">{``}</p>
           <p className="m-0">
             Enhance Your DeFi Adventure
@@ -45,7 +45,7 @@ const DeFiXBotFeaturesSection = () => {
             With Our Comprehensive Telegram Companion
           </p>
         </b>
-        <div className=" h-[58px] text-5xl text-apple-style-dark-4">
+        <div className=" h-[58px] text-5xl text-apple-style-dark-4 ">
           <div className="leading-[120%] font-semibold inline-block ">
               Enjoy a seamless, feature-packed DeFi journey—all within the comfort of Telegram. Let's dive into the five core aspects that make ScroBot the ultimate destination for your DeFi endeavors. And the best part? it's free to use.
           </div>
