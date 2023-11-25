@@ -44,11 +44,11 @@ const Tokenomic = () => {
             Tokenomic
           </b>
           <div className=" leading-[120%] font-semibold inline-block mb-[32px]">
-            ScroBot, powered by $SBOT token on Scroll blockchain, with a limited
-            supply of 1,250,000 $SBOT
+            ScroBot, powered by $SBOT token on Ethereum blockchain, with a limited supply of 1,250,000 $SBOT
+
           </div>
           <div className=" leading-[120%] font-semibold inline-block mb-[32px]">
-            Token holders not only engage in a Referral Program but also receive a 50% revenue share in $ETH from the TelegramBot, coupled with a 20% transaction fee discount. With features like premium access for multi-wallet usage, voting rights, and lucrative staking options, ScroBot empowers its community to actively shape the future. 
+          Token holders not only engage in a Referral Program but also receive a 80% revenue share in $ETH from the TelegramBot, coupled with a 20% transaction fee discount. With features like premium access for multi-wallet usage, voting rights, and lucrative staking options, ScroBot empowers its community to actively shape the future.  
           </div>
           <div className=" leading-[120%] font-semibold inline-block w-[640px]">
             Telegram Bot flexible transaction fee 0.1 - 0.5%

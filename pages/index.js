@@ -54,13 +54,13 @@ useEffect(() => {
             </a>
           </div>
           <div className="flex flex-row items-center justify-end gap-4">
-            <a href="#" className="text-black mr-[48px] no-underline">
+            <a href="https://t.me/Scrobot_Announcements" target="_blank" className="text-black mr-[48px] no-underline">
               <img className="w-8 h-8" alt="" src="/telegram-icon.svg" />
             </a>
             <a href="#" className="text-black mr-[48px] no-underline">
               <img className="w-8 h-8" alt="" src="/github-icon.svg" />
             </a>
-            <a href="#" className="text-black no-underline">
+            <a href="#https://twitter.com/Scrobot_eth" target="_blank" className="text-black no-underline">
               <img className="w-8 h-8" alt="" src="/twitter-icon.svg" />
             </a>
           </div>
