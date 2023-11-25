@@ -42,7 +42,7 @@ useEffect(() => {
       <DeFiXBotSection />
       <Tokenomic />
       <DeFiXBotFeaturesSection />
-      <div className="container mx-auto  bg-garbi-version-2-30-white flex flex-row items-center justify-between py-6 px-0 gap-[341px] border-t-[2px] border-solid border-garbi-version-2-30-white-85">
+      <div className="container mx-auto bg-garbi-version-2-30-white flex flex-row items-center justify-between py-6 px-0 gap-[341px] border-t-[2px] border-solid border-garbi-version-2-30-white-85">
         <div className="grid grid-cols-4 gap-4 w-full">
           <div className="col-span-3 flex flex-row items-start justify-start gap-[80px]">
             <a href="#" className="text-black no-underline relative leading-[120%] font-semibold">Security</a>

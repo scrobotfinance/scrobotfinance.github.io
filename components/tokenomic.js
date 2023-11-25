@@ -37,7 +37,7 @@ const Tokenomic = () => {
     >
       <div className="relative flex items-center container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
         <div
-          className="[&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-left] opacity-[0]"
+          className="px-[16px] lg:px-0 [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-left] opacity-[0]"
           data-animate-on-scroll
         >
           <b className=" text-21xl leading-[120%] inline-block text-garbi-version-2-60-black mb-[32px]">
@@ -55,7 +55,7 @@ const Tokenomic = () => {
           </div>
           
         </div>
-        <div className="img ">
+        <div className="img px-[16px] lg:px-0">
           <img
             className=" w-full h-auto object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-right] opacity-[0]"
             alt=""

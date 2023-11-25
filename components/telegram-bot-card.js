@@ -13,7 +13,7 @@ const TelegramBotCard = () => {
     <div className="relative w-full h-auto text-center text-13xl text-garbi-version-2-30-white">
       <div className="bg-garbi-version-2-60-black pb-[219px] w-full h-auto overflow-hidden">
         <div className="container mx-auto py-[24px] overflow-hidden text-left text-base">
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 px-[16px] lg:px-0 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="logo flex items-center">
               <a href="#">
                 <img
@@ -49,7 +49,7 @@ const TelegramBotCard = () => {
             </div>
             
             <div className="menu-toggle lg:hidden col-span-1 flex items-center justify-end">
-              <button className="bg-opacity-100" onClick={toggleMenu}>
+              <button className="bg-transparent" onClick={toggleMenu}>
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
               </button>
             </div>
@@ -57,14 +57,14 @@ const TelegramBotCard = () => {
         </div>
 
         {/* Responsive menu */}
-        <div className={`lg:hidden ${menuOpen ? 'block' : 'hidden'}`}>
-          <a href="#features" className="block mt-4 text-white no-underline relative leading-[120%] font-semibold">
+        <div className={`lg:hidden text-left container mx-auto ${menuOpen ? 'block' : 'hidden'}`}>
+          <a href="#features" className="block mt-4 text-white text-base no-underline relative leading-[120%] font-semibold">
             Features
           </a>
-          <a href="#tokenomic" className="block mt-4 text-white no-underline relative leading-[120%] font-semibold">
+          <a href="#tokenomic" className="block mt-4 text-white text-base no-underline relative leading-[120%] font-semibold">
             Token Utility
           </a>
-          <a href="#" className="block mt-4 text-white no-underline relative leading-[120%] font-semibold">
+          <a href="#" className="block mt-4 mb-4 text-white text-base no-underline relative leading-[120%] font-semibold">
             Community
           </a>
           <ButtonSmall
@@ -87,10 +87,10 @@ const TelegramBotCard = () => {
             alt=""
             src="/asset-12x-1@2x.png"
           />
-          <div className="text-xl leading-[120%] mb-[24px] font-semibold inline-block ">
+          <div className="text-xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold inline-block ">
             Embark on your DeFi journey effortlessly—No confusing blockchain talk, just fast and budget-friendly trading on Telegram.
           </div>
-          <div className="leading-[120%] mb-[48px] font-semibold inline-block ">
+          <div className="leading-[120%] px-[16px] lg:px-0 mb-[48px] md:text-[28px] sm:text-[28px] font-semibold inline-block ">
             Explore decentralized finance without the complications. Our user-friendly Telegram bot takes care of all the technical details, enabling you to trade quickly and cost-effectively with just a few taps.
           </div>
           <ButtonSmall
