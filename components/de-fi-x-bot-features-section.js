@@ -31,7 +31,7 @@ const DeFiXBotFeaturesSection = () => {
     };
   }, []);
   return (
-    <div id="features" className="container mx-auto bg-garbi-version-2-30-white py-[120px]  text-center text-21xl md:text-[32px] sm:text-[32px] text-garbi-version-2-60-black">
+    <div id="features" className="container mx-auto bg-garbi-version-2-30-white py-[120px]  text-center lg:text-21xl text-[32px] text-garbi-version-2-60-black">
       <div
         className="mb-[69px] px-[16px] lg:px-0 [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-top] opacity-[0]"
         data-animate-on-scroll
@@ -51,11 +51,11 @@ const DeFiXBotFeaturesSection = () => {
           </div>
         </div>
       </div>
-      <div
-        className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4 w-full [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] text-left text-xl"
-        data-animate-on-scroll
-      >
-        <div className="px-[16px] lg:px-0">
+      <div className="px-[16px] lg:px-0">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4  w-full [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-bottom] opacity-[0] text-left text-xl"
+          data-animate-on-scroll
+        >
           <div className=" rounded-2xl bg-apple-style-white-2  py-[48px] px-[18px] overflow-hidden">
             <div className="icon w-full mb-[16px]">
               <img
