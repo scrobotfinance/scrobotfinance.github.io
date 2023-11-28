@@ -403,17 +403,8 @@ const Document = () => {
         </div>
         <div className="leading-[120%] font-semibold   ">
           <p className="m-0">
-            Telegram-based interface. Upon the first launch, ScroBot generates
-            three wallets for buying/selling and sniping, ensuring access to
-            crypto trading
+            ScroBot is not just a tool; it's your gateway to a smarter and more efficient crypto trading experience. Join us in revolutionizing the future of crypto trading on Telegram! Embrace the power of ScroBot, where innovation meets accessibility, and every trader finds their path to success.
           </p>
-          <ul className="m-0 pl-8">
-            <li className="mb-0">
-              Start with a minimum of 0.01 ETH in your wallet
-            </li>
-            <li className="mb-0">Multiple wallet support</li>
-            <li>Wallet monitoring with detailed analytics</li>
-          </ul>
         </div>
       </div>
     </div>
