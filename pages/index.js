@@ -7,11 +7,7 @@ import DeFiXBotFeaturesSection from "../components/de-fi-x-bot-features-section"
 import DeFiXBotSection from "../components/de-fi-x-bot-section";
 
 const Frame = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  
   useEffect(() => {
       const scrollAnimElements = document.querySelectorAll(
         "[data-animate-on-scroll]"

@@ -1,10 +1,7 @@
 import { useEffect , useState } from "react";
-import Tokenomic from "../components/tokenomic";
+import Document from "../components/document";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import TelegramBotCard from "../components/telegram-bot-card";
-import DeFiXBotFeaturesSection from "../components/de-fi-x-bot-features-section";
-import DeFiXBotSection from "../components/de-fi-x-bot-section";
 
 const Frame = () => {
   
@@ -42,6 +39,9 @@ const Frame = () => {
      data-animate-on-scroll
      >
       <Header />
+      <div>
+        <Document />
+      </div>
       <Footer />
     </div>
   );

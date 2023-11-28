@@ -47,7 +47,7 @@ const Footer = () => {
             <a href="#" className="text-black mr-[48px] no-underline">
               <img className="w-8 h-8" alt="" src="/github-icon.svg" />
             </a>
-            <a href="#https://twitter.com/Scrobot_eth" target="_blank" className="text-black no-underline">
+            <a href="https://twitter.com/Scrobot_eth" target="_blank" className="text-black no-underline">
               <img className="w-8 h-8" alt="" src="/twitter-icon.svg" />
             </a>
           </div>
