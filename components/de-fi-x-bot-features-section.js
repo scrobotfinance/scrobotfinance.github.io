@@ -47,7 +47,7 @@ const DeFiXBotFeaturesSection = () => {
         </b>
         <div className=" text-5xl md:text-xl sm:text-xl text-apple-style-dark-4 ">
           <div className="leading-[120%] font-semibold inline-block ">
-              Enjoy a seamless, feature-packed DeFi journey—all within the comfort of Telegram. Let's dive into the five core aspects that make ScroBot the ultimate destination for your DeFi endeavors. And the best part? it's free to use.
+              Enjoy a seamless, feature - packed DeFi journey - all within the comfort of Telegram. Let's dive into the five core aspects that make ScroBot the ultimate destination for your DeFi endeavors. And the best part? it's free to use.
           </div>
         </div>
       </div>

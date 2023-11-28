@@ -30,7 +30,7 @@ const Header = () => {
               <a href="#tokenomic" className="text-white no-underline relative leading-[120%] font-semibold">
                 Token Utility
               </a>
-              <a href="#" className="text-white no-underline relative leading-[120%] font-semibold">
+              <a href="https://t.me/Scrobot_Official" target="_blank" className="text-white no-underline relative leading-[120%] font-semibold">
                 Community
               </a>
               <ButtonSmall
