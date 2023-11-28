@@ -233,7 +233,7 @@ const Document = () => {
             </ul>
           </div>
         </div>
-        <div className="">
+        <div className="mb-[24px]">
           <div className=" leading-[120%] font-semibold text-garbi-version-2-60-black mb-[8px]">
             4. Discounted Trading
           </div>
@@ -241,6 +241,24 @@ const Document = () => {
             <ul className="m-0 pl-[27px]">
                 <li>
                     Enjoy reduced fees on trades and subscription plans
+                </li>
+            </ul>
+          </div>
+        </div>
+        <div className="">
+          <div className=" leading-[120%] font-semibold text-garbi-version-2-60-black mb-[8px]">
+            Revenue Sharing
+          </div>
+          <div className="text-base leading-[150%] font-semibold font-inherit text-apple-style-dark-4  ">
+            <ul className="m-0 pl-[27px]">
+                <li>
+                    Transactions through the bot incur a fee of 0.1 - 0.5%.
+                </li>
+                <li>
+                    80% revenue share is allocated stakers.
+                </li>
+                <li>
+                    Additional rewards through trading volume.
                 </li>
             </ul>
           </div>
