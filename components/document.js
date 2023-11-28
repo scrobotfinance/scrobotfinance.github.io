@@ -1,34 +1,33 @@
 
-
 const Document = () => {
   return (
-    <div className="bg-garbi-version-2-30-white text-left text-5xl text-apple-style-dark-4 container mx-auto py-[40px]">
-      <div className="text-13xl text-garbi-version-2-60-black border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px]">
-        <div className="leading-[120%] font-semibold   mb-[16px]">
-          Welcome
+    <div className="bg-garbi-version-2-30-white text-left text-5xl text-apple-style-dark-4 container mx-auto py-[40px] ">
+        <div className="text-13xl text-garbi-version-2-60-black border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px] px-[16px] lg:px-0">
+                <div className="leading-[120%] font-semibold mb-[16px]">
+                    Welcome
+                </div>
+                <div className="text-5xl leading-[120%] font-semibold text-apple-style-dark-4  ">
+                    Welcome to ScroBot, the next evolution in crypto trading on the
+                    Telegram platform. ScroBot is a comprehensive suite of AI-powered
+                    tools designed to streamline interactions with DeFi, discover new
+                    investment opportunities, and enhance your trading experience.
+                </div>
         </div>
-        <div className="text-5xl leading-[120%] font-semibold text-apple-style-dark-4  ">
-          Welcome to ScroBot, the next evolution in crypto trading on the
-          Telegram platform. ScroBot is a comprehensive suite of AI-powered
-          tools designed to streamline interactions with DeFi, discover new
-          investment opportunities, and enhance your trading experience.
-        </div>
+        <div className="text-13xl text-garbi-version-2-60-black border-solid border-b-[2px] border-garbi-version-2-30-white-85 py-[40px] px-[16px] lg:px-0">
+            <div className="leading-[120%] font-semibold   mb-[16px]">
+                Vision and Mission
+            </div>
+            <div className="text-5xl leading-[120%] font-semibold text-apple-style-dark-4   ">
+                At ScroBot, our mission is to empower users to navigate the dynamic
+                world of cryptocurrencies with confidence and ease. We envision a
+                future where everyone, from beginners to seasoned traders, can access
+                a cutting-edge AI platform tailored to their needs. Our commitment
+                lies in delivering a state-of-the-art platform that provides
+                knowledge, support, and powerful tools, all while ensuring
+                accessibility through our unique tokenomics system.
+            </div>
       </div>
-      <div className="text-13xl text-garbi-version-2-60-black border-solid border-b-[2px] border-garbi-version-2-30-white-85 py-[40px]">
-        <div className="leading-[120%] font-semibold   mb-[16px]">
-          Vision and Mission
-        </div>
-        <div className="text-5xl leading-[120%] font-semibold text-apple-style-dark-4   ">
-          At ScroBot, our mission is to empower users to navigate the dynamic
-          world of cryptocurrencies with confidence and ease. We envision a
-          future where everyone, from beginners to seasoned traders, can access
-          a cutting-edge AI platform tailored to their needs. Our commitment
-          lies in delivering a state-of-the-art platform that provides
-          knowledge, support, and powerful tools, all while ensuring
-          accessibility through our unique tokenomics system.
-        </div>
-      </div>
-      <div className="text-apple-style-dark-1 border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px]">
+      <div className="text-apple-style-dark-1 border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px] px-[16px] lg:px-0">
         <div className=" text-13xl leading-[120%] font-semibold text-garbi-version-2-60-black   mb-[16px]">
           Key Features
         </div>
@@ -146,7 +145,7 @@ const Document = () => {
           </div>
         </div>
       </div>
-      <div className="text-inherit font-inherit border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px]">
+      <div className="text-inherit font-inherit border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px] px-[16px] lg:px-0">
         <div className=" text-13xl leading-[120%] font-semibold font-sf-pro-display-body-regular text-garbi-version-2-60-black mb-[16px]">
           Getting Started
         </div>
@@ -167,7 +166,7 @@ const Document = () => {
         </div>
         
       </div>
-      <div className="text-inherit font-inherit border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px] grid grid-cols-1 lg:grid-cols-2">
+      <div className="text-inherit font-inherit border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px] px-[16px] lg:px-0 grid grid-cols-1 lg:grid-cols-2">
         <div className="info-token">
             <div className="text-13xl leading-[120%] font-semibold font-sf-pro-display-body-regular text-garbi-version-2-60-black mb-[16px]">
                 Tokenomics
@@ -193,7 +192,7 @@ const Document = () => {
             />
         </div>
       </div>
-      <div className="text-apple-style-dark-1  border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px]">
+      <div className="text-apple-style-dark-1  border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px] px-[16px] lg:px-0">
         <div className=" text-13xl leading-[120%] font-semibold text-garbi-version-2-60-black mb-[16px]">
           Use Cases
         </div>
@@ -247,7 +246,7 @@ const Document = () => {
           </div>
         </div>
       </div>
-      <div className="border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px]">
+      <div className="border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px] px-[16px] lg:px-0">
         <div className="text-13xl text-garbi-version-2-60-black">
           <div className="leading-[120%] font-semibold mb-[16px]">
             Airdrop
@@ -257,7 +256,7 @@ const Document = () => {
           Coming soon
         </div>
       </div>
-      <div className=" text-apple-style-dark-1 border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px]">
+      <div className=" text-apple-style-dark-1 border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px] px-[16px] lg:px-0">
         <div className="text-13xl leading-[120%] font-semibold text-garbi-version-2-60-black mb-[16px]">
           How to Use ScroBot
         </div>
@@ -313,79 +312,79 @@ const Document = () => {
           </div>
         </div>
       </div>
-      <div className="text-apple-style-dark-1 border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px]">
-        <div className="text-13xl leading-[120%] font-semibold text-garbi-version-2-60-black mb-[16px]">
-          Road Map
-        </div>
-        <div className="mb-[24px]">
-          <div className="leading-[120%] font-semibold text-garbi-version-2-60-black mb-[8px]">
-            Stone 1
-          </div>
-          <div className=" text-base leading-[150%] font-semibold font-inherit text-apple-style-dark-4   ">
-            <ul className="m-0 pl-[27px]">
-              <li className="mb-0">Concept design.</li>
-              <li className="mb-0">
-                Building the foundational infrastructure of the ScroBot trading
-                platform.
-              </li>
-              <li className="mb-0">Website, social setup.</li>
-              <li className="mb-0">Testnet Deployment.</li>
-              <li>Implementing targeted marketing strategies.</li>
-            </ul>
-          </div>
-        </div>
-        <div className="mb-[24px]">
-          <div className="leading-[120%] font-semibold text-garbi-version-2-60-black mb-[8px]">
-            Stone 2: Preparing for Launch
-          </div>
-          <div className="text-base leading-[150%] font-semibold font-inherit text-apple-style-dark-4">
-            <ul className="m-0 pl-[27px]">
-              <li className="mb-0">Community Building.</li>
-              <li className="mb-0">Token Launch.</li>
-              <li className="mb-0">Partnerships.</li>
-              <li className="mb-0">Mainnet Transition.</li>
-              <li>Revenue share.</li>
-            </ul>
-          </div>
-        </div>
-        <div className="mb-[24px]">
-          <div className="leading-[120%] font-semibold text-garbi-version-2-60-black mb-[8px]">
-            Stone 3
-          </div>
-          <div className="text-base leading-[150%] font-semibold font-inherit text-apple-style-dark-4">
-            <ul className="m-0 pl-[27px]">
-              <li className="mb-0">Market growth.</li>
-              <li className="mb-0">User Interface (UI) Refinement.</li>
-              <li className="mb-0">
-                Unveiling innovative trading tools and features to enhance user
-                capabilities.
-              </li>
-              <li>Referral Program.</li>
-            </ul>
-          </div>
-        </div>
-        <div className="">
-          <div className="leading-[120%] font-semibold text-garbi-version-2-60-black mb-[8px]">
-            Stone 4
-          </div>
-          <div className=" text-base leading-[150%] font-semibold font-inherit text-apple-style-dark-4">
-            <ul className="m-0 pl-[27px]">
-              <li className="mb-0">DAO launch</li>
-              <li>
-                DEX Integration: Incorporating additional DEX routers to broaden
-                trading options.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className="text-inherit font-inherit pt-[40px]">
+     
+      <div className="text-apple-style-dark-1 border-b-[2px] border-solid border-garbi-version-2-30-white-85 py-[40px] px-[16px] lg:px-0">
+            <div className="text-13xl leading-[120%] font-semibold text-garbi-version-2-60-black mb-[16px]">
+                Road Map
+            </div>
+            <div className="mb-[24px]">
+            <div className="leading-[120%] font-semibold text-garbi-version-2-60-black mb-[8px]">
+                Stone 1
+            </div>
+            <div className=" text-base leading-[150%] font-semibold font-inherit text-apple-style-dark-4   ">
+                <ul className="m-0 pl-[27px]">
+                <li className="mb-0">Concept design.</li>
+                <li className="mb-0">
+                    Building the foundational infrastructure of the ScroBot trading
+                    platform.
+                </li>
+                <li className="mb-0">Website, social setup.</li>
+                <li className="mb-0">Testnet Deployment.</li>
+                <li>Implementing targeted marketing strategies.</li>
+                </ul>
+            </div>
+            </div>
+            <div className="mb-[24px]">
+                <div className="leading-[120%] font-semibold text-garbi-version-2-60-black mb-[8px]">
+                    Stone 2: Preparing for Launch
+                </div>
+                <div className="text-base leading-[150%] font-semibold font-inherit text-apple-style-dark-4">
+                    <ul className="m-0 pl-[27px]">
+                        <li className="mb-0">Community Building.</li>
+                        <li className="mb-0">Token Launch.</li>
+                        <li className="mb-0">Partnerships.</li>
+                        <li className="mb-0">Mainnet Transition.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div className="mb-[24px]">
+            <div className="leading-[120%] font-semibold text-garbi-version-2-60-black mb-[8px]">
+                Stone 3
+            </div>
+            <div className="text-base leading-[150%] font-semibold font-inherit text-apple-style-dark-4">
+                <ul className="m-0 pl-[27px]">
+                <li className="mb-0">Market growth.</li>
+                <li className="mb-0">User Interface (UI) Refinement.</li>
+                <li className="mb-0">
+                    Unveiling innovative trading tools and features to enhance user
+                    capabilities.
+                </li>
+                <li>Referral Program.</li>
+                </ul>
+            </div>
+            </div>
+            <div className="">
+            <div className="leading-[120%] font-semibold text-garbi-version-2-60-black mb-[8px]">
+                Stone 4
+            </div>
+            <div className=" text-base leading-[150%] font-semibold font-inherit text-apple-style-dark-4">
+                <ul className="m-0 pl-[27px]">
+                <li className="mb-0">DAO launch</li>
+                <li>
+                    DEX Integration: Incorporating additional DEX routers to broaden
+                    trading options.
+                </li>
+                </ul>
+            </div>
+            </div>
+      </div> 
+      <div className="text-inherit font-inherit pt-[40px] px-[16px] lg:px-0">
         <div className=" text-13xl leading-[120%] font-semibold text-garbi-version-2-60-black mb-[16px]">
           Conclusion
         </div>
         <div className="leading-[120%] font-semibold   ">
           <p className="m-0">
-            ScroBot simplifies your crypto journey with a user-friendly
             Telegram-based interface. Upon the first launch, ScroBot generates
             three wallets for buying/selling and sniping, ensuring access to
             crypto trading

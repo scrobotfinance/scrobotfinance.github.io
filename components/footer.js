@@ -7,7 +7,7 @@ const Footer = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <div className="relative bg-garbi-version-2-30-white w-full overflow-hidden flex flex-col items-center justify-center [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0] text-left text-base text-apple-style-dark-2"
+    <div className="relative bg-garbi-version-2-30-white w-full overflow-hidden flex flex-col items-center justify-center [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] text-left text-base text-apple-style-dark-2"
      data-animate-on-scroll
      >
       <div className="container mx-auto bg-garbi-version-2-30-white py-6 px-0 gap-[341px] border-t-[2px] border-solid border-garbi-version-2-30-white-85">
