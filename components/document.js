@@ -362,7 +362,7 @@ const Document = () => {
                         <li className="mb-0">Token Launch.</li>
                         <li className="mb-0">Partnerships.</li>
                         <li className="mb-0">Mainnet Transition.</li>
-                        
+                        <li className="mb-0">Revenue share.</li>       
                     </ul>
                 </div>
             </div>
