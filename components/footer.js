@@ -32,7 +32,7 @@ const Footer = () => {
               <a href="#" className="block mt-4 text-black text-base no-underline relative leading-[120%] font-semibold">
                 Security
               </a>
-              <a href="#" className="block mt-4 text-black text-base no-underline relative leading-[120%] font-semibold">
+              <a href="/document-page" className="block mt-4 text-black text-base no-underline relative leading-[120%] font-semibold">
                 Documentation
               </a>
               <a href="#" className="block mt-4 text-black mb-4 text-base no-underline relative leading-[120%] font-semibold">

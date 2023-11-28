@@ -15,7 +15,7 @@ const Header = () => {
         <div className="container mx-auto py-[24px] overflow-hidden text-left text-base">
           <div className="grid grid-cols-2 px-[16px] lg:px-0 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="logo flex items-center">
-              <a href="#">
+              <a href="/">
                 <img
                   className=""
                   alt=""
