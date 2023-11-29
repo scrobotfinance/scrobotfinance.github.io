@@ -2,6 +2,7 @@ import ButtonSmall from "./button-small";
 import { useState } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import Modal from 'react-modal';
+import Head from 'next/head';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,6 +23,10 @@ const Header = () => {
 
   return (
     <div className="relative w-full h-auto text-center text-13xl text-garbi-version-2-30-white">
+      <Head>
+        <meta property="og:title" content="ScroBot" />
+
+      </Head>
       <div className="bg-garbi-version-2-60-black w-full h-auto overflow-hidden">
         <div className="container mx-auto py-[24px] overflow-hidden text-left text-base">
           <div className="grid grid-cols-2 px-[16px] lg:px-0 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
