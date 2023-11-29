@@ -13,6 +13,7 @@ const ButtonSmall = ({
   readMoreLineHeight,
   readMoreFontFamily,
   readMoreColor,
+  openModal, // Add openModal to the destructured props
 }) => {
   const buttonSmallStyle = useMemo(() => {
     return {
@@ -20,7 +21,7 @@ const ButtonSmall = ({
       border: buttonSmallBorder,
       position: buttonSmallPosition,
       top: buttonSmallTop,
-      bottom : buttonSmallBottom,
+      bottom: buttonSmallBottom,
       left: buttonSmallLeft,
       backgroundColor: buttonSmallBackgroundColor,
     };
@@ -43,8 +44,10 @@ const ButtonSmall = ({
     };
   }, [readMoreFontSize, readMoreLineHeight, readMoreFontFamily, readMoreColor]);
 
+  // Move the ButtonSmall component outside of the useMemo
   return (
     <button
+      onClick={() => openModal()} // Use an arrow function here
       className="rounded-[34px] cursor-pointer flex flex-row items-center justify-center py-4 px-8 text-left text-xl text-dark-theme-10-2 border-[2px] border-solid border-dark-theme-10-2"
       style={buttonSmallStyle}
     >

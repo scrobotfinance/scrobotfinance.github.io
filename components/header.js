@@ -1,12 +1,22 @@
 import ButtonSmall from "./button-small";
 import { useState } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import Modal from 'react-modal';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
   };
 
 
@@ -48,7 +58,8 @@ const Header = () => {
               <a href="https://t.me/Scrobot_Official" target="_blank" className="text-white no-underline relative leading-[120%] font-semibold">
                 Community
               </a>
-              <ButtonSmall
+              <ButtonSmall 
+                openModal={openModal}
                 buttonText="Get Started"
                 buttonSmallBorderRadius="8px"
                 buttonSmallBorder="unset"
@@ -70,6 +81,56 @@ const Header = () => {
           </div>
         </div>
 
+        {/* Modal */}
+        <Modal
+          className=""
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          contentLabel="Example Modal"
+          style={{
+            overlay: {
+              backgroundColor: 'rgba(0, 0, 0, 0.5)',
+              zIndex: 1000,
+            },
+            content: {
+              top: '50%',
+              left: '50%',
+              right: 'auto',
+              bottom: 'auto',
+              marginRight: '-50%',
+              transform: 'translate(-50%, -50%)',
+              width: '400px',
+            },
+          }}
+        >
+          <h2>🚀 Coming Soon! 🚀</h2>
+          <p>
+          Get ready for the SBOT token project launch! We're thrilled to announce that the SBOT token will soon be introduced. Curious to know more? Stay tuned for further details about the upcoming ScroBot project. (https://twitter.com/Scrobot_eth)
+          </p>
+          <h2>🌟 Anticipate the Excitement</h2>
+          <ul>
+              <li>
+                  Intelligent Trading Tools
+              </li>
+              <li>
+                  Gas Fee Savings
+              </li>
+              <li>
+                  Anti-MEV and Anti-Rug Measures
+              </li>
+              <li>
+                  Wallet Monitoring with Analytics
+              </li>
+              <li>
+                  Comprehensive DEX Integration
+              </li>
+              <li>
+                  Dynamic 80% Revenue Sharing
+              </li>
+          </ul>
+            <p>Stay tuned for the big reveal!</p>
+        </Modal>
+
         {/* Responsive menu */}
         <div className={`lg:hidden text-left container mx-auto ${menuOpen ? 'block' : 'hidden'}`}>
           <div className=" px-[16px] lg:px-0">
@@ -82,7 +143,7 @@ const Header = () => {
             <a href="#" className="block mt-4 mb-4 text-white text-base no-underline relative leading-[120%] font-semibold">
               Community
             </a>
-            <ButtonSmall
+            <ButtonSmall onClick={openModal}
               buttonText="Get Started"
               buttonSmallBorderRadius="8px"
               buttonSmallBorder="unset"
@@ -97,6 +158,7 @@ const Header = () => {
             />
           </div>
         </div>
+
       </div>
      
     </div>
