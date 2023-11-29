@@ -1,5 +1,6 @@
 import ButtonSmall from "./button-small";
 import { useState } from "react";
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,12 +25,26 @@ const Header = () => {
               </a>
             </div>
             <div className={`lg:col-span-3 col-span-1 flex flex-row items-center justify-end gap-[48px] lg:flex hidden`}>
-              <a href="#features" className="text-white no-underline relative leading-[120%] font-semibold">
+              <ScrollLink
+                to="features"
+                spy={true}
+                smooth={true}
+                offset={-70} 
+                duration={500}
+                className="text-white no-underline relative leading-[120%] font-semibold"
+              >
                 Features
-              </a>
-              <a href="#tokenomic" className="text-white no-underline relative leading-[120%] font-semibold">
+              </ScrollLink>
+              <ScrollLink
+                to="tokenomic"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="text-white no-underline relative leading-[120%] font-semibold"
+              >
                 Token Utility
-              </a>
+              </ScrollLink>
               <a href="https://t.me/Scrobot_Official" target="_blank" className="text-white no-underline relative leading-[120%] font-semibold">
                 Community
               </a>
