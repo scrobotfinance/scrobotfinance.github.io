@@ -44,7 +44,7 @@ const Footer = () => {
             <a href="https://t.me/Scrobot_Announcements" target="_blank" className="text-black mr-[48px] no-underline">
               <img className="w-8 h-8" alt="" src="/telegram-icon.svg" />
             </a>
-            <a href="#" className="text-black mr-[48px] no-underline">
+            <a href="https://github.com/scrobotfinance/scrobotfinance.github.io" target="_blank" className="text-black mr-[48px] no-underline">
               <img className="w-8 h-8" alt="" src="/github-icon.svg" />
             </a>
             <a href="https://twitter.com/Scrobot_eth" target="_blank" className="text-black no-underline">
