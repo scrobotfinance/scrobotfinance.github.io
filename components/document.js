@@ -6,7 +6,7 @@ const Document = () => {
                 <div className="leading-[120%] font-semibold mb-[16px]">
                     Welcome
                 </div>
-                <div className="text-5xl leading-[120%] font-semibold text-apple-style-dark-4  ">
+                <div className="text-base leading-[120%] font-semibold text-apple-style-dark-4  ">
                     Welcome to ScroBot, the next evolution in crypto trading on the
                     Telegram platform. ScroBot is a comprehensive suite of AI-powered
                     tools designed to streamline interactions with DeFi, discover new
@@ -17,7 +17,7 @@ const Document = () => {
             <div className="leading-[120%] font-semibold   mb-[16px]">
                 Vision and Mission
             </div>
-            <div className="text-5xl leading-[120%] font-semibold text-apple-style-dark-4   ">
+            <div className="text-base leading-[120%] font-semibold text-apple-style-dark-4   ">
                 At ScroBot, our mission is to empower users to navigate the dynamic
                 world of cryptocurrencies with confidence and ease. We envision a
                 future where everyone, from beginners to seasoned traders, can access
@@ -149,7 +149,7 @@ const Document = () => {
         <div className=" text-13xl leading-[120%] font-semibold font-sf-pro-display-body-regular text-garbi-version-2-60-black mb-[16px]">
           Getting Started
         </div>
-        <div className=" leading-[120%] font-semibold   ">
+        <div className=" leading-[120%] font-semibold text-base">
           <p className="m-0">
             ScroBot simplifies your crypto journey with a user-friendly
             Telegram-based interface. Upon the first launch, ScroBot generates
@@ -172,7 +172,7 @@ const Document = () => {
                 Tokenomics
             </div>
             <div className=" ">
-                <div className="leading-[120%] font-semibold  ">
+                <div className="leading-[120%] font-semibold text-base ">
                     <ul className="m-0 pl-8">
                     <li className="mb-0">Token Name: ScroBot</li>
                     <li className="mb-0">Token Symbol: $SBOT</li>
@@ -401,7 +401,7 @@ const Document = () => {
         <div className=" text-13xl leading-[120%] font-semibold text-garbi-version-2-60-black mb-[16px]">
           Conclusion
         </div>
-        <div className="leading-[120%] font-semibold   ">
+        <div className="leading-[120%] font-semibold text-base  ">
           <p className="m-0">
             ScroBot is not just a tool; it's your gateway to a smarter and more efficient crypto trading experience. Join us in revolutionizing the future of crypto trading on Telegram! Embrace the power of ScroBot, where innovation meets accessibility, and every trader finds their path to success.
           </p>
