@@ -27,6 +27,7 @@ const Header = () => {
         <meta property="og:title" content="ScroBot: Elevate Your Crypto Trading with AI-Powered Precision on Telegram!" />
         <meta property="og:description" content="ScroBot is the ultimate Telegram based platform. Empower your journey with advanced AI tools, intelligent trading features, and a revolutionary tokenomics system. Join us where innovation meets accessibility, shaping a new era in crypto trading!" />
         <meta property="og:image" content="https://www.scrobot.app/scrobot-for-social.png" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ScroBot: Elevate Your Crypto Trading with AI-Powered Precision on Telegram!" />
         <meta name="twitter:description" content="ScroBot is the ultimate Telegram based platform. Empower your journey with advanced AI tools, intelligent trading features, and a revolutionary tokenomics system. Join us where innovation meets accessibility, shaping a new era in crypto trading!" />
         <meta name="twitter:image" content="https://www.scrobot.app/scrobot-for-social.png" />
