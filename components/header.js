@@ -111,9 +111,17 @@ const Header = () => {
               marginRight: '-50%',
               transform: 'translate(-50%, -50%)',
               width: '400px',
+              background : 'rgba(128, 128, 128, 1)',
+              color: "#fff",
+              border: "rgba(128, 128, 128, 1)",
             },
           }}
         >
+          <img
+            className=""
+            alt=""
+            src="/group-14073.svg"
+          />
           <h2>🚀 Coming Soon! 🚀</h2>
           <p>
           Get ready for the SBOT token project launch! We're thrilled to announce that the SBOT token will soon be introduced. Curious to know more? Stay tuned for further details about the upcoming ScroBot project. (https://twitter.com/Scrobot_eth)

@@ -22,11 +22,11 @@ const TelegramBotCard = () => {
             alt=""
             src="/asset-12x-1@2x.png"
           />
-          <div className="text-xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold inline-block ">
-            Explore decentralized finance without the complications. Our user - friendly Telegram bot takes care of all the technical details, enabling you to trade quickly and cost - effectively with just a few taps
+          <div className="text-4xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold inline-block ">
+            Embark on your DeFi journey effortlessly—No confusing blockchain talk, just fast and budget-friendly trading on Telegram.
           </div>
-          <div className="leading-[120%] px-[16px] lg:px-0 mb-[48px] font-semibold inline-block ">
-            Explore decentralized finance without the complications. Our user - friendly Telegram bot takes care of all the technical details, enabling you to trade quickly and cost - effectively with just a few taps.
+          <div className="text-5xl leading-[120%] px-[16px] lg:px-0 mb-[48px] font-semibold inline-block ">
+            Explore decentralized finance without the complications. Our user-friendly Telegram bot takes care of all the technical details, enabling you to trade quickly and cost-effectively with just a few taps.
           </div>
           <ButtonSmall
             openModal={openModal}
@@ -63,9 +63,17 @@ const TelegramBotCard = () => {
               marginRight: '-50%',
               transform: 'translate(-50%, -50%)',
               width: '400px',
+              background : 'rgba(128, 128, 128, 1)',
+              color: "#fff",
+              border: "rgba(128, 128, 128, 1)",
             },
           }}
         >
+          <img
+            className=""
+            alt=""
+            src="/group-14073.svg"
+          />
           <h2>🚀 Coming Soon! 🚀</h2>
           <p>
           Get ready for the SBOT token project launch! We're thrilled to announce that the SBOT token will soon be introduced. Curious to know more? Stay tuned for further details about the upcoming ScroBot project. (https://twitter.com/Scrobot_eth)
