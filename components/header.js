@@ -31,6 +31,7 @@ const Header = () => {
         <meta name="twitter:title" content="ScroBot: Elevate Your Crypto Trading with AI-Powered Precision on Telegram!" />
         <meta name="twitter:description" content="ScroBot is the ultimate Telegram based platform. Empower your journey with advanced AI tools, intelligent trading features, and a revolutionary tokenomics system. Join us where innovation meets accessibility, shaping a new era in crypto trading!" />
         <meta name="twitter:image" content="https://www.scrobot.app/scrobot-for-social.png" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <div className="bg-garbi-version-2-60-black w-full h-auto overflow-hidden">
         <div className="container mx-auto py-[24px] overflow-hidden text-left text-base">
