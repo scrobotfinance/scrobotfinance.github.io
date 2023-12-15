@@ -1,40 +1,49 @@
 import React, { useState, useEffect } from 'react';
+import web3 from './Web3';
 import Web3 from 'web3';
-import MetaMaskConnect from './connect-wallet';
+import contractABIs from './abi';
 
 const Stake = () => {
     const [connectedAddress, setConnectedAddress] = useState(null);
+    const [contractStakeReader, setContractStakeReader] = useState(null);
 
-    const initWeb3 = async () => {
-        try {
-            if (typeof window !== 'undefined' && window.ethereum) {
-                window.web3 = new Web3(window.ethereum);
-                await window.ethereum.enable();
-                // Get the connected address
-                const accounts = await window.web3.eth.getAccounts();
-                setConnectedAddress(accounts[0]);
-            } else if (typeof window !== 'undefined' && window.web3) {
-                window.web3 = new Web3(window.web3.currentProvider);
-                // Get the connected address
-                const accounts = await window.web3.eth.getAccounts();
-                setConnectedAddress(accounts[0]);
-            } else {
-                console.log('MetaMask not detected! Please install MetaMask extension.');
-            }
-        } catch (error) {
-            console.error('Error initializing Web3:', error);
-        }
-    };
-
+    const stakeAdd = "0x1a32d063c2a6b222ba19099390687f0d0b44d958";
+    const stakeAbi = contractABIs.stakeABI;
+   
     const handleDepositClick = async () => {
-        if (!connectedAddress) {
-            // If wallet is not connected, initiate the connection
-            await initWeb3();
+      try {
+        // Check if MetaMask is installed
+        if (window.ethereum) {
+          window.web3 = new Web3(window.ethereum);
+          await window.ethereum.enable();
+  
+          const accounts = await window.web3.eth.getAccounts();
+          setConnectedAddress(accounts[0]);
         } else {
-            // If wallet is connected, log the wallet address
-            console.log('Connected Wallet Address:', connectedAddress);
-            // Add your deposit logic here
+          console.log('MetaMask not detected! Please install MetaMask extension.');
+          return; // Stop further execution if MetaMask is not installed
         }
+  
+        // Initialize the contract reader
+        const contract = new window.web3.eth.Contract(stakeAbi, stakeAdd);
+        setContractStakeReader(contract);
+  
+        // If wallet is connected, log the wallet address
+        console.log('Connected Wallet Address:', connectedAddress);
+  
+        // Access contractStakeReader from the state
+        if (contractStakeReader) {
+          // Example: Call a method on the contract
+          const result = await contractStakeReader.methods;
+          console.log('Result from smart contract:', result);
+  
+          // Add your deposit logic here
+        } else {
+          console.error('Contract not properly initialized.');
+        }
+      } catch (error) {
+        console.error('Error handling deposit:', error);
+      }
     };
 
   return (
