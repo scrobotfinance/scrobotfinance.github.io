@@ -17,16 +17,22 @@ const TelegramBotCard = () => {
     <div className="relative w-full h-auto text-center text-[28px] lg:text-13xl text-garbi-version-2-30-white">
       <div className="bg-garbi-version-2-60-black pb-[219px] w-full h-auto overflow-hidden">
         <div className="container mx-auto relative">
+          <div className="text-4xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold inline-block ">
+            Built on Ethereum
+          </div>
           <img
             className=" w-full h-auto object-cover"
             alt=""
             src="/asset-12x-1@2x.png"
           />
+          <div className="text-21xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold">
+            DEFI TELEGRAM BOT
+          </div>
           <div className="text-4xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold inline-block ">
-            Embark on your DeFi journey effortlessly—No confusing blockchain talk, just fast and budget-friendly trading on Telegram.
+            Staking Rewards - Earn rewards through Lido Ethereum Staking and DeFi Pool
           </div>
           <div className="text-5xl leading-[120%] px-[16px] lg:px-0 mb-[48px] font-semibold inline-block ">
-            Explore decentralized finance without the complications. Our user-friendly Telegram bot takes care of all the technical details, enabling you to trade quickly and cost-effectively with just a few taps.
+            Embark on your DeFi journey effortlessly—No confusing blockchain talk, just fast and budget-friendly trading on Telegram.
           </div>
           <ButtonSmall
             openModal={openModal}

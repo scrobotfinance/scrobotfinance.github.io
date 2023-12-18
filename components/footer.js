@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 px-[16px] lg:px-0 lg:gap-4">
           <div className=" lg:flex hidden flex-row items-start justify-start gap-[80px]">
             <a href="#" className="text-black no-underline relative leading-[120%] font-semibold">Security</a>
-            <a href="/document-page" className="text-black no-underline relative leading-[120%] font-semibold">
+            <a href="https://scroboteth.gitbook.io/" target="_blank" className="text-black no-underline relative leading-[120%] font-semibold">
               Documentation
             </a>
             <a href="#" className="text-black no-underline relative leading-[120%] font-semibold">
@@ -32,7 +32,7 @@ const Footer = () => {
               <a href="#" className="block mt-4 text-black text-base no-underline relative leading-[120%] font-semibold">
                 Security
               </a>
-              <a href="/document-page" className="block mt-4 text-black text-base no-underline relative leading-[120%] font-semibold">
+              <a href="https://scroboteth.gitbook.io/" target="_blank" className="block mt-4 text-black text-base no-underline relative leading-[120%] font-semibold">
                 Documentation
               </a>
               <a href="#" className="block mt-4 text-black mb-4 text-base no-underline relative leading-[120%] font-semibold">
