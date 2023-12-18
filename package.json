@@ -5,6 +5,7 @@
   "dependencies": {
     "@ethersproject/providers": "^5.7.2",
     "@web3-react/core": "^8.2.3",
+    "antd": "^5.12.3",
     "browserslist": "^4.22.2",
     "ethers": "^6.9.0",
     "eventemitter3": "^5.0.1",
