@@ -7,19 +7,17 @@ import { Input } from "antd";
 const Stake = () => {
     const [connectedAddress, setConnectedAddress] = useState(null);
     const [contractStakeReader, setContractStakeReader] = useState(null);
-    const [stETHBalance, setStETHBalance] = useState(0);
+    const [userInfo, setUserInfo] = useState(null);
+    const stETHBalance = userInfo && userInfo[3];
 
     const stakeAdd = "0x1a32d063c2a6b222ba19099390687f0d0b44d958";
     const stakeAbi = contractABIs.stakeABI;
-    const stETHadd = '0x773044B9E67E5B8CdFfe0f3295db27e2e3DD5a1e';
-    const erc20Abi = contractABIs.erc20ABI;
-    const nullAdd = '0x0000000000000000000000000000000000000000';
+    const nullAdd = '0x2e01fca03F7EBDf714C055E5E6B7297Bb62e5346';
+
     const fetchData = async () => {
       try {
-        const stETHContract = new window.web3.eth.Contract(erc20Abi, stETHadd);
-        const balance = await stETHContract.methods.balanceOf(connectedAddress).call();
-        console.log("🚀 ~ file: stake.js:21 ~ fetchData ~ balance:", balance)
-        setStETHBalance(`${balance}`);
+        const userInfor = await contractStakeReader.methods.userInfo(connectedAddress).call();
+        setUserInfo(userInfor);
       } catch (error) {
         console.error('Error fetching stETH balance:', error);
       }
@@ -32,9 +30,10 @@ const Stake = () => {
           if (window.ethereum) {
             window.web3 = new Web3(window.ethereum);
             await window.ethereum.enable();
-  
+ 
             const accounts = await window.web3.eth.getAccounts();
             setConnectedAddress(accounts[0]);
+          
           } else {
             console.log('MetaMask not detected! Please install MetaMask extension.');
             return; // Stop further execution if MetaMask is not installed
@@ -70,15 +69,16 @@ const Stake = () => {
         if (contractStakeReader) {
           // Example: Call a method on the contract
           const amount = 0.1;
-          const result = await contractStakeReader.methods
-          .submit(
-            nullAdd,
-            amount,
-          )
-          .send({
-            from: connectedAddress,
-          });
-          console.log("🚀 ~ file: stake.js:80 ~ handleDepositClick ~ result:", result);
+          
+          // const result = await contractStakeReader.methods
+          // .submit(
+          //   nullAdd
+          // )
+          // .send({
+          //   from: connectedAddress,
+          //   value : amount,
+          // });
+          // console.log("🚀 ~ file: stake.js:80 ~ handleDepositClick ~ result:", result);
   
           // Add your deposit logic here
         } else {
