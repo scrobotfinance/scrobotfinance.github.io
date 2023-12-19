@@ -7,6 +7,8 @@ const Stake = () => {
     const [connectedAddress, setConnectedAddress] = useState(null);
     const [contractStakeReader, setContractStakeReader] = useState(null);
     const [userInfo, setUserInfo] = useState(null);
+    const [inputValue, setInputValue] = useState('');
+    const [depositAmount, setDepositAmount] = useState('');
     const stETHBalance = userInfo && userInfo[3];
 
     const stakeAdd = "0x1a32d063c2a6b222ba19099390687f0d0b44d958";
@@ -62,24 +64,42 @@ const Stake = () => {
       // Clean up the interval on component unmount
       return () => clearInterval(intervalId);
     }, [connectedAddress]); // Include connectedAddress as a dependency to run the effect when it changes
+
+    const handleInputChange = (e) => {
+      const value = e.target.value;
+      setInputValue(value);
+      setDepositAmount(value);
+    };
   
     const handleDepositClick = async () => {
       try {
         if (contractStakeReader) {
-          // Example: Call a method on the contract
-          const amount = 0.1;
-          
-          // const result = await contractStakeReader.methods
-          // .submit(
-          //   nullAdd
-          // )
-          // .send({
-          //   from: connectedAddress,
-          //   value : amount,
-          // });
-          // console.log("🚀 ~ file: stake.js:80 ~ handleDepositClick ~ result:", result);
+          // Kiểm tra xem depositAmount có giá trị hay không
+          if (!depositAmount) {
+            console.error('Please enter a valid deposit amount.');
+            return;
+          }
   
-          // Add your deposit logic here
+          // Chuyển đổi depositAmount sang định dạng số
+          const amount = parseFloat(depositAmount);
+  
+          // Kiểm tra xem amount có là một số hợp lệ hay không
+          if (isNaN(amount)) {
+            console.error('Invalid deposit amount. Please enter a valid number.');
+            return;
+          }
+  
+          // Gọi hàm submit trên smart contract với giá trị amount từ ô input
+          const result = await contractStakeReader.methods
+            .submit(nullAdd)
+            .send({
+              from: connectedAddress,
+              value: window.web3.utils.toWei(amount.toString(), 'ether'), // Chuyển đổi amount sang wei
+            });
+  
+          console.log("🚀 ~ file: stake.js:80 ~ handleDepositClick ~ result:", result);
+  
+          // Thêm logic xử lý khi deposit thành công tại đây
         } else {
           console.error('Contract not properly initialized.');
         }
@@ -109,7 +129,7 @@ const Stake = () => {
               <div className="self-stretch rounded-xl bg-apple-style-white-2 mt-[24px] text-xl">
                 <div className='mb-[24px] flex items-center'>
                   <button className="flex-1 rounded-xl bg-garbi-version-2-30-white shadow-[0px_2px_2px_rgba(0,_0,_0,_0.25)] overflow-hidden flex flex-row items-center justify-start py-2 px-3.5 gap-[12px]">
-                    <div className="relative leading-[120%] font-semibold">Stake</div>
+                    <div className="relative leading-[120%] text-xl font-semibold">Stake</div>
                     <div className="flex-1 rounded-lg bg-garbi-version-2-semantic-success overflow-hidden flex flex-row items-center justify-center p-1 text-center text-base text-garbi-version-2-30-white font-inter-sb16">
                       <div className="rounded-[8px] leading-[24px] py-[4px] px-[8px] bg-[#49B815] font-semibold">
                         ~8.5% APY
@@ -117,7 +137,7 @@ const Stake = () => {
                     </div>
                   </button>
                   <button className="cursor-pointer [border:none] py-2 px-3.5 bg-[transparent] flex-1 rounded-xl h-12 overflow-hidden flex flex-row items-center justify-center box-border gap-[16px] hover:bg-gainsboro">
-                    <div className="relative text-xl leading-[120%] font-semibold font-sf-pro-display-display-h6 text-garbi-version-2-30-white-70 text-left">
+                    <div className="relative text-xl leading-[120%] font-semibold text-garbi-version-2-30-white-70 text-left">
                       Unstake
                     </div>
                     <div className="rounded-lg bg-garbi-version-2-semantic-success overflow-hidden hidden flex-row items-center justify-start py-1 px-2">
@@ -126,8 +146,64 @@ const Stake = () => {
                   </button>
                   </div>
               </div>
-              <div className='stake-area'>
-                  
+              <div className='self-stretch text-center'>
+                <div className='bg-garbi-version-2-30-white p-[14px] gap-[4px] border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-xl mb-[7px]'>
+                  <div className='flex items-center justify-between mb-[6px]'>
+                    <div className=''>
+                      You're staking: $0.00000
+                    </div>
+                    <div>
+                      Balance: 0.00000
+                    </div>
+                  </div>
+                  <div className='flex items-center justify-between'>
+                    <Input 
+                      className='w-[50%] border-0 text-[28px] p-0'
+                      placeholder='0.00000'
+                      value={inputValue}
+                      onChange={handleInputChange}
+                    />
+                    <div className='flex items-center'>
+                      <img
+                          className="relative rounded-3xs w-5 h-5 overflow-hidden shrink-0 mr-[8px]"
+                          alt=""
+                          src="/scrobot-token.svg"
+                        />
+                        <div className="relative leading-[150%]">ETH</div>
+                    </div>
+                  </div>
+                </div>
+                <img
+                    className="relative rounded w-6 h-6 overflow-hidden shrink-0"
+                    alt=""
+                    src="/frame-14141.svg"
+                  />
+                <div className='bg-garbi-version-2-30-white p-[14px] gap-[4px] border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-xl mt-[7px]'>
+                  <div className='flex items-center justify-between mb-[6px]'>
+                    <div className=''>
+                      To receive: $0.00000
+                    </div>
+                    <div>
+                      0% Slippage
+                    </div>
+                  </div>
+                  <div className='flex items-center justify-between'>
+                    <Input 
+                      className='w-[50%] border-0 text-[28px] p-0 !bg-[#fff] !text-[#000]'
+                      placeholder='0.00000'
+                      value={inputValue}
+                      disabled
+                    />
+                    <div className='flex items-center'>
+                      <img
+                          className="relative rounded-3xs w-5 h-5 overflow-hidden shrink-0 mr-[8px]"
+                          alt=""
+                          src="/scrobot-token.svg"
+                        />
+                        <div className="relative leading-[150%]">stETH</div>
+                    </div>
+                  </div>
+                </div>
               </div>
               {/* <div className='icon-token flex items-center text-5xl mb-[16px]'>
                 <img className="w-[32px] h-[32px] object-cover mr-[8px]" alt="" src="/scrobot-token.svg" />
