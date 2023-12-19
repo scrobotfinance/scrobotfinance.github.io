@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import web3 from './Web3';
 import Web3 from 'web3';
 import contractABIs from './abi';
 import { Input } from "antd";
@@ -127,7 +126,10 @@ const Stake = () => {
                   </button>
                   </div>
               </div>
-              <div className='icon-token flex items-center text-5xl mb-[16px]'>
+              <div className='stake-area'>
+                  
+              </div>
+              {/* <div className='icon-token flex items-center text-5xl mb-[16px]'>
                 <img className="w-[32px] h-[32px] object-cover mr-[8px]" alt="" src="/scrobot-token.svg" />
                 <span>ETH</span>
               </div>
@@ -138,7 +140,7 @@ const Stake = () => {
               <div className='unstake-receive text-left w-full'>
                 <div className=''>Unstake in <span className='time-to-unstake'>2</span>Block</div>
                 <div className=''><span className='receive-amount'>0.00</span> SCR</div>
-              </div>
+              </div> */}
               <button
                   className="cursor-pointer [border:none] p-4 bg-apple-style-blue-1 self-stretch rounded-lg flex flex-row items-center justify-center hover:bg-lightskyblue-100 active:bg-cornflowerblue"
                   autoFocus={true}
