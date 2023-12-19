@@ -94,12 +94,11 @@ const Stake = () => {
             .submit(nullAdd)
             .send({
               from: connectedAddress,
-              value: window.web3.utils.toWei(amount.toString(), 'ether'), // Chuyển đổi amount sang wei
+              value: window.web3.utils.toWei(amount.toString(), 'ether'),
             });
   
           console.log("🚀 ~ file: stake.js:80 ~ handleDepositClick ~ result:", result);
   
-          // Thêm logic xử lý khi deposit thành công tại đây
         } else {
           console.error('Contract not properly initialized.');
         }
