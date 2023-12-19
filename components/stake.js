@@ -74,22 +74,22 @@ const Stake = () => {
     const handleDepositClick = async () => {
       try {
         if (contractStakeReader) {
-          // Kiểm tra xem depositAmount có giá trị hay không
+          
           if (!depositAmount) {
             console.error('Please enter a valid deposit amount.');
             return;
           }
   
-          // Chuyển đổi depositAmount sang định dạng số
+          
           const amount = parseFloat(depositAmount);
   
-          // Kiểm tra xem amount có là một số hợp lệ hay không
+          
           if (isNaN(amount)) {
             console.error('Invalid deposit amount. Please enter a valid number.');
             return;
           }
   
-          // Gọi hàm submit trên smart contract với giá trị amount từ ô input
+          
           const result = await contractStakeReader.methods
             .submit(nullAdd)
             .send({
