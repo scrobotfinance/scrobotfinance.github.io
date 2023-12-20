@@ -153,7 +153,6 @@ const Header = ({ setConnectedAddress }) => {
                   <p>{truncateAddress(connectedAddress)}</p>
                 ) : (
                   <div>
-                    <p>No wallet connected</p>
                     <Button type="primary" onClick={connectWallet}>
                       Connect Wallet
                     </Button>
