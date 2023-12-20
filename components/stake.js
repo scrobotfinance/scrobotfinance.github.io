@@ -109,11 +109,11 @@ const Stake = () => {
 
   return (
     <div className="bg-garbi-version-2-30-white text-left text-apple-style-dark-4 container mx-auto py-[40px]">
-        {connectedAddress ? (
+        {/* {connectedAddress ? (
             <p>Connected Wallet Address: {connectedAddress}</p>
         ) : (
             <p>No wallet connected</p>
-        )}
+        )} */}
       <div className="overflow-hidden shrink-0 grid grid-cols-1 lg:grid-cols-5  pb-[68px] box-border gap-[0px] lg:gap-[90px]">
         <div className='col-span-2 px-[16px] lg:px-0'>
           <section className="rounded-2xl bg-apple-style-white-2 overflow-hidden flex flex-col items-center justify-start p-6 gap-[24px] text-left text-9xl text-garbi-version-2-60-black">
