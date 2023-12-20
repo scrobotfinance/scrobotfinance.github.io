@@ -3,7 +3,7 @@ import Web3 from 'web3';
 import contractABIs from './abi';
 import { Input } from "antd";
 
-const Stake = () => {
+const UnStake = () => {
     const [connectedAddress, setConnectedAddress] = useState(null);
     const [contractStakeReader, setContractStakeReader] = useState(null);
     const [userInfo, setUserInfo] = useState(null);
@@ -71,40 +71,40 @@ const Stake = () => {
       setDepositAmount(value);
     };
   
-    const handleDepositClick = async () => {
-      try {
-        if (contractStakeReader) {
+    const handleWithDrawClick = async () => {
+      // try {
+      //   if (contractStakeReader) {
           
-          if (!depositAmount) {
-            console.error('Please enter a valid deposit amount.');
-            return;
-          }
-  
-          
-          const amount = parseFloat(depositAmount);
+      //     if (!depositAmount) {
+      //       console.error('Please enter a valid deposit amount.');
+      //       return;
+      //     }
   
           
-          if (isNaN(amount)) {
-            console.error('Invalid deposit amount. Please enter a valid number.');
-            return;
-          }
+      //     const amount = parseFloat(depositAmount);
   
           
-          const result = await contractStakeReader.methods
-            .submit(nullAdd)
-            .send({
-              from: connectedAddress,
-              value: window.web3.utils.toWei(amount.toString(), 'ether'),
-            });
+      //     if (isNaN(amount)) {
+      //       console.error('Invalid deposit amount. Please enter a valid number.');
+      //       return;
+      //     }
   
-          console.log("🚀 ~ file: stake.js:80 ~ handleDepositClick ~ result:", result);
+          
+      //     const result = await contractStakeReader.methods
+      //       .submit(nullAdd)
+      //       .send({
+      //         from: connectedAddress,
+      //         value: window.web3.utils.toWei(amount.toString(), 'ether'),
+      //       });
   
-        } else {
-          console.error('Contract not properly initialized.');
-        }
-      } catch (error) {
-        console.error('Error handling deposit:', error);
-      }
+      //     console.log("🚀 ~ file: stake.js:80 ~ handleDepositClick ~ result:", result);
+  
+      //   } else {
+      //     console.error('Contract not properly initialized.');
+      //   }
+      // } catch (error) {
+      //   console.error('Error handling deposit:', error);
+      // }
     };
 
   return (
@@ -145,7 +145,7 @@ const Stake = () => {
                   </button>
                   </div>
               </div>
-              <div className='self-stretch text-center'>
+              {/* <div className='self-stretch text-center'>
                 <div className='bg-garbi-version-2-30-white p-[14px] gap-[4px] border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-xl mb-[7px]'>
                   <div className='flex items-center justify-between mb-[6px] text-[#666]'>
                     <div className='text-left'>
@@ -203,8 +203,8 @@ const Stake = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              {/* <div className='icon-token flex items-center text-5xl mb-[16px]'>
+              </div> */}
+              <div className='icon-token flex items-center text-5xl mb-[16px]'>
                 <img className="w-[32px] h-[32px] object-cover mr-[8px]" alt="" src="/scrobot-token.svg" />
                 <span>ETH</span>
               </div>
@@ -214,9 +214,9 @@ const Stake = () => {
               </div>
               <div className='unstake-receive text-left w-full'>
                 <div className=''>Unstake in <span className='time-to-unstake'>2</span>Block</div>
-                <div className=''><span className='receive-amount'>0.00</span> SCR</div>
-              </div> */}
-              <div className='w-full text-[#666]'>
+                <div className=''><span className='receive-amount'>0.00</span> ETH</div>
+              </div>
+              {/* <div className='w-full text-[#666]'>
                 <div className='flex items-center justify-between mb-[4px]'>
                   <span>1 stETH</span>
                   <span className='text-black'>= 1.01389654 ETH</span>
@@ -225,14 +225,22 @@ const Stake = () => {
                   <span>Network fee</span>
                   <span className='text-black'>0.0025 ETH</span>
                 </div>
-              </div>
+              </div> */}
               <button
                   className="cursor-pointer border-[1px] border-solid border-apple-style-blue-1 p-4 text-white bg-apple-style-blue-1 self-stretch rounded-lg flex flex-row items-center justify-center hover:bg-transparent hover:text-apple-style-blue-1 active:bg-cornflowerblue"
                   autoFocus={true}
-                  onClick={handleDepositClick}
+                  onClick={handleWithDrawClick}
               >
                   <div className="relative text-base leading-[120%] font-semibold text-left">
-                      Deposit
+                      Withdraw
+                  </div>
+              </button>
+              <button
+                  className="cursor-pointer p-4 bg-transparent border-[1px] border-solid border-[#B2B2B2] text-[#B2B2B2] self-stretch rounded-lg flex flex-row items-center justify-center hover:bg-apple-style-blue-1 hover:text-white active:bg-apple-style-blue-1"
+                  autoFocus={true}
+              >
+                  <div className="relative text-base leading-[120%] font-semibold text-left">
+                      Unstake
                   </div>
               </button>
           </section>
@@ -257,4 +265,4 @@ const Stake = () => {
   );
 };
 
-export default Stake;
+export default UnStake;
