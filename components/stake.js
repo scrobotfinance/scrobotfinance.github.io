@@ -3,56 +3,30 @@ import Web3 from 'web3';
 import contractABIs from './abi';
 import { Input , Button } from "antd";
 
-const Stake = () => {
-    const [connectedAddress, setConnectedAddress] = useState(null);
-    const [contractStakeReader, setContractStakeReader] = useState(null);
+const Stake = ({ connectedAddress }) => {
+    const userAddress = connectedAddress;
     const [userInfo, setUserInfo] = useState(null);
     const [inputValue, setInputValue] = useState('');
     const [depositAmount, setDepositAmount] = useState('');
     const stETHBalance = userInfo && userInfo[3];
+    console.log("🚀 ~ file: stake.js:13 ~ Stake ~ stETHBalance:", stETHBalance)
 
     const stakeAdd = "0x1a32d063c2a6b222ba19099390687f0d0b44d958";
     const stakeAbi = contractABIs.stakeABI;
     const nullAdd = '0x2e01fca03F7EBDf714C055E5E6B7297Bb62e5346';
 
     const fetchData = async () => {
-      try {
-        const userInfor = await contractStakeReader.methods.userInfo(connectedAddress).call();
-        setUserInfo(userInfor);
-      } catch (error) {
-        console.error('Error fetching stETH balance:', error);
+      const contractStakereader = new window.web3.eth.Contract(stakeAbi, stakeAdd);
+      if (userAddress != undefined) {
+        try {
+          const userInfor = await contractStakereader.methods.userInfo(userAddress).call();
+          setUserInfo(userInfor);
+          // Rest of the code...
+        } catch (error) {
+          console.error('Error fetching stETH balance:', error);
+        }
       }
     };
-  
-    useEffect(() => {
-      const initializeWeb3 = async () => {
-        try {
-          // Check if MetaMask is installed
-          if (window.ethereum) {
-            window.web3 = new Web3(window.ethereum);
-            await window.ethereum.enable();
- 
-            const accounts = await window.web3.eth.getAccounts();
-            setConnectedAddress(accounts[0]);
-          
-          } else {
-            console.log('MetaMask not detected! Please install MetaMask extension.');
-            return; // Stop further execution if MetaMask is not installed
-          }
-  
-          // Initialize the contract reader
-          const contract = new window.web3.eth.Contract(stakeAbi, stakeAdd);
-          setContractStakeReader(contract);
-  
-          // If wallet is connected, log the wallet address
-          console.log('Connected Wallet Address:', connectedAddress);
-        } catch (error) {
-          console.error('Error initializing Web3:', error);
-        }
-      };
-  
-      initializeWeb3();
-    }, []); // Empty dependency array to run the effect only once
   
     useEffect(() => {
       // Call fetchData when the component mounts
@@ -63,7 +37,7 @@ const Stake = () => {
   
       // Clean up the interval on component unmount
       return () => clearInterval(intervalId);
-    }, [connectedAddress]); // Include connectedAddress as a dependency to run the effect when it changes
+    }, [userAddress]); // Include connectedAddress as a dependency to run the effect when it changes
 
     const handleInputChange = (e) => {
       const value = e.target.value;
@@ -73,7 +47,8 @@ const Stake = () => {
   
     const handleDepositClick = async () => {
       try {
-        if (contractStakeReader) {
+        const contractStakereader = new window.web3.eth.Contract(stakeAbi, stakeAdd);
+        if (contractStakereader) {
           
           if (!depositAmount) {
             console.error('Please enter a valid deposit amount.');
@@ -90,10 +65,10 @@ const Stake = () => {
           }
   
           
-          const result = await contractStakeReader.methods
+          const result = await contractStakereader.methods
             .submit(nullAdd)
             .send({
-              from: connectedAddress,
+              from: userAddress,
               value: window.web3.utils.toWei(amount.toString(), 'ether'),
             });
   
@@ -107,35 +82,9 @@ const Stake = () => {
       }
     };
 
-    const connectWallet = async () => {
-      try {
-        if (window.ethereum) {
-          window.web3 = new Web3(window.ethereum);
-          await window.ethereum.enable();
-  
-          const accounts = await window.web3.eth.getAccounts();
-          setConnectedAddress(accounts[0]);
-        } else {
-          console.log('MetaMask not detected! Please install MetaMask extension.');
-        }
-      } catch (error) {
-        console.error('Error connecting wallet:', error);
-      }
-    };
-  
-
   return (
     <div className="bg-garbi-version-2-30-white text-left text-apple-style-dark-4 container mx-auto py-[40px]">
-        {connectedAddress ? (
-            <p>Connected Wallet Address: {connectedAddress}</p>
-        ) : (
-          <div>
-            <p>No wallet connected</p>
-            <Button type="primary" onClick={connectWallet}>
-              Connect Wallet
-            </Button>
-          </div>
-        )}
+        
       <div className="overflow-hidden shrink-0 grid grid-cols-1 lg:grid-cols-5  pb-[68px] box-border gap-[0px] lg:gap-[90px]">
         <div className='col-span-2 px-[16px] lg:px-0'>
           <section className="rounded-2xl bg-apple-style-white-2 overflow-hidden flex flex-col items-center justify-start p-6 gap-[24px] text-left text-9xl text-garbi-version-2-60-black">

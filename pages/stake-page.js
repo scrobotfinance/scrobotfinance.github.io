@@ -1,9 +1,13 @@
-import { useEffect } from "react";
 import Stake from "../components/stake";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import React, { useState, useEffect } from 'react';
 
 const Frame = () => {
+
+  const [connectedAddress, setConnectedAddress] = useState(null);
+  console.log("🚀 ~ file: stake-page.js:9 ~ Frame ~ connectedAddress:", connectedAddress)
+
   
   useEffect(() => {
       const scrollAnimElements = document.querySelectorAll(
@@ -38,9 +42,9 @@ const Frame = () => {
     <div className="relative bg-garbi-version-2-30-white w-full overflow-hidden flex flex-col items-center justify-center [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] text-left text-base text-apple-style-dark-2"
      data-animate-on-scroll
      >
-      <Header />
+      <Header setConnectedAddress={setConnectedAddress}/>
       <div>
-        <Stake />
+        <Stake connectedAddress={connectedAddress}/>
       </div>
       <Footer />
     </div>

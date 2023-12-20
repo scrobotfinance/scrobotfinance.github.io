@@ -1,12 +1,42 @@
 import ButtonSmall from "./button-small";
-import { useState } from "react";
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import Modal from 'react-modal';
 import Head from 'next/head';
+import Web3 from 'web3';
+import { Button } from 'antd';
 
-const Header = () => {
+const Header = ({ setConnectedAddress }) => {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [connectedAddress, setConnectedAddressLocal] = useState(null);
+  const [walletConnected, setWalletConnected] = useState(false);
+
+
+  useEffect(() => {
+    const initializeWeb3 = async () => {
+      try {
+        if (window.ethereum) {
+          window.web3 = new Web3(window.ethereum);
+
+          const accounts = await window.web3.eth.getAccounts();
+          const address = accounts[0];
+          setConnectedAddressLocal(address);
+          setConnectedAddress(address);
+          setWalletConnected(true);
+        } else {
+          console.log('MetaMask not detected! Please install MetaMask extension.');
+          return; 
+        }
+      } catch (error) {
+        console.error('Error initializing Web3:', error);
+      }
+    };
+
+    initializeWeb3();
+  }, []); // Empty dependency array to run the effect only once
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -19,6 +49,37 @@ const Header = () => {
   const closeModal = () => {
     setModalIsOpen(false);
   };
+
+  const truncateAddress = (address) => {
+    const prefix = address.slice(0, 5);
+    const suffix = address.slice(-5);
+    return `${prefix}...${suffix}`;
+  };
+
+  const connectWallet = async () => {
+    try {
+      if (window.ethereum) {
+        window.web3 = new Web3(window.ethereum);
+        await window.ethereum.enable();
+
+        const accounts = await window.web3.eth.getAccounts();
+        setConnectedAddressLocal(accounts[0]);
+        setConnectedAddress(accounts[0]);
+        setWalletConnected(true);
+      } else {
+        console.log('MetaMask not detected! Please install MetaMask extension.');
+      }
+    } catch (error) {
+      console.error('Error connecting wallet:', error);
+    }
+  };
+
+  useEffect(() => {
+    if (walletConnected) {
+      window.ethereum.autoRefreshOnNetworkChange = false;
+      window.ethereum.removeAllListeners();
+    }
+  }, [walletConnected]);
 
 
   return (
@@ -69,20 +130,36 @@ const Header = () => {
               <a href="https://t.me/Scrobot_Official" target="_blank" className="text-white no-underline relative leading-[120%] font-semibold">
                 Community
               </a>
-              <ButtonSmall 
-                openModal={openModal}
-                buttonText="Get Started"
-                buttonSmallBorderRadius="8px"
-                buttonSmallBorder="unset"
-                buttonSmallPosition="unset"
-                buttonSmallTop="unset"
-                buttonSmallBottom="unset"
-                buttonSmallLeft="unset"
-                buttonSmallBackgroundColor="#2997ff"
-                readMoreFontSize="16px"
-                readMoreLineHeight="120%"
-                readMoreColor="#fff"
-              />
+              {router.pathname == '/' ? (
+                <>
+                  <ButtonSmall 
+                    openModal={openModal}
+                    buttonText="Get Started"
+                    buttonSmallBorderRadius="8px"
+                    buttonSmallBorder="unset"
+                    buttonSmallPosition="unset"
+                    buttonSmallTop="unset"
+                    buttonSmallBottom="unset"
+                    buttonSmallLeft="unset"
+                    buttonSmallBackgroundColor="#2997ff"
+                    readMoreFontSize="16px"
+                    readMoreLineHeight="120%"
+                    readMoreColor="#fff"
+                  />
+                </>
+              ) : null}
+              {router.pathname !== '/' ? (
+                connectedAddress ? (
+                  <p>{truncateAddress(connectedAddress)}</p>
+                ) : (
+                  <div>
+                    <p>No wallet connected</p>
+                    <Button type="primary" onClick={connectWallet}>
+                      Connect Wallet
+                    </Button>
+                  </div>
+                )
+              ) : null}
             </div>
             <div className="menu-toggle lg:hidden col-span-1 flex items-center justify-end">
               <button className="bg-transparent" onClick={toggleMenu}>
