@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import contractABIs from './abi';
-import { Input } from "antd";
+import { Input , Button } from "antd";
 
 const Stake = () => {
     const [connectedAddress, setConnectedAddress] = useState(null);
@@ -107,13 +107,35 @@ const Stake = () => {
       }
     };
 
+    const connectWallet = async () => {
+      try {
+        if (window.ethereum) {
+          window.web3 = new Web3(window.ethereum);
+          await window.ethereum.enable();
+  
+          const accounts = await window.web3.eth.getAccounts();
+          setConnectedAddress(accounts[0]);
+        } else {
+          console.log('MetaMask not detected! Please install MetaMask extension.');
+        }
+      } catch (error) {
+        console.error('Error connecting wallet:', error);
+      }
+    };
+  
+
   return (
     <div className="bg-garbi-version-2-30-white text-left text-apple-style-dark-4 container mx-auto py-[40px]">
-        {/* {connectedAddress ? (
+        {connectedAddress ? (
             <p>Connected Wallet Address: {connectedAddress}</p>
         ) : (
+          <div>
             <p>No wallet connected</p>
-        )} */}
+            <Button type="primary" onClick={connectWallet}>
+              Connect Wallet
+            </Button>
+          </div>
+        )}
       <div className="overflow-hidden shrink-0 grid grid-cols-1 lg:grid-cols-5  pb-[68px] box-border gap-[0px] lg:gap-[90px]">
         <div className='col-span-2 px-[16px] lg:px-0'>
           <section className="rounded-2xl bg-apple-style-white-2 overflow-hidden flex flex-col items-center justify-start p-6 gap-[24px] text-left text-9xl text-garbi-version-2-60-black">
@@ -166,7 +188,7 @@ const Stake = () => {
                       <img
                           className="relative rounded-3xs w-5 h-5 overflow-hidden shrink-0 mr-[8px]"
                           alt=""
-                          src="/scrobot-token.svg"
+                          src="/eth-token.svg"
                         />
                         <div className="relative leading-[150%]">ETH</div>
                     </div>
@@ -197,7 +219,7 @@ const Stake = () => {
                       <img
                           className="relative rounded-3xs w-5 h-5 overflow-hidden shrink-0 mr-[8px]"
                           alt=""
-                          src="/scrobot-token.svg"
+                          src="/steth-token.svg"
                         />
                         <div className="relative leading-[150%]">stETH</div>
                     </div>
@@ -219,7 +241,7 @@ const Stake = () => {
               <div className='w-full text-[#666]'>
                 <div className='flex items-center justify-between mb-[4px]'>
                   <span>1 stETH</span>
-                  <span className='text-black'>= 1.01389654 ETH</span>
+                  <span className='text-black'>= 1 ETH</span>
                 </div>
                 <div className='flex items-center justify-between'>
                   <span>Network fee</span>
