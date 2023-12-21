@@ -35,8 +35,8 @@ const Tokenomic = () => {
       className="bg-apple-style-white-2 w-full flex flex-col items-start justify-start py-[120px] box-border [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] opacity-[0] text-left text-5xl text-apple-style-dark-4 font-sf-pro-display-heading-h6"
       data-animate-on-scroll
     >
-      <div className="relative flex items-center container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
-        <div
+      <div className="relative flex items-center container mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4">
+        {/* <div
           className="px-[16px] lg:px-0 [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-left] opacity-[0]"
           data-animate-on-scroll
         >
@@ -146,12 +146,12 @@ const Tokenomic = () => {
             </div>
           </div>
           
-        </div>
+        </div> */}
         <div className="img px-[16px] lg:px-0">
           <img
             className=" w-full h-auto object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-right] opacity-[0]"
             alt=""
-            src="/group-1407-10@2x.png"
+            src="/road-map.png"
             data-animate-on-scroll
           />
         </div>
