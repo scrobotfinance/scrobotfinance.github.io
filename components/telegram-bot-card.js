@@ -17,16 +17,24 @@ const TelegramBotCard = () => {
     <div className="relative w-full h-auto text-center text-[28px] lg:text-13xl text-garbi-version-2-30-white">
       <div className="bg-garbi-version-2-60-black pb-[219px] w-full h-auto overflow-hidden">
         <div className="container mx-auto relative">
-          <div className="text-4xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold inline-block ">
-            Built on Ethereum
+          <div className="text-5xl px-[16px] py-[8px] leading-[120%] mb-[24px] font-semibold inline-block border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-[32px]">
+            Built on  
+            <img
+                className="relative rounded-3xs w-5 h-5 overflow-hidden shrink-0 mx-[8px]"
+                alt=""
+                src="/eth-token.svg"
+            /> 
+            Ethereum
           </div>
           <img
             className=" w-full h-auto object-cover"
             alt=""
             src="/asset-12x-1@2x.png"
           />
-          <div className="text-21xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold">
-            DEFI TELEGRAM BOT
+          <div className=" text-21xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold flex justify-center">
+            <div className="w-fit px-[16px] py-[8px] border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-[32px]">
+              DEFI TELEGRAM BOT
+            </div>
           </div>
           <div className="text-4xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold inline-block ">
             Staking Rewards - Earn rewards through Lido Ethereum Staking and DeFi Pool
