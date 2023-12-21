@@ -9,7 +9,7 @@ const Stake = ({ connectedAddress }) => {
     const [inputValue, setInputValue] = useState('');
     const [depositAmount, setDepositAmount] = useState('');
     const stETHBalance = userInfo && userInfo[3];
-    console.log("🚀 ~ file: stake.js:13 ~ Stake ~ stETHBalance:", stETHBalance)
+    const [ethBalance, setEthBalance] = useState(0);
 
     const stakeAdd = "0x1a32d063c2a6b222ba19099390687f0d0b44d958";
     const stakeAbi = contractABIs.stakeABI;
@@ -21,6 +21,10 @@ const Stake = ({ connectedAddress }) => {
         try {
           const userInfor = await contractStakereader.methods.userInfo(userAddress).call();
           setUserInfo(userInfor);
+          const balance = await window.web3.eth.getBalance(userAddress);
+          const ethBalance = (window.web3.utils.fromWei(balance, 'ether'));
+          const formattedEthBalance = parseFloat(ethBalance).toFixed(5);
+          setEthBalance(formattedEthBalance);
           // Rest of the code...
         } catch (error) {
           console.error('Error fetching stETH balance:', error);
@@ -123,7 +127,7 @@ const Stake = ({ connectedAddress }) => {
                       You're staking: $0.00000
                     </div>
                     <div className='text-right'>
-                      Balance: 0.00000
+                      Balance: {ethBalance || "0.00"}
                     </div>
                   </div>
                   <div className='flex items-center justify-between'>
