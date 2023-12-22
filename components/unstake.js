@@ -5,7 +5,6 @@ import { Input } from "antd";
 
 const UnStake = ({ connectedAddress }) => {
   const userAddress = connectedAddress;
-  console.log("🚀 ~ file: unstake.js:8 ~ UnStake ~ userAddress:", userAddress)
   const [userInfo, setUserInfo] = useState(null);
   const [inputValue, setInputValue] = useState('');
   const stETHSubmit = userInfo && userInfo[0];
@@ -37,7 +36,6 @@ const UnStake = ({ connectedAddress }) => {
     if (userAddress != undefined) {
       try {
         const userInfor = await contractStakereader.methods.userInfo(userAddress).call();
-        console.log("🚀 ~ file: unstake.js:22 ~ fetchData ~ userInfor:", userInfor)
         setUserInfo(userInfor);
         // Rest of the code...
       } catch (error) {
@@ -66,10 +64,13 @@ const UnStake = ({ connectedAddress }) => {
           console.error('Please enter a valid deposit amount.');
           return;
         }
+        let amount;
 
-        
-        const amount = parseFloat(inputValue) * 10**18;
-        console.log("🚀 ~ file: unstake.js:72 ~ handleWithdrawClick ~ amount:", amount)
+        if (parseFloat(inputValue) > stETHSubmitFormat) {
+          amount = parseFloat(stETHSubmitFormat) * 10**18;
+        } else {
+          amount = parseFloat(inputValue) * 10**18;
+        }
 
         
         if (isNaN(amount)) {
@@ -86,6 +87,10 @@ const UnStake = ({ connectedAddress }) => {
       } else {
         console.error('Contract not properly initialized.');
       }
+        console.log("🚀 ~ file: unstake.js:92 ~ handleWithdrawClick ~ amount:", amount)
+        console.log("🚀 ~ file: unstake.js:92 ~ handleWithdrawClick ~ amount:", amount)
+        console.log("🚀 ~ file: unstake.js:92 ~ handleWithdrawClick ~ amount:", amount)
+        console.log("🚀 ~ file: unstake.js:92 ~ handleWithdrawClick ~ amount:", amount)
     } catch (error) {
       console.error('Error handling deposit:', error);
     }
