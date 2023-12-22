@@ -68,7 +68,7 @@ const DeFiXBotFeaturesSection = () => {
               Decentralized Exchange (Dex) Trading
             </div>
             <div className=" text-base leading-[150%] inline-block mb-[16px]">
-              Streamlined and Stylish: Effortlessly navigate platforms like KyberSwap, SyncSwap..., complete with advanced features such as Limit Orders and exclusive Early Access Tokens—all within an intuitive interface.
+              Streamlined and Stylish: Effortlessly navigate platforms like KyberSwap, SyncSwap..., complete with advanced features such as Limit Orders and exclusive Early Access Tokens - all within an intuitive interface.
             </div>
           </div>
           <div className=" rounded-2xl bg-apple-style-white-2 overflow-hidden py-[48px] px-[18px]">

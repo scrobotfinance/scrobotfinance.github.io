@@ -49,7 +49,7 @@ const DeFiXBotSection = () => {
       >
         <div className=" mb-[74px] px-[16px] lg:px-0">
           <b className=" leading-[120%] mb-[24px] inline-block ">
-          ScroBot: Transforming DeFi into an Easy and Inclusive Experience—All from the Comfort of Telegram.
+          ScroBot: Transforming DeFi into an Easy and Inclusive Experience - All from the Comfort of Telegram.
           </b>
           <div className=" text-5xl md:text-xl sm:text-xl leading-[120%] font-semibold text-apple-style-dark-4 inline-block ">
           Step confidently into the realm of decentralized finance without the hassle. ScroBot introduces a streamlined interface catering to all your DeFi necessities, spanning from trading to governance, conveniently accessible through Telegram.
@@ -60,7 +60,7 @@ const DeFiXBotSection = () => {
             Seamless DeFi for Everyone.
           </b>
           <div className=" text-5xl md:text-xl sm:text-xl leading-[120%] font-semibold text-apple-style-dark-4 inline-block ">
-           ScroBot strives to simplify the DeFi landscape, making it accessible to a broad audience. No need for intricate blockchain knowledge—our bot takes care of the intricacies, ensuring a hassle-free DeFi experience for you.
+           ScroBot strives to simplify the DeFi landscape, making it accessible to a broad audience. No need for intricate blockchain knowledge - our bot takes care of the intricacies, ensuring a hassle-free DeFi experience for you.
           </div>
         </div>
         <div className="  mb-[74px] px-[16px] lg:px-0">

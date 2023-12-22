@@ -151,7 +151,7 @@ const Tokenomic = () => {
           <img
             className=" w-full h-auto object-cover [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-right] opacity-[0]"
             alt=""
-            src="/road-map.png"
+            src="/road-map.svg"
             data-animate-on-scroll
           />
         </div>

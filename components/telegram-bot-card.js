@@ -44,11 +44,11 @@ const TelegramBotCard = () => {
             Staking Rewards - Earn rewards through Lido Ethereum Staking and DeFi Pool
           </div>
           <div className="text-5xl leading-[120%] px-[16px] lg:px-0 mb-[48px] font-semibold inline-block ">
-            Embark on your DeFi journey effortlessly—No confusing blockchain talk, just fast and budget-friendly trading on Telegram.
+            Embark on your DeFi journey effortlessly - No confusing blockchain talk, just fast and budget-friendly trading on Telegram.
           </div>
           <div>
             <Button className="bg-[#2997ff] border-0 text-white font-semibold text-xl h-[50px] hover:text-[#2997ff] hover:bg-white" onClick={() => router.push("/stake-page")}>
-                <span className="">Start Trading</span>
+                <span className="">Stake Now</span>
             </Button>
           </div>
         </div>
