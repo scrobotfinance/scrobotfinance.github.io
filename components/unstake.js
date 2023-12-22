@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import contractABIs from './abi';
 import { Input } from "antd";
+import { useRouter } from 'next/router';
 
 const UnStake = ({ connectedAddress }) => {
+  const router = useRouter();
   const userAddress = connectedAddress;
   const [userInfo, setUserInfo] = useState(null);
   const [inputValue, setInputValue] = useState('');
@@ -133,7 +135,7 @@ const UnStake = ({ connectedAddress }) => {
               </div>
               <div className="self-stretch rounded-xl bg-apple-style-white-2 text-xl">
                 <div className='flex items-center'>
-                  <button className="flex-1 bg-transparent rounded-xl overflow-hidden flex flex-row items-center justify-between px-[14px] py-[8px] gap-[12px]">
+                  <button className="cursor-pointer flex-1 bg-transparent rounded-xl overflow-hidden flex flex-row items-center justify-between px-[14px] py-[8px] gap-[12px]" onClick={() => router.push("/stake-page")}>
                     <div className="text-[#B2B2B2] relative leading-[120%] text-xl font-semibold">Stake</div>
                     <div className="rounded-lg bg-garbi-version-2-semantic-success overflow-hidden text-center text-base text-garbi-version-2-30-white font-inter-sb16">
                       <div className="rounded-[8px] leading-[24px] py-[4px] px-[8px] bg-[#49B815] font-semibold">

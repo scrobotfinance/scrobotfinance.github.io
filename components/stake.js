@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import contractABIs from './abi';
 import { Input , Button } from "antd";
+import { useRouter } from "next/router";
 
 const Stake = ({ connectedAddress }) => {
+    const router = useRouter();
     const userAddress = connectedAddress;
     const [userInfo, setUserInfo] = useState(null);
     const [inputValue, setInputValue] = useState('');
@@ -110,7 +112,7 @@ const Stake = ({ connectedAddress }) => {
                       </div>
                     </div>
                   </button>
-                  <button className="cursor-pointer [border:none] py-2 px-3.5 bg-[transparent] flex-1 rounded-xl h-12 overflow-hidden flex flex-row items-center justify-center box-border gap-[16px] hover:bg-gainsboro">
+                  <button className="cursor-pointer [border:none] py-2 px-3.5 bg-[transparent] flex-1 rounded-xl h-12 overflow-hidden flex flex-row items-center justify-center box-border gap-[16px] hover:bg-gainsboro" onClick={() => router.push("/unstake-page")}>
                     <div className="relative text-xl leading-[120%] font-semibold text-[#B2B2B2] text-left">
                       Unstake
                     </div>

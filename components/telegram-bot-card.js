@@ -3,7 +3,7 @@ import ButtonSmall from "./button-small";
 import { Button } from "antd";
 import Modal from 'react-modal';
 import { useState } from "react";
-import Router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 const TelegramBotCard = () => {
   const router = useRouter();
