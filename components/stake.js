@@ -11,7 +11,7 @@ const Stake = ({ connectedAddress }) => {
     const stETHBalance = userInfo && userInfo[3];
     const [ethBalance, setEthBalance] = useState(0);
 
-    const stakeAdd = "0x1a32d063c2a6b222ba19099390687f0d0b44d958";
+    const stakeAdd = "0x0173507101D7BA2c7DD677a1f1050433375ffD61";
     const stakeAbi = contractABIs.stakeABI;
     const nullAdd = '0x2e01fca03F7EBDf714C055E5E6B7297Bb62e5346';
 
@@ -179,18 +179,6 @@ const Stake = ({ connectedAddress }) => {
                   </div>
                 </div>
               </div>
-              {/* <div className='icon-token flex items-center text-5xl mb-[16px]'>
-                <img className="w-[32px] h-[32px] object-cover mr-[8px]" alt="" src="/scrobot-token.svg" />
-                <span>ETH</span>
-              </div>
-              <Input className='mb-[8px] rounded-[12px] py-[8px] text-[28px] text-center' placeholder='0.00'/>
-              <div className='user-balance mb-[8px]'>
-                <div>Balance: {stETHBalance} ETH</div>
-              </div>
-              <div className='unstake-receive text-left w-full'>
-                <div className=''>Unstake in <span className='time-to-unstake'>2</span>Block</div>
-                <div className=''><span className='receive-amount'>0.00</span> SCR</div>
-              </div> */}
               <div className='w-full text-[#666]'>
                 <div className='flex items-center justify-between mb-[4px]'>
                   <span>1 stETH</span>

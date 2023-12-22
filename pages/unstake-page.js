@@ -1,9 +1,10 @@
-import { useEffect } from "react";
 import UnStake from "../components/unstake";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import React, { useState, useEffect } from 'react';
 
 const Frame = () => {
+  const [connectedAddress, setConnectedAddress] = useState(null);
   
   useEffect(() => {
       const scrollAnimElements = document.querySelectorAll(
@@ -38,9 +39,9 @@ const Frame = () => {
     <div className="relative bg-garbi-version-2-30-white w-full overflow-hidden flex flex-col items-center justify-center [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] text-left text-base text-apple-style-dark-2"
      data-animate-on-scroll
      >
-      <Header />
+      <Header setConnectedAddress={setConnectedAddress}/>
       <div>
-        <UnStake />
+        <UnStake connectedAddress={connectedAddress}/>
       </div>
       <Footer />
     </div>

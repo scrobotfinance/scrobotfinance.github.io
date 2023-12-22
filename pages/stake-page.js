@@ -6,7 +6,6 @@ import React, { useState, useEffect } from 'react';
 const Frame = () => {
 
   const [connectedAddress, setConnectedAddress] = useState(null);
-  console.log("🚀 ~ file: stake-page.js:9 ~ Frame ~ connectedAddress:", connectedAddress)
 
   
   useEffect(() => {
