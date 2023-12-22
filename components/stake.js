@@ -91,7 +91,7 @@ const Stake = ({ connectedAddress }) => {
   return (
     <div className="bg-garbi-version-2-30-white text-left text-apple-style-dark-4 container mx-auto py-[40px]">
         
-      <div className="overflow-hidden shrink-0 grid grid-cols-1 lg:grid-cols-5  pb-[68px] box-border gap-[0px] lg:gap-[90px]">
+      <div className="overflow-hidden shrink-0 grid grid-cols-1 lg:grid-cols-6  pb-[68px] box-border gap-[0px] lg:gap-[30px]">
         <div className='col-span-2 px-[16px] lg:px-0'>
           <section className="rounded-2xl bg-apple-style-white-2 overflow-hidden flex flex-col items-center justify-start p-6 gap-[24px] text-left text-9xl text-garbi-version-2-60-black">
               <div className="flex flex-col w-full items-start justify-start pt-0 px-0 pb-4 gap-[8px] border-b-[1px] border-solid border-garbi-version-2-30-white-70">
@@ -108,7 +108,7 @@ const Stake = ({ connectedAddress }) => {
                     <div className="relative leading-[120%] text-xl font-semibold">Stake</div>
                     <div className="rounded-lg bg-garbi-version-2-semantic-success overflow-hidden text-center text-base text-garbi-version-2-30-white font-inter-sb16">
                       <div className="rounded-[8px] leading-[24px] py-[4px] px-[8px] bg-[#49B815] font-semibold">
-                        ~4% APY
+                        ~4% APR
                       </div>
                     </div>
                   </button>
@@ -202,18 +202,21 @@ const Stake = ({ connectedAddress }) => {
               </button>
           </section>
         </div>
-        <div className='col-span-3'>
-          <section className="overflow-hidden shrink-0 flex flex-col items-start justify-start py-16 px-6 box-border gap-[24px] text-left text-53xl text-garbi-version-2-60-black font-sf-pro-display-display-h6">
+        <div className='col-span-4 flex items-center'>
+          <section className="overflow-hidden shrink-0 flex flex-col items-center justify-start py-16 px-6 box-border gap-[24px] text-left text-53xl text-garbi-version-2-60-black font-sf-pro-display-display-h6 text-center">
             <div className="self-stretch relative">
               <div className="self-stretch text-[72px] leading-[120%] font-semibold text-garbi-version-2-30-white-40">
-                Staking Rewards.
+                Liquid Ethereum Staking
               </div>
               <div className="self-stretch text-[72px] leading-[120%] font-semibold text-garbi-version-2-30-white-40">
-                SCR Powered
+                ScroBot Powered
               </div>
             </div>
-            <div className="self-stretch text-21xl leading-[120%] font-semibold text-garbi-version-2-30-white-40">
-              Choose how much you want to stake and earn rewards.
+            <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40">
+                Stake any amount and grow your balance with DeFi.
+            </div>
+            <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40">
+                ScroBot lets you stake ETH to get daily rewards on LIDO.
             </div>
           </section>
         </div>

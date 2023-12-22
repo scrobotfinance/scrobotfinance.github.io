@@ -42,9 +42,7 @@ const Frame = () => {
      data-animate-on-scroll
      >
       <Header setConnectedAddress={setConnectedAddress}/>
-      <div>
-        <Stake connectedAddress={connectedAddress}/>
-      </div>
+      <Stake connectedAddress={connectedAddress}/>
       <Footer />
     </div>
   );
