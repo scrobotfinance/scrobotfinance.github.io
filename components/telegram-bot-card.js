@@ -1,8 +1,12 @@
+"use client";
 import ButtonSmall from "./button-small";
+import { Button } from "antd";
 import Modal from 'react-modal';
 import { useState } from "react";
+import Router, { useRouter } from "next/router";
 
 const TelegramBotCard = () => {
+  const router = useRouter();
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const openModal = () => {
@@ -42,20 +46,11 @@ const TelegramBotCard = () => {
           <div className="text-5xl leading-[120%] px-[16px] lg:px-0 mb-[48px] font-semibold inline-block ">
             Embark on your DeFi journey effortlessly—No confusing blockchain talk, just fast and budget-friendly trading on Telegram.
           </div>
-          <ButtonSmall
-            openModal={openModal}
-            buttonText="Start Trading"
-            buttonSmallBorderRadius="8px"
-            buttonSmallBorder="unset"
-            buttonSmallPosition="absolute"
-            buttonSmallTop=""
-            buttonSmallBottom="-51px"
-            buttonSmallLeft="calc(50% - 70px)"
-            buttonSmallBackgroundColor="#2997ff"
-            readMoreFontSize="16px"
-            readMoreLineHeight="120%"
-            readMoreColor="#f5f5f7"
-          />
+          <div>
+            <Button className="bg-[#2997ff] border-0 text-white font-semibold text-xl h-[50px] hover:text-[#2997ff] hover:bg-white" onClick={() => router.push("/stake-page")}>
+                <span className="">Start Trading</span>
+            </Button>
+          </div>
         </div>
       </div>
       {/* Modal */}
