@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container mx-auto bg-garbi-version-2-30-white py-6 px-0 gap-[341px] border-t-[2px] border-solid border-garbi-version-2-30-white-85">
         <div className="grid grid-cols-2 px-[16px] lg:px-0 lg:gap-4">
           <div className=" lg:flex hidden flex-row items-start justify-start gap-[80px]">
-            <a href="#" className="text-black no-underline relative leading-[120%] font-semibold">Security</a>
+            {/* <a href="#" className="text-black no-underline relative leading-[120%] font-semibold">Security</a> */}
             <a href="https://scroboteth.gitbook.io/" target="_blank" className="text-black no-underline relative leading-[120%] font-semibold">
               Documentation
             </a>
@@ -29,9 +29,9 @@ const Footer = () => {
             </div>
             {/* Responsive menu */}
             <div className={`lg:hidden text-left container mx-auto ${menuOpen ? 'block' : 'hidden'}`}>
-              <a href="#" className="block mt-4 text-black text-base no-underline relative leading-[120%] font-semibold">
+              {/* <a href="/" className="block mt-4 text-black text-base no-underline relative leading-[120%] font-semibold">
                 Security
-              </a>
+              </a> */}
               <a href="https://scroboteth.gitbook.io/" target="_blank" className="block mt-4 text-black text-base no-underline relative leading-[120%] font-semibold">
                 Documentation
               </a>
