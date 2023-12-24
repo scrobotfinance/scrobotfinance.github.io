@@ -266,8 +266,41 @@ const UnStake = ({ connectedAddress }) => {
             <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40">
                 Stake any amount and grow your balance with DeFi.
             </div>
-            <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40">
+            <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40 mb-[40px]">
                 ScroBot lets you stake ETH to get daily rewards on LIDO.
+            </div>
+            <div className="grid grid-cols-6 px-[32px] py-[32px] flex items-center bg-gradient-to-r to-apple-style-white-2/[.6] from-apple-style-blue-1/[.6] gap-x-[10px] gap-y-[20px] rounded-[16px]">
+                <div className="col-span-3 text-left">
+                  <div className="self-stretch text-21xl leading-[120%] font-semibold text-garbi-version-2-30-white-40 mb-[10px]">
+                      Conversion Rate
+                  </div>
+                  <div className="self-stretch text-base leading-[120%] font-normal text-garbi-version-2-30-white-40">
+                      Accumulate as much $POINT to redeem $SBOT
+                  </div>
+                  <div className="self-stretch text-base leading-[120%] font-normal text-garbi-version-2-30-white-40 mb-[20px]">
+                      upon ScroBot TGE
+                  </div>
+                  <a href="https://scroboteth.gitbook.io/" target="_blank" className="no-underline text-apple-style-blue-1">Rules {">"}</a>
+                </div>
+                <div></div>
+                <div className="col-span-2">
+                    <div className="flex items-center justify-between mb-[4px]">
+                        <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40">
+                          1 <span className="text-base font-bold">POINT</span>
+                        </div>
+                        <img
+                          className="relative rounded-3xs w-5 h-5 overflow-hidden shrink-0 mr-[8px]"
+                          alt=""
+                          src="/transfer-icon.svg"
+                        />
+                        <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40">
+                          ? <span className="text-base">SBOT</span>
+                        </div>
+                    </div>
+                    <div className="text-base">
+                      Coming soon !
+                    </div>
+                </div>
             </div>
           </section>
         </div>

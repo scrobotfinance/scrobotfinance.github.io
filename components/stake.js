@@ -91,7 +91,7 @@ const Stake = ({ connectedAddress }) => {
   return (
     <div className="bg-garbi-version-2-30-white text-left text-apple-style-dark-4 container mx-auto py-[40px]">
         
-      <div className="overflow-hidden shrink-0 grid grid-cols-1 lg:grid-cols-6  pb-[68px] box-border gap-[0px] lg:gap-[30px]">
+      <div className="grid grid-cols-1 lg:grid-cols-6  pb-[68px] box-border gap-[0px] lg:gap-[30px]">
         <div className='col-span-2 px-[16px] lg:px-0'>
           <section className="rounded-2xl bg-apple-style-white-2 overflow-hidden flex flex-col items-center justify-start p-6 gap-[24px] text-left text-9xl text-garbi-version-2-60-black">
               <div className="flex flex-col w-full items-start justify-start pt-0 px-0 pb-4 gap-[8px] border-b-[1px] border-solid border-garbi-version-2-30-white-70">
@@ -204,7 +204,7 @@ const Stake = ({ connectedAddress }) => {
         </div>
         <div className='col-span-4 flex items-center'>
           <section className="py-16 px-6 box-border gap-[24px] text-left text-53xl text-garbi-version-2-60-black text-center">
-            <div className="self-stretch relative">
+            <div className="self-stretch">
               <div className="self-stretch text-[72px] leading-[120%] font-semibold text-garbi-version-2-30-white-40">
                 Liquid Ethereum Staking
               </div>
@@ -215,8 +215,41 @@ const Stake = ({ connectedAddress }) => {
             <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40">
                 Stake any amount and grow your balance with DeFi.
             </div>
-            <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40">
+            <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40 mb-[40px]">
                 ScroBot lets you stake ETH to get daily rewards on LIDO.
+            </div>
+            <div className="grid grid-cols-6 px-[32px] py-[32px] flex items-center bg-gradient-to-r to-apple-style-white-2/[.6] from-apple-style-blue-1/[.6] gap-x-[10px] gap-y-[20px] rounded-[16px]">
+                <div className="col-span-3 text-left">
+                  <div className="self-stretch text-21xl leading-[120%] font-semibold text-garbi-version-2-30-white-40 mb-[10px]">
+                      Conversion Rate
+                  </div>
+                  <div className="self-stretch text-base leading-[120%] font-normal text-garbi-version-2-30-white-40">
+                      Accumulate as much $POINT to redeem $SBOT
+                  </div>
+                  <div className="self-stretch text-base leading-[120%] font-normal text-garbi-version-2-30-white-40 mb-[20px]">
+                      upon ScroBot TGE
+                  </div>
+                  <a href="https://scroboteth.gitbook.io/" target="_blank" className="no-underline text-apple-style-blue-1">Rules {">"}</a>
+                </div>
+                <div></div>
+                <div className="col-span-2">
+                    <div className="flex items-center justify-between mb-[4px]">
+                        <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40">
+                          1 <span className="text-base font-bold">POINT</span>
+                        </div>
+                        <img
+                          className="relative rounded-3xs w-5 h-5 overflow-hidden shrink-0 mr-[8px]"
+                          alt=""
+                          src="/transfer-icon.svg"
+                        />
+                        <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40">
+                          ? <span className="text-base">SBOT</span>
+                        </div>
+                    </div>
+                    <div className="text-base">
+                      Coming soon !
+                    </div>
+                </div>
             </div>
           </section>
         </div>

@@ -36,13 +36,15 @@ const Frame = () => {
       };
     }, []);
   return (
-    <div className="relative bg-garbi-version-2-30-white w-full overflow-hidden flex flex-col items-center justify-center [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] text-left text-base text-apple-style-dark-2"
-     data-animate-on-scroll
-     >
-      <Header setConnectedAddress={setConnectedAddress}/>
+    <>
+    <Header setConnectedAddress={setConnectedAddress}/>
+    <div className="bg-garbi-version-2-30-white w-full overflow-hidden flex flex-col items-center justify-center [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] text-left text-base text-apple-style-dark-2"
+    data-animate-on-scroll
+    >
       <UnStake connectedAddress={connectedAddress}/>
-      <Footer />
     </div>
+    <Footer />
+    </>
   );
 };
 
