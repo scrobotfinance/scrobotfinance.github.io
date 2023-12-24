@@ -254,7 +254,7 @@ const UnStake = ({ connectedAddress }) => {
           </section>
         </div>
         <div className='col-span-4 flex items-center'>
-          <section className="overflow-hidden shrink-0 flex flex-col items-center justify-start py-16 px-6 box-border gap-[24px] text-left text-53xl text-garbi-version-2-60-black font-sf-pro-display-display-h6 text-center">
+          <section className=" py-16 px-6 box-border gap-[24px] text-left text-53xl text-garbi-version-2-60-black text-center">
             <div className="self-stretch relative">
               <div className="self-stretch text-[72px] leading-[120%] font-semibold text-garbi-version-2-30-white-40">
                 Liquid Ethereum Staking
