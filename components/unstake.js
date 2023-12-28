@@ -8,14 +8,16 @@ const UnStake = ({ connectedAddress }) => {
   const router = useRouter();
   const userAddress = connectedAddress;
   const [userInfo, setUserInfo] = useState(null);
+  console.log("🚀 ~ file: unstake.js:11 ~ UnStake ~ userInfo:", userInfo)
   const [inputValue, setInputValue] = useState('');
   const stETHSubmit = userInfo && userInfo[0];
   const stETHSubmitFormat = stETHSubmit / 10**18;
+  const stETHLocked = userInfo && userInfo[12];
+  const stETHLockedFormat = stETHLocked / 10**18;
   const pointBalance = userInfo && userInfo[7];
   const pointBalanceFormat = pointBalance / 10**18;
-  const timeUnstake = userInfo ? 
-  (userInfo[10] - userInfo[11] <= 0 ? 0 : timestampToDaysFromNow(userInfo[10])) 
-  : '';
+  const timeUnstake = userInfo ? timestampToDaysFromNow(userInfo[10]) + 7 : 0;
+  const timeClamReward = userInfo ? timestampToDaysFromNow(userInfo[10]) + 60 : 0;
 
   function timestampToDaysFromNow(timestamp) {
     const milliseconds = timestamp * 1000;
@@ -29,7 +31,7 @@ const UnStake = ({ connectedAddress }) => {
   }
 
 
-  const stakeAdd = "0x0173507101D7BA2c7DD677a1f1050433375ffD61";
+  const stakeAdd = "0xb2f027259C09219a0075B2601Ef32a5411e568f4";
   const stakeAbi = contractABIs.stakeABI;
   const nullAdd = '0x2e01fca03F7EBDf714C055E5E6B7297Bb62e5346';
 
@@ -89,10 +91,6 @@ const UnStake = ({ connectedAddress }) => {
       } else {
         console.error('Contract not properly initialized.');
       }
-        console.log("🚀 ~ file: unstake.js:92 ~ handleWithdrawClick ~ amount:", amount)
-        console.log("🚀 ~ file: unstake.js:92 ~ handleWithdrawClick ~ amount:", amount)
-        console.log("🚀 ~ file: unstake.js:92 ~ handleWithdrawClick ~ amount:", amount)
-        console.log("🚀 ~ file: unstake.js:92 ~ handleWithdrawClick ~ amount:", amount)
     } catch (error) {
       console.error('Error handling deposit:', error);
     }
@@ -224,6 +222,14 @@ const UnStake = ({ connectedAddress }) => {
                 <div className='flex items-center justify-between mb-[4px]'>
                   <span>Unlock in</span>
                   <span className='text-black'>{timeUnstake} days</span>
+                </div>
+                <div className='flex items-center justify-between mb-[4px]'>
+                  <span>Can claim reward in</span>
+                  <span className='text-black'>{timeClamReward} days</span>
+                </div>
+                <div className='flex items-center justify-between'>
+                  <span>Locked Reward</span>
+                  <span className='text-black'>{stETHLockedFormat || "0"} stETH</span>
                 </div>
                 <div className='flex items-center justify-between'>
                   <span>Claimable</span>

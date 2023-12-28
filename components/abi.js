@@ -119,6 +119,25 @@ const contractABIs = {
          },
          {
             "inputs":[
+               {
+                  "internalType":"address",
+                  "name":"",
+                  "type":"address"
+               }
+            ],
+            "name":"lastTimeSubmitOf",
+            "outputs":[
+               {
+                  "internalType":"uint256",
+                  "name":"",
+                  "type":"uint256"
+               }
+            ],
+            "stateMutability":"view",
+            "type":"function"
+         },
+         {
+            "inputs":[
                
             ],
             "name":"miningMachine",
@@ -191,6 +210,21 @@ const contractABIs = {
                   "internalType":"uint256",
                   "name":"",
                   "type":"uint256"
+               }
+            ],
+            "stateMutability":"view",
+            "type":"function"
+         },
+         {
+            "inputs":[
+               
+            ],
+            "name":"receiverShareOf",
+            "outputs":[
+               {
+                  "internalType":"address",
+                  "name":"",
+                  "type":"address"
                }
             ],
             "stateMutability":"view",
@@ -274,6 +308,21 @@ const contractABIs = {
          {
             "inputs":[
                {
+                  "internalType":"uint256",
+                  "name":"_time",
+                  "type":"uint256"
+               }
+            ],
+            "name":"setTimeUnlockWithdrawReward",
+            "outputs":[
+               
+            ],
+            "stateMutability":"nonpayable",
+            "type":"function"
+         },
+         {
+            "inputs":[
+               {
                   "internalType":"address",
                   "name":"_want",
                   "type":"address"
@@ -295,6 +344,25 @@ const contractABIs = {
                }
             ],
             "name":"shareOf",
+            "outputs":[
+               {
+                  "internalType":"uint256",
+                  "name":"",
+                  "type":"uint256"
+               }
+            ],
+            "stateMutability":"view",
+            "type":"function"
+         },
+         {
+            "inputs":[
+               {
+                  "internalType":"address",
+                  "name":"",
+                  "type":"address"
+               }
+            ],
+            "name":"shareOfLocked",
             "outputs":[
                {
                   "internalType":"uint256",
@@ -367,13 +435,9 @@ const contractABIs = {
          },
          {
             "inputs":[
-               {
-                  "internalType":"address",
-                  "name":"",
-                  "type":"address"
-               }
+               
             ],
-            "name":"timeUnlockWithdrawOf",
+            "name":"timeUnlockWithdrawReward",
             "outputs":[
                {
                   "internalType":"uint256",
@@ -425,9 +489,9 @@ const contractABIs = {
             "name":"userInfo",
             "outputs":[
                {
-                  "internalType":"uint256[12]",
+                  "internalType":"uint256[14]",
                   "name":"data",
-                  "type":"uint256[12]"
+                  "type":"uint256[14]"
                }
             ],
             "stateMutability":"view",

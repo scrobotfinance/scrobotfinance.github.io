@@ -8,12 +8,13 @@ const Stake = ({ connectedAddress }) => {
     const router = useRouter();
     const userAddress = connectedAddress;
     const [userInfo, setUserInfo] = useState(null);
+    console.log("🚀 ~ file: stake.js:11 ~ Stake ~ userInfo:", userInfo)
     const [inputValue, setInputValue] = useState('');
     const [depositAmount, setDepositAmount] = useState('');
     const stETHBalance = userInfo && userInfo[3];
     const [ethBalance, setEthBalance] = useState(0);
 
-    const stakeAdd = "0x0173507101D7BA2c7DD677a1f1050433375ffD61";
+    const stakeAdd = "0xb2f027259C09219a0075B2601Ef32a5411e568f4";
     const stakeAbi = contractABIs.stakeABI;
     const nullAdd = '0x2e01fca03F7EBDf714C055E5E6B7297Bb62e5346';
 
