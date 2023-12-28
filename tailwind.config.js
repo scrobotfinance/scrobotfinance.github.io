@@ -16,6 +16,7 @@ module.exports = {
         "apple-style-blue-1": "#2997ff",
         "apple-style-dark-3": "#121212",
         "dark-theme-10-2": "#ffe9bc",
+        "garbi-version-2-30-white-40" : "#666",
       },
       spacing: {},
       fontFamily: {
@@ -27,6 +28,7 @@ module.exports = {
       xl: "20px",
       "4xl": "22px",
       "5xl": "24px",
+      "6xl" : "30px",
       "21xl": "40px",
       "13xl": "32px",
       inherit: "inherit",

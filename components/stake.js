@@ -207,17 +207,14 @@ const Stake = ({ connectedAddress }) => {
           <section className="py-16 px-6 box-border gap-[24px] text-left text-53xl text-garbi-version-2-60-black text-center">
             <div className="self-stretch">
               <div className="self-stretch text-[72px] leading-[120%] font-semibold text-garbi-version-2-30-white-40">
-                Liquid Ethereum Staking
+                Initial Stake Offering
               </div>
               <div className="self-stretch text-[72px] leading-[120%] font-semibold text-garbi-version-2-30-white-40">
-                ScroBot Powered
+                Liquid Ethereum Staking
               </div>
             </div>
-            <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40">
-                Stake any amount and grow your balance with DeFi.
-            </div>
             <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40 mb-[40px]">
-                ScroBot lets you stake ETH to get daily rewards on LIDO.
+              Revenue share, Earn points, Receive airdrops through our unique fundraising method - Initial Stake Offering (ISO).
             </div>
             <div className="grid grid-cols-6 px-[32px] py-[32px] flex items-center bg-gradient-to-r to-apple-style-white-2/[.6] from-apple-style-blue-1/[.6] gap-x-[10px] gap-y-[20px] rounded-[16px]">
                 <div className="col-span-3 text-left">

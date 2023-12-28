@@ -37,18 +37,18 @@ const TelegramBotCard = () => {
           />
           <div className=" text-21xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold flex justify-center">
             <div className="w-fit px-[16px] py-[8px] border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-[32px]">
-              DEFI TELEGRAM BOT
+              ISO TELEGRAM BOT
             </div>
           </div>
-          <div className="text-4xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold inline-block ">
-            Staking Rewards - Earn rewards through Lido Ethereum Staking and DeFi Pool
+          <div className="text-6xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold inline-block ">
+            Staking Rewards - Earn POINTs, Receive Airdrop
           </div>
           <div className="text-5xl leading-[120%] px-[16px] lg:px-0 mb-[48px] font-semibold inline-block ">
-            Embark on your DeFi journey effortlessly - No confusing blockchain talk, just fast and budget-friendly trading on Telegram.
+            Unique Initial Stake Offering (ISO) model seamlessly integrated with TelegramBot, easy and fast trading experience. Start Now to claim your airdrop.
           </div>
           <div>
-            <Button className="bg-[#2997ff] border-0 text-white font-semibold text-xl h-[50px] hover:text-[#2997ff] hover:bg-white" onClick={() => router.push("/stake-page")}>
-                <span className="">Stake Now</span>
+            <Button className="bg-[#2997ff] border-0 text-white px-[20px] font-semibold text-xl h-[60px] hover:text-[#2997ff] hover:bg-white" onClick={() => router.push("/stake-page")}>
+                <span className="">Earn Points</span>
             </Button>
           </div>
         </div>

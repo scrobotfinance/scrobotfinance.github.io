@@ -68,7 +68,7 @@ const DeFiXBotFeaturesSection = () => {
               Decentralized Exchange (Dex) Trading
             </div>
             <div className=" text-base leading-[150%] inline-block mb-[16px]">
-              Streamlined and Stylish: Effortlessly navigate platforms like KyberSwap, SyncSwap..., complete with advanced features such as Limit Orders and exclusive Early Access Tokens - all within an intuitive interface.
+              Streamlined and Stylish: Effortlessly navigate platforms like UniSwap, Balancer..., complete with advanced features such as Limit Orders and exclusive Early Access Tokens - all within an intuitive interface.
             </div>
           </div>
           <div className=" rounded-2xl bg-apple-style-white-2 overflow-hidden py-[48px] px-[18px]">
@@ -83,7 +83,7 @@ const DeFiXBotFeaturesSection = () => {
               Effortless Entry to DeFi Apps
             </div>
             <div className=" text-base leading-[150%] inline-block mb-[16px]">
-              Your DeFi Hub: Engage with popular DeFi platforms like Aave, Comp... and Compound without the headaches. Our bot's user-friendly setup ensures that interacting with DeFi apps is a breeze for everyone.
+              Your DeFi Hub: Engage with popular DeFi platforms like Lido, Aave, Comp... and Compound without the headaches. Our bot's user-friendly setup ensures that interacting with DeFi apps is a breeze for everyone.
             </div>
 
           </div>
@@ -115,7 +115,7 @@ const DeFiXBotFeaturesSection = () => {
               Revenue Sharing
             </div>
             <div className=" text-base leading-[150%] inline-block mb-[16px]">
-              Earn 80% of platform fees by staking $SBOT tokens in your wallet. Weekly profit distributions reward loyal ScroBot users, promoting ongoing community involvement.
+              Earn 50% fees from the Telegram bot, and 100% fees on DeFi Tools, will be shared among all users staking $SBOT. Additional rewards through trading volume & Invites Bonus (POINT)
             </div>
             
           </div>

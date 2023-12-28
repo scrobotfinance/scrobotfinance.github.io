@@ -113,9 +113,9 @@ const Header = ({ setConnectedAddress }) => {
                 smooth={true}
                 offset={-70} 
                 duration={500}
-                className="text-white no-underline relative leading-[120%] font-semibold"
+                className="text-white no-underline cursor-pointer text-[24px] relative leading-[120%] font-semibold"
               >
-                Features
+                AirDrop
               </ScrollLink>
               <ScrollLink
                 to="tokenomic"
@@ -123,7 +123,7 @@ const Header = ({ setConnectedAddress }) => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="text-white no-underline relative leading-[120%] font-semibold"
+                className="text-white no-underline cursor-pointer relative leading-[120%] font-semibold"
               >
                 Token Utility
               </ScrollLink>
@@ -134,7 +134,7 @@ const Header = ({ setConnectedAddress }) => {
                 <>
                   <ButtonSmall 
                     openModal={openModal}
-                    buttonText="Get Started"
+                    buttonText="Start"
                     buttonSmallBorderRadius="8px"
                     buttonSmallBorder="unset"
                     buttonSmallPosition="unset"

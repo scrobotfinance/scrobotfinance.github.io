@@ -57,18 +57,18 @@ const DeFiXBotSection = () => {
         </div>
         <div className=" mb-[74px] px-[16px] lg:px-0">
           <b className=" leading-[120%] mb-[24px] inline-block ">
-            Seamless DeFi for Everyone.
+            Initial Stake Offering (ISO) is a unique approach to fundraising
           </b>
           <div className=" text-5xl md:text-xl sm:text-xl leading-[120%] font-semibold text-apple-style-dark-4 inline-block ">
-           ScroBot strives to simplify the DeFi landscape, making it accessible to a broad audience. No need for intricate blockchain knowledge - our bot takes care of the intricacies, ensuring a hassle-free DeFi experience for you.
+            Instead of buying tokens at fixed prices, participants stake their funds in a project's pool. The pooled funds are then used for DeFi activities, generating profits. These profits are shared, with 50% going to users and 50% used to provide liquidity for the project's token. Participants also receive airdropped project tokens based on their stake, promoting community engagement. With minimal risk, users can withdraw their funds after 7days.
           </div>
         </div>
         <div className="  mb-[74px] px-[16px] lg:px-0">
           <b className="leading-[120%] mb-[24px] inline-block">
-            Collective Governance and Profit Distribution
+            Staking Rewards - Earn POINTs - Receive Airdrop
           </b>
           <div className=" text-5xl md:text-xl sm:text-xl leading-[120%] font-semibold text-apple-style-dark-4 inline-block ">
-            Hold $SBOT tokens to become a vital part of our ecosystem. Beyond proposing and voting on platform enhancements, you also share in the bot's profits, creating a sense of community ownership and participation.
+            Earn bonus points by "JOIN EARLY ACCESS", completing daily and weekly tasks, and receiving additional spins based on the deposited amount. Increase the lucky spin percentage through team activity for a chance to get a "Super Spin" with 10x rewards.
           </div>
         </div>
       </div>
