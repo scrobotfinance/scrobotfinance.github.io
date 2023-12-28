@@ -107,16 +107,9 @@ const Header = ({ setConnectedAddress }) => {
               </a>
             </div>
             <div className={`lg:col-span-3 col-span-1 flex flex-row items-center justify-end gap-[48px] lg:flex hidden`}>
-              <ScrollLink
-                to="features"
-                spy={true}
-                smooth={true}
-                offset={-70} 
-                duration={500}
-                className="text-white no-underline cursor-pointer text-[24px] relative leading-[120%] font-semibold"
-              >
+              <a href="/airdrop-page" target="_blank" className="text-white text-[24px] no-underline relative leading-[120%] font-semibold">
                 AirDrop
-              </ScrollLink>
+              </a>
               <ScrollLink
                 to="tokenomic"
                 spy={true}
@@ -132,20 +125,9 @@ const Header = ({ setConnectedAddress }) => {
               </a>
               {router.pathname == '/' ? (
                 <>
-                  <ButtonSmall 
-                    openModal={openModal}
-                    buttonText="Start"
-                    buttonSmallBorderRadius="8px"
-                    buttonSmallBorder="unset"
-                    buttonSmallPosition="unset"
-                    buttonSmallTop="unset"
-                    buttonSmallBottom="unset"
-                    buttonSmallLeft="unset"
-                    buttonSmallBackgroundColor="#2997ff"
-                    readMoreFontSize="16px"
-                    readMoreLineHeight="120%"
-                    readMoreColor="#fff"
-                  />
+                  <Button type="primary" size="large" className="p-[16px]" onClick={() => router.push("/airdrop-page")}>
+                    Start
+                  </Button>
                 </>
               ) : null}
               {router.pathname !== '/' ? (
@@ -229,8 +211,8 @@ const Header = ({ setConnectedAddress }) => {
         {/* Responsive menu */}
         <div className={`lg:hidden text-left container mx-auto ${menuOpen ? 'block' : 'hidden'}`}>
           <div className=" px-[16px] lg:px-0">
-            <a href="#features" className="block mt-4 text-white text-base no-underline relative leading-[120%] font-semibold">
-              Features
+            <a href="/airdrop-page" target="_blank" className="text-white text-[24px] no-underline relative leading-[120%] font-semibold">
+                AirDrop
             </a>
             <a href="#tokenomic" className="block mt-4 text-white text-base no-underline relative leading-[120%] font-semibold">
               Token Utility
@@ -238,19 +220,9 @@ const Header = ({ setConnectedAddress }) => {
             <a href="#" className="block mt-4 mb-4 text-white text-base no-underline relative leading-[120%] font-semibold">
               Community
             </a>
-            <ButtonSmall onClick={openModal}
-              buttonText="Get Started"
-              buttonSmallBorderRadius="8px"
-              buttonSmallBorder="unset"
-              buttonSmallPosition="unset"
-              buttonSmallTop="unset"
-              buttonSmallBottom="unset"
-              buttonSmallLeft="unset"
-              buttonSmallBackgroundColor="#2997ff"
-              readMoreFontSize="16px"
-              readMoreLineHeight="120%"
-              readMoreColor="#fff"
-            />
+            <Button type="primary" size="large" className="p-[16px]" onClick={() => router.push("/airdrop-page")}>
+              Start
+            </Button>
           </div>
         </div>
 
