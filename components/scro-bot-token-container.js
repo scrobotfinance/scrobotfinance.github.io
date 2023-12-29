@@ -15,10 +15,7 @@ const ScroBotTokenContainer = () => {
             What is ScroBot token?
           </div>
           <div className=" relative text-[28px] leading-[120%] font-semibold text-garbi-version-2-30-white-40">
-            ScroBot token is the governance token for the Jito Network, designed
-            to decentralize decision-making within the ecosystem. It allows
-            community members to participate in shaping the network's future by
-            voting on key operational and strategic decisions.
+            $SBOT token is the governance token for ScroBot, designed to decentralize decision-making within the ecosystem. It enables community members to participate in governance, share profits from the ecosystem, and reduce transaction fees. Additionally, SBOT is used for payments Premium features, enhancing the overall professional experience.
           </div>
         </div>
         <Button size="large" className="p-[16px] bg-black text-white hover:bg-transparent ">

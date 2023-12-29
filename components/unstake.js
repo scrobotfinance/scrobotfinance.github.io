@@ -216,7 +216,7 @@ const UnStake = ({ connectedAddress }) => {
               </div>
               <Input className='mb-[8px] rounded-[12px] py-[8px] text-[28px] text-center' value={inputValue} onChange={handleInputChange} placeholder='0.00'/>
               <div className='user-balance mb-[8px]'>
-                <div>Balance: {stETHSubmitFormat || '0'} stETH</div>
+                <div>ETH Staked: {stETHSubmitFormat || '0'} stETH</div>
               </div>
               <div className='w-full text-[#666]'>
                 <div className='flex items-center justify-between mb-[4px]'>
