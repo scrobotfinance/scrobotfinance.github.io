@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import contractABIs from './abi';
-import { Input } from "antd";
+import { Input , Button } from "antd";
 import { useRouter } from 'next/router';
 
 const UnStake = ({ connectedAddress }) => {
@@ -260,20 +260,17 @@ const UnStake = ({ connectedAddress }) => {
           </section>
         </div>
         <div className='col-span-4 flex items-center'>
-          <section className=" py-16 px-6 box-border gap-[24px] text-left text-53xl text-garbi-version-2-60-black text-center">
-            <div className="self-stretch relative">
+        <section className="py-16 px-6 box-border gap-[24px] text-left text-53xl text-garbi-version-2-60-black text-center">
+            <div className="self-stretch">
+              <div className="self-stretch text-[72px] leading-[120%] font-semibold text-garbi-version-2-30-white-40">
+                Initial Stake Offering
+              </div>
               <div className="self-stretch text-[72px] leading-[120%] font-semibold text-garbi-version-2-30-white-40">
                 Liquid Ethereum Staking
               </div>
-              <div className="self-stretch text-[72px] leading-[120%] font-semibold text-garbi-version-2-30-white-40">
-                ScroBot Powered
-              </div>
-            </div>
-            <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40">
-                Stake any amount and grow your balance with DeFi.
             </div>
             <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40 mb-[40px]">
-                ScroBot lets you stake ETH to get daily rewards on LIDO.
+              Revenue share, Earn points, Receive airdrops through our unique fundraising method - Initial Stake Offering (ISO).
             </div>
             <div className="grid grid-cols-6 px-[32px] py-[32px] flex items-center bg-gradient-to-r to-apple-style-white-2/[.6] from-apple-style-blue-1/[.6] gap-x-[10px] gap-y-[20px] rounded-[16px]">
                 <div className="col-span-3 text-left">
@@ -286,7 +283,7 @@ const UnStake = ({ connectedAddress }) => {
                   <div className="self-stretch text-base leading-[120%] font-normal text-garbi-version-2-30-white-40 mb-[20px]">
                       upon ScroBot TGE
                   </div>
-                  <a href="https://scroboteth.gitbook.io/" target="_blank" className="no-underline text-apple-style-blue-1">Rules {">"}</a>
+                  <Button href="https://scroboteth.gitbook.io/" target="_blank" className="no-underline text-apple-style-blue-1">Rules {">"}</Button>
                 </div>
                 <div></div>
                 <div className="col-span-2">

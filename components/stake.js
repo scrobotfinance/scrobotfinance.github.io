@@ -227,7 +227,7 @@ const Stake = ({ connectedAddress }) => {
                   <div className="self-stretch text-base leading-[120%] font-normal text-garbi-version-2-30-white-40 mb-[20px]">
                       upon ScroBot TGE
                   </div>
-                  <a href="https://scroboteth.gitbook.io/" target="_blank" className="no-underline text-apple-style-blue-1">Rules {">"}</a>
+                  <Button href="https://scroboteth.gitbook.io/" target="_blank" className="no-underline text-apple-style-blue-1">Rules {">"}</Button>
                 </div>
                 <div></div>
                 <div className="col-span-2">
