@@ -107,7 +107,7 @@ const Header = ({ setConnectedAddress }) => {
               </a>
             </div>
             <div className={`lg:col-span-3 col-span-1 flex flex-row items-center justify-end gap-[48px] lg:flex hidden`}>
-              <a href="/airdrop-page" target="_blank" className="text-white text-[24px] no-underline relative leading-[120%] font-semibold">
+              <a href="/airdrop-page" className="text-white text-[24px] no-underline relative leading-[120%] font-semibold">
                 AirDrop
               </a>
               <ScrollLink
@@ -211,7 +211,7 @@ const Header = ({ setConnectedAddress }) => {
         {/* Responsive menu */}
         <div className={`lg:hidden text-left container mx-auto ${menuOpen ? 'block' : 'hidden'}`}>
           <div className=" px-[16px] lg:px-0">
-            <a href="/airdrop-page" target="_blank" className="text-white text-[24px] no-underline relative leading-[120%] font-semibold">
+            <a href="/airdrop-page" className="text-white text-[24px] no-underline relative leading-[120%] font-semibold">
                 AirDrop
             </a>
             <a href="#tokenomic" className="block mt-4 text-white text-base no-underline relative leading-[120%] font-semibold">

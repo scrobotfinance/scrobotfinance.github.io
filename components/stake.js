@@ -93,7 +93,7 @@ const Stake = ({ connectedAddress }) => {
     <div className="bg-garbi-version-2-30-white text-left text-apple-style-dark-4 container mx-auto py-[40px]">
         
       <div className="grid grid-cols-1 lg:grid-cols-6  pb-[68px] box-border gap-[0px] lg:gap-[30px]">
-        <div className='col-span-2 px-[16px] lg:px-0'>
+        <div className='col-span-2 px-[16px] lg:px-0 flex'>
           <section className="rounded-2xl bg-apple-style-white-2 overflow-hidden flex flex-col items-center justify-start p-6 gap-[24px] text-left text-9xl text-garbi-version-2-60-black">
               <div className="flex flex-col w-full items-start justify-start pt-0 px-0 pb-4 gap-[8px] border-b-[1px] border-solid border-garbi-version-2-30-white-70">
                 <div className="relative leading-[120%] font-semibold">
@@ -204,7 +204,7 @@ const Stake = ({ connectedAddress }) => {
           </section>
         </div>
         <div className='col-span-4 flex items-center'>
-          <section className="py-16 px-6 box-border gap-[24px] text-left text-53xl text-garbi-version-2-60-black text-center">
+          <section className="py-16 px-6 box-border gap-[24px] text-left text-53xl text-garbi-version-2-60-black text-center flex flex-col pb-0">
             <div className="self-stretch">
               <div className="self-stretch text-[72px] leading-[120%] font-semibold text-garbi-version-2-30-white-40">
                 Initial Stake Offering
