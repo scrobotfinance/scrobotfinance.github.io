@@ -27,10 +27,10 @@ const Welcome = () => {
             The new Initial Stake Offering model is the blast we all wanted. ISO creates a fair opportunity with very low risk, distributing all tokens to users through airdrops.
           </div>
           <div className="flex flex-row items-center justify-start gap-[64px]">
-            <Button type="primary" size="large" className="p-[16px]" onClick={() => router.push("/stake-page")} >
+            <Button type="primary" size="large" className="!px-[40px] !h-[51px] flex items-center" onClick={() => router.push("/stake-page")} >
               Connect to earn POINTs
             </Button>
-            <Button size="large" className="p-[16px] bg-black text-white hover:bg-transparent " onClick={(openModal)}>
+            <Button size="large" className="!px-[40px] bg-black text-white hover:bg-transparent !h-[51px] flex items-center" onClick={(openModal)}>
               Convert $POINT
             </Button>
              {/* Modal */}
