@@ -20,7 +20,7 @@ const ScroBotTokenContainer = () => {
             $SBOT token is the governance token for ScroBot, designed to decentralize decision-making within the ecosystem. It enables community members to participate in governance, share profits from the ecosystem, and reduce transaction fees. Additionally, SBOT is used for payments Premium features, enhancing the overall professional experience.
           </div>
         </div>
-        <Button size="large" className="p-[16px] bg-black text-white hover:bg-transparent" onClick={() => router.push("https://scroboteth.gitbook.io/scrobot/road-map/phase-1-iso-initial-stake-offering")} >
+        <Button size="large" className="px-[40px] bg-black text-white hover:bg-transparent !h-[51px] flex items-center" onClick={() => router.push("https://scroboteth.gitbook.io/scrobot/road-map/phase-1-iso-initial-stake-offering")} >
             Read More
         </Button>
       </div>
