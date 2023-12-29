@@ -10,7 +10,7 @@ const UnStake = ({ connectedAddress }) => {
   const [userInfo, setUserInfo] = useState(null);
   console.log("🚀 ~ file: unstake.js:11 ~ UnStake ~ userInfo:", userInfo)
   const [inputValue, setInputValue] = useState('');
-  const stETHSubmit = userInfo && userInfo[0];
+  const stETHSubmit = userInfo && (userInfo[0] - userInfo[12]);
   const stETHSubmitFormat = stETHSubmit / 10**18;
   const stETHLocked = userInfo && userInfo[12];
   const stETHLockedFormat = stETHLocked / 10**18;
@@ -122,7 +122,7 @@ const UnStake = ({ connectedAddress }) => {
     <div className="bg-garbi-version-2-30-white text-left text-apple-style-dark-4 container mx-auto py-[40px]">
       <div className="overflow-hidden shrink-0 grid grid-cols-1 lg:grid-cols-6  pb-[68px] box-border gap-[0px] lg:gap-[30px]">
         <div className='col-span-2 px-[16px] lg:px-0'>
-          <section className="rounded-2xl bg-apple-style-white-2 overflow-hidden flex flex-col items-center justify-start p-6 gap-[24px] text-left text-9xl text-garbi-version-2-60-black">
+          <section className="rounded-2xl bg-apple-style-white-2 overflow-hidden flex flex-col items-center justify-start p-6 gap-[16px] text-left text-9xl text-garbi-version-2-60-black">
               <div className="flex flex-col w-full items-start justify-start pt-0 px-0 pb-4 gap-[8px] border-b-[1px] border-solid border-garbi-version-2-30-white-70">
                 <div className="relative leading-[120%] font-semibold">
                   Stake Ethereum
@@ -151,65 +151,21 @@ const UnStake = ({ connectedAddress }) => {
                   </button>
                   </div>
               </div>
-              {/* <div className='self-stretch text-center'>
-                <div className='bg-garbi-version-2-30-white p-[14px] gap-[4px] border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-xl mb-[7px]'>
-                  <div className='flex items-center justify-between mb-[6px] text-[#666]'>
-                    <div className='text-left'>
-                      You're staking: $0.00000
-                    </div>
-                    <div className='text-right'>
-                      Balance: 0.00000
-                    </div>
-                  </div>
-                  <div className='flex items-center justify-between'>
-                    <Input 
-                      className='w-[50%] border-0 text-[28px] p-0'
-                      placeholder='0.00000'
-                      value={inputValue}
-                      onChange={handleInputChange}
-                    />
-                    <div className='flex items-center'>
-                      <img
-                          className="relative rounded-3xs w-5 h-5 overflow-hidden shrink-0 mr-[8px]"
-                          alt=""
-                          src="/scrobot-token.svg"
-                        />
-                        <div className="relative leading-[150%]">ETH</div>
-                    </div>
-                  </div>
+              <div className='border-b-[1px] border-solid border-garbi-version-2-30-white-70 w-full flex flex-col items-center justify-start mt-[24px] pb-[16px]'>
+                <div className='font-semibold text-[20px] mb-[8px]'>Total Point</div>
+                <div className='flex items-center justify-center w-full mb-[24px]'>
+                  <span className='text-black w-full text-center px-[16px] py-[8px] rounded-lg bg-[#D9D9D9]'>{pointBalanceFormat || "0"}</span>
                 </div>
-                <img
-                    className="relative rounded w-6 h-6 overflow-hidden shrink-0"
-                    alt=""
-                    src="/frame-14141.svg"
-                  />
-                <div className='bg-garbi-version-2-30-white p-[14px] gap-[4px] border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-xl mt-[7px]'>
-                  <div className='flex items-center justify-between mb-[6px] text-[#666]'>
-                    <div className=''>
-                      To receive: $0.00000
+                <button
+                    className="cursor-pointer border-[1px] border-solid border-apple-style-blue-1 p-4 text-white bg-apple-style-blue-1 self-stretch rounded-lg flex flex-row items-center justify-center hover:bg-transparent hover:text-apple-style-blue-1 active:bg-cornflowerblue"
+                    autoFocus={true}
+                    onClick={handleHarvestClick}
+                >
+                    <div className="relative text-base leading-[120%] font-semibold text-left">
+                        Harvest
                     </div>
-                    <div>
-                      0% Slippage
-                    </div>
-                  </div>
-                  <div className='flex items-center justify-between'>
-                    <Input 
-                      className='w-[50%] border-0 text-[28px] p-0 !bg-[#fff] !text-[#000]'
-                      placeholder='0.00000'
-                      value={inputValue}
-                      disabled
-                    />
-                    <div className='flex items-center'>
-                      <img
-                          className="relative rounded-3xs w-5 h-5 overflow-hidden shrink-0 mr-[8px]"
-                          alt=""
-                          src="/scrobot-token.svg"
-                        />
-                        <div className="relative leading-[150%]">stETH</div>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
+                </button>
+              </div>
               <div className='icon-token flex items-center text-5xl mb-[16px]'>
                 <img className="w-[32px] h-[32px] object-cover mr-[8px]" alt="" src="/steth-token.png" />
                 <span>stETH</span>
@@ -219,32 +175,21 @@ const UnStake = ({ connectedAddress }) => {
                 <div>ETH Staked: {stETHSubmitFormat || '0'} stETH</div>
               </div>
               <div className='w-full text-[#666]'>
-                <div className='flex items-center justify-between mb-[4px]'>
+                <div className='flex items-center justify-between mb-[4px] px-[16px]'>
                   <span>Unlock in</span>
                   <span className='text-black'>{timeUnstake} days</span>
                 </div>
-                <div className='flex items-center justify-between mb-[4px]'>
-                  <span>Can claim reward in</span>
-                  <span className='text-black'>{timeClamReward} days</span>
-                </div>
-                <div className='flex items-center justify-between'>
-                  <span>Locked Reward</span>
-                  <span className='text-black'>{stETHLockedFormat || "0"} stETH</span>
-                </div>
-                <div className='flex items-center justify-between'>
-                  <span>Claimable</span>
-                  <span className='text-black'>{pointBalanceFormat || "0"} Point</span>
+                <div className='px-[16px] py-[8px] rounded-lg bg-[#D9D9D9]'>
+                  <div className='flex items-center justify-between mb-[4px]'>
+                    <span>Can claim reward in</span>
+                    <span className='text-black'>{timeClamReward} days</span>
+                  </div>
+                  <div className='flex items-center justify-between'>
+                    <span>Locked Reward</span>
+                    <span className='text-black'>{stETHLockedFormat || "0"} stETH</span>
+                  </div>
                 </div>
               </div>
-              <button
-                  className="cursor-pointer border-[1px] border-solid border-apple-style-blue-1 p-4 text-white bg-apple-style-blue-1 self-stretch rounded-lg flex flex-row items-center justify-center hover:bg-transparent hover:text-apple-style-blue-1 active:bg-cornflowerblue"
-                  autoFocus={true}
-                  onClick={handleHarvestClick}
-              >
-                  <div className="relative text-base leading-[120%] font-semibold text-left">
-                      Harvest
-                  </div>
-              </button>
               <button
                   className={`cursor-pointer p-4 bg-transparent border-[1px] border-solid border-[#B2B2B2] text-[#B2B2B2] self-stretch rounded-lg flex flex-row items-center justify-center ${
                     timeUnstake > 0 ? 'disabled' : 'hover:bg-apple-style-blue-1 hover:text-white active:bg-apple-style-blue-1'
