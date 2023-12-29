@@ -3,12 +3,12 @@ const EligibilityForm = () => {
   return (
     <div className="container mx-auto rounded-2xl bg-garbi-version-2-30-white gap-[64px] text-center text-21xl text-garbi-version-2-60-black border-[1px] border-solid border-apple-style-dark-4 mb-[80px]">
       <div className="py-[64px] px-[64px] flex flex-col items-center justify-start gap-[8px]">
-        <div className="self-stretch relative leading-[120%] font-semibold">
+        <div className="self-stretch relative leading-[120%] font-semibold mb-[8px]">
           ScroBot is faster and offers more opportunities
         </div>
         <div className="self-stretch relative text-9xl leading-[120%] font-semibold text-dodgerblue">
           {/* <span>Connect Wallet</span> */}
-          <span className="text-garbi-version-2-30-white-40">
+          <span className="text-garbi-version-2-30-white-40 text-[28px]">
             {" "}
             Start now with ScroBot to earn POINTS and receive Airdrops
           </span>
