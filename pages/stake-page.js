@@ -38,15 +38,15 @@ const Frame = () => {
       };
     }, []);
   return (
-    <>
-    <Header setConnectedAddress={setConnectedAddress}/>
-    <div className="bg-garbi-version-2-30-white w-full overflow-hidden [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] text-left text-base text-apple-style-dark-2"
-     data-animate-on-scroll
-     >
-      <Stake connectedAddress={connectedAddress}/>
+    <div className="flex flex-col min-h-screen">
+      <Header setConnectedAddress={setConnectedAddress} />
+      <div className="flex-1 bg-garbi-version-2-30-white overflow-hidden [&.animate]:animate-[1s_ease_0s_1_normal_forwards_fade-in] text-left text-base text-apple-style-dark-2"
+        data-animate-on-scroll
+      >
+        <Stake connectedAddress={connectedAddress} />
+      </div>
+      <Footer />
     </div>
-     <Footer />
-     </>
   );
 };
 
