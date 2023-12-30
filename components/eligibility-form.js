@@ -1,5 +1,9 @@
 import { Button } from "antd";
+import { useRouter } from 'next/router';
+
+
 const EligibilityForm = () => {
+  const router = useRouter();
   return (
     <div className="container mx-auto rounded-2xl bg-garbi-version-2-30-white gap-[64px] text-center text-21xl text-garbi-version-2-60-black border-[1px] border-solid border-apple-style-dark-4 mb-[80px]">
       <div className="py-[64px] px-[64px] flex flex-col items-center justify-start gap-[8px]">
@@ -14,9 +18,9 @@ const EligibilityForm = () => {
           </span>
           
         </div>
-        <a href="#" className="border-0 text-21xl no-underline">
-            Connect Wallet
-        </a>
+        <Button className="bg-[#2997ff] border-0 text-white px-[20px] font-semibold text-xl h-[60px] hover:text-[#2997ff] hover:bg-white" onClick={() => router.push("/stake-page")}>
+            <span className="">Join Early Access</span>
+        </Button>
       </div>
       <div className="mx-[64px] relative bg-apple-style-dark-4 h-px" />
       <div className="py-[64px] px-[64px] flex flex-col items-start justify-start gap-[8px] text-left text-xl">
