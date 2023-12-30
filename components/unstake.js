@@ -13,7 +13,7 @@ const UnStake = ({ connectedAddress }) => {
   const stETHSubmit = userInfo && (userInfo[0] - userInfo[12]);
   const stETHSubmitFormat = stETHSubmit / 10**18;
   const stETHLocked = userInfo && userInfo[12];
-  const stETHLockedFormat = stETHLocked / 10**18;
+  const stETHLockedFormat = (stETHLocked / 10**18).toFixed(6);
   const pointBalance = userInfo && userInfo[7];
   const pointBalanceFormat = pointBalance / 10**18;
   const timeUnstake = userInfo ? timestampToDaysFromNow(userInfo[10]) + 7 : 0;
