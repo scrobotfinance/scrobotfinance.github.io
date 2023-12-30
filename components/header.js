@@ -125,7 +125,7 @@ const Header = ({ setConnectedAddress }) => {
               </a>
               {router.pathname == '/' ? (
                 <>
-                  <Button type="primary" size="large" className="p-[16px]" onClick={() => router.push("/airdrop-page")}>
+                  <Button type="primary" size="large" className="p-[16px]" onClick={() => router.push("/stake-page")}>
                     Join Early Access
                   </Button>
                 </>
