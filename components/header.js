@@ -61,10 +61,47 @@ const Header = ({ setConnectedAddress }) => {
       if (window.ethereum) {
         window.web3 = new Web3(window.ethereum);
         await window.ethereum.enable();
-
+  
         const accounts = await window.web3.eth.getAccounts();
         setConnectedAddressLocal(accounts[0]);
         setConnectedAddress(accounts[0]);
+  
+        const chainId = await window.web3.eth.getChainId();
+  
+        if (chainId !== 17000) {
+          console.log('Switching to network with chainID 17000...');
+  
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [{
+              chainId: `0x${parseInt(17000, 10).toString(16)}`,
+              chainName: 'Holesky Tetnetwork',
+              nativeCurrency: {
+                name: 'ETH',
+                symbol: 'ETH',
+                decimals: 18,
+              },
+              rpcUrls: ['https://ethereum-holesky.publicnode.com/'],
+              blockExplorerUrls: ['https://holesky.etherscan.io/'],
+            }],
+          });
+  
+          // Chuyển đổi network
+          await window.ethereum.request({
+            method: 'wallet_switchEthereumChain',
+            params: [{ chainId: `0x${parseInt(17000, 10).toString(16)}` }],
+          });
+  
+          // Kiểm tra lại sau khi chuyển đổi
+          const updatedChainId = await window.web3.eth.getChainId();
+  
+          if (updatedChainId === 17000) {
+            console.log('Successfully switched to network with chainID 17000.');
+          } else {
+            console.log('Failed to switch network.');
+          }
+        }
+  
         setWalletConnected(true);
       } else {
         console.log('MetaMask not detected! Please install MetaMask extension.');
@@ -73,6 +110,8 @@ const Header = ({ setConnectedAddress }) => {
       console.error('Error connecting wallet:', error);
     }
   };
+  
+  
 
   useEffect(() => {
     if (walletConnected) {

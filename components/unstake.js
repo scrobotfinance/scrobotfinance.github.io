@@ -60,6 +60,41 @@ const UnStake = ({ connectedAddress }) => {
   }, [userAddress]); // Include connectedAddress as a dependency to run the effect when it changes
 
   const handleWithdrawClick = async () => {
+    const chainId = await window.web3.eth.getChainId();
+  
+      if (chainId !== 17000) {
+        console.log('Switching to network with chainID 17000...');
+
+        await window.ethereum.request({
+          method: 'wallet_addEthereumChain',
+          params: [{
+            chainId: `0x${parseInt(17000, 10).toString(16)}`,
+            chainName: 'Holesky Tetnetwork',
+            nativeCurrency: {
+              name: 'ETH',
+              symbol: 'ETH',
+              decimals: 18,
+            },
+            rpcUrls: ['https://ethereum-holesky.publicnode.com/'],
+            blockExplorerUrls: ['https://holesky.etherscan.io/'],
+          }],
+        });
+
+        // Chuyển đổi network
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: `0x${parseInt(17000, 10).toString(16)}` }],
+        });
+
+        // Kiểm tra lại sau khi chuyển đổi
+        const updatedChainId = await window.web3.eth.getChainId();
+
+        if (updatedChainId === 17000) {
+          console.log('Successfully switched to network with chainID 17000.');
+        } else {
+          console.log('Failed to switch network.');
+        }
+      }
     try {
       const contractStakereader = new window.web3.eth.Contract(stakeAbi, stakeAdd);
       if (contractStakereader) {
@@ -97,6 +132,41 @@ const UnStake = ({ connectedAddress }) => {
   };
 
   const handleHarvestClick = async () => {
+    const chainId = await window.web3.eth.getChainId();
+  
+      if (chainId !== 17000) {
+        console.log('Switching to network with chainID 17000...');
+
+        await window.ethereum.request({
+          method: 'wallet_addEthereumChain',
+          params: [{
+            chainId: `0x${parseInt(17000, 10).toString(16)}`,
+            chainName: 'Holesky Tetnetwork',
+            nativeCurrency: {
+              name: 'ETH',
+              symbol: 'ETH',
+              decimals: 18,
+            },
+            rpcUrls: ['https://ethereum-holesky.publicnode.com/'],
+            blockExplorerUrls: ['https://holesky.etherscan.io/'],
+          }],
+        });
+
+        // Chuyển đổi network
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: `0x${parseInt(17000, 10).toString(16)}` }],
+        });
+
+        // Kiểm tra lại sau khi chuyển đổi
+        const updatedChainId = await window.web3.eth.getChainId();
+
+        if (updatedChainId === 17000) {
+          console.log('Successfully switched to network with chainID 17000.');
+        } else {
+          console.log('Failed to switch network.');
+        }
+      }
     try {
       const contractStakereader = new window.web3.eth.Contract(stakeAbi, stakeAdd);
       if (contractStakereader) {     
