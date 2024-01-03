@@ -3,12 +3,14 @@ import Web3 from 'web3';
 import contractABIs from './abi';
 import { Input , Button } from "antd";
 import { useRouter } from 'next/router';
+import Modal from 'react-modal';
 
 const UnStake = ({ connectedAddress }) => {
   const router = useRouter();
   const userAddress = connectedAddress;
   const [userInfo, setUserInfo] = useState(null);
-  console.log("🚀 ~ file: unstake.js:11 ~ UnStake ~ userInfo:", userInfo)
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [popupResult, setPopupResult] = useState('');
   const [inputValue, setInputValue] = useState('');
   const stETHSubmit = userInfo && (userInfo[0] - userInfo[12]);
   const stETHSubmitFormat = stETHSubmit / 10**18;
@@ -123,6 +125,11 @@ const UnStake = ({ connectedAddress }) => {
           .send({
             from: userAddress,
           });
+        setPopupResult(result);
+        setModalIsOpen(true);
+        setTimeout(() => {
+          handlePopupClose();
+        }, 5000);
       } else {
         console.error('Contract not properly initialized.');
       }
@@ -175,6 +182,11 @@ const UnStake = ({ connectedAddress }) => {
           .send({
             from: userAddress,
           });
+        setPopupResult(result);
+        setModalIsOpen(true);
+        setTimeout(() => {
+          handlePopupClose();
+        }, 5000);
       } else {
         console.error('Contract not properly initialized.');
       }
@@ -186,6 +198,10 @@ const UnStake = ({ connectedAddress }) => {
   const handleInputChange = (e) => {
     const value = e.target.value;
     setInputValue(value);
+  };
+
+  const handlePopupClose = () => {
+    setModalIsOpen(false);
   };
 
   return (
@@ -323,6 +339,28 @@ const UnStake = ({ connectedAddress }) => {
           </section>
         </div>
       </div>
+      <Modal
+        className=""
+        isOpen={modalIsOpen}
+        onRequestClose={handlePopupClose}
+        contentLabel="Example Modal"
+        style={{
+          overlay: {
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            zIndex: 1000,
+          },
+          content: {
+            top: '20px',
+            right: '20px',
+            left: 'auto',
+            bottom: 'auto',
+            width: 'auto', 
+            maxWidth: '90%',
+          },
+        }}
+      >
+        <p className='m-0 text-[20px]'>Your <a href={`https://holesky.etherscan.io/tx/${popupResult.transactionHash}`} target='_blank' className='transaction-hash'>transaction</a> is confirmed.</p>
+      </Modal>
     </div>
   );
 };

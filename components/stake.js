@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Web3 from 'web3';
 import contractABIs from './abi';
 import { Input , Button } from "antd";
+import Modal from 'react-modal';
 import { useRouter } from "next/router";
 
 const Stake = ({ connectedAddress }) => {
     const router = useRouter();
     const userAddress = connectedAddress;
     const [userInfo, setUserInfo] = useState(null);
-    console.log("🚀 ~ file: stake.js:11 ~ Stake ~ userInfo:", userInfo)
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [popupResult, setPopupResult] = useState('');
     const [inputValue, setInputValue] = useState('');
     const [depositAmount, setDepositAmount] = useState('');
     const stETHBalance = userInfo && userInfo[3];
@@ -52,7 +54,7 @@ const Stake = ({ connectedAddress }) => {
       setDepositAmount(value);
     };
   
-    const handleDepositClick = async () => {
+    const handleDepositClick = async () => {   
       const chainId = await window.web3.eth.getChainId();
   
       if (chainId !== 17000) {
@@ -73,13 +75,11 @@ const Stake = ({ connectedAddress }) => {
           }],
         });
 
-        // Chuyển đổi network
         await window.ethereum.request({
           method: 'wallet_switchEthereumChain',
           params: [{ chainId: `0x${parseInt(17000, 10).toString(16)}` }],
         });
 
-        // Kiểm tra lại sau khi chuyển đổi
         const updatedChainId = await window.web3.eth.getChainId();
 
         if (updatedChainId === 17000) {
@@ -113,8 +113,11 @@ const Stake = ({ connectedAddress }) => {
               from: userAddress,
               value: window.web3.utils.toWei(amount.toString(), 'ether'),
             });
-  
-          console.log("🚀 ~ file: stake.js:80 ~ handleDepositClick ~ result:", result);
+          setPopupResult(result);
+          setModalIsOpen(true);
+          setTimeout(() => {
+            handlePopupClose();
+          }, 5000);
   
         } else {
           console.error('Contract not properly initialized.');
@@ -122,6 +125,10 @@ const Stake = ({ connectedAddress }) => {
       } catch (error) {
         console.error('Error handling deposit:', error);
       }
+    };
+
+    const handlePopupClose = () => {
+      setModalIsOpen(false);
     };
 
   return (
@@ -236,7 +243,29 @@ const Stake = ({ connectedAddress }) => {
                       Deposit
                   </div>
               </button>
-          </section>
+              <Modal
+              className=""
+              isOpen={modalIsOpen}
+              onRequestClose={handlePopupClose}
+              contentLabel="Example Modal"
+              style={{
+                overlay: {
+                  backgroundColor: 'rgba(0, 0, 0, 0)',
+                  zIndex: 1000,
+                },
+                content: {
+                  top: '20px',
+                  right: '20px',
+                  left: 'auto',
+                  bottom: 'auto',
+                  width: 'auto', 
+                  maxWidth: '90%',
+                },
+              }}
+            >
+              <p className='m-0 text-[20px]'>Your <a href={`https://holesky.etherscan.io/tx/${popupResult.transactionHash}`} target='_blank' className='transaction-hash'>transaction</a> is confirmed.</p>
+            </Modal>
+            </section>
         </div>
         <div className='col-span-4 flex items-center'>
           <section className="py-16 px-6 box-border gap-[24px] text-left text-53xl text-garbi-version-2-60-black text-center flex flex-col pb-0">
