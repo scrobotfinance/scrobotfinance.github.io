@@ -43,8 +43,11 @@ const TelegramBotCard = () => {
           <div className="text-6xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold inline-block ">
             Staking Rewards - Earn POINTs, Receive Airdrop
           </div>
-          <div className="text-5xl leading-[120%] px-[16px] lg:px-0 mb-[48px] font-semibold inline-block ">
-            Unique Initial Stake Offering (ISO) model seamlessly integrated with TelegramBot, easy and fast trading experience. Start Now to claim your airdrop.
+          <div className="text-5xl leading-[120%] px-[16px] lg:px-0 mb-[24px] font-semibold inline-block ">
+            Unique Initial Stake Offering (ISO) model seamlessly integrated with TelegramBot, easy and fast trading experience.
+          </div>
+          <div className="text-5xl leading-[120%] px-[16px] lg:px-0 mb-[48px] font-semibold block ">
+            Start Now to claim your airdrop.
           </div>
           <div>
             <Button className="bg-[#2997ff] border-0 text-white px-[20px] font-semibold text-xl h-[60px] hover:text-[#2997ff] hover:bg-white" onClick={() => router.push("/stake-page")}>
