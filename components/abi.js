@@ -76,6 +76,21 @@ const contractABIs = {
             "inputs":[
                
             ],
+            "name":"calculationRewardBlock",
+            "outputs":[
+               {
+                  "internalType":"uint256",
+                  "name":"",
+                  "type":"uint256"
+               }
+            ],
+            "stateMutability":"view",
+            "type":"function"
+         },
+         {
+            "inputs":[
+               
+            ],
             "name":"getTotalRewardPerDay",
             "outputs":[
                {
@@ -107,6 +122,21 @@ const contractABIs = {
                
             ],
             "name":"lastBalance",
+            "outputs":[
+               {
+                  "internalType":"uint256",
+                  "name":"",
+                  "type":"uint256"
+               }
+            ],
+            "stateMutability":"view",
+            "type":"function"
+         },
+         {
+            "inputs":[
+               
+            ],
+            "name":"lastCaculationReward",
             "outputs":[
                {
                   "internalType":"uint256",
@@ -263,6 +293,21 @@ const contractABIs = {
          {
             "inputs":[
                {
+                  "internalType":"uint256",
+                  "name":"_quantityBlock",
+                  "type":"uint256"
+               }
+            ],
+            "name":"setCalculationRewardBlock",
+            "outputs":[
+               
+            ],
+            "stateMutability":"nonpayable",
+            "type":"function"
+         },
+         {
+            "inputs":[
+               {
                   "internalType":"address",
                   "name":"_miningMachine",
                   "type":"address"
@@ -284,6 +329,21 @@ const contractABIs = {
                }
             ],
             "name":"setPidOfMining",
+            "outputs":[
+               
+            ],
+            "stateMutability":"nonpayable",
+            "type":"function"
+         },
+         {
+            "inputs":[
+               {
+                  "internalType":"address",
+                  "name":"_receiver",
+                  "type":"address"
+               }
+            ],
+            "name":"setReceiverShareOf",
             "outputs":[
                
             ],
