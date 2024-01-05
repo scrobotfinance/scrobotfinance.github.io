@@ -86,13 +86,11 @@ const Header = ({ setConnectedAddress }) => {
             }],
           });
   
-          // Chuyển đổi network
           await window.ethereum.request({
             method: 'wallet_switchEthereumChain',
             params: [{ chainId: `0x${parseInt(17000, 10).toString(16)}` }],
           });
   
-          // Kiểm tra lại sau khi chuyển đổi
           const updatedChainId = await window.web3.eth.getChainId();
   
           if (updatedChainId === 17000) {
@@ -150,7 +148,7 @@ const Header = ({ setConnectedAddress }) => {
                 AirDrop
               </a>
               <ScrollLink
-                to="tokenomic"
+                to="features"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -248,22 +246,45 @@ const Header = ({ setConnectedAddress }) => {
         </Modal>
 
         {/* Responsive menu */}
-        <div className={`lg:hidden text-left container mx-auto ${menuOpen ? 'block' : 'hidden'}`}>
-          <div className=" px-[16px] lg:px-0">
-            <a href="/airdrop-page" className="text-white text-[24px] no-underline relative leading-[120%] font-semibold">
-                AirDrop
+        <div className={`text-left container mx-auto ${menuOpen ? 'block' : 'hidden'}`}>
+          <div className="px-[16px] lg:px-0 flex flex-col items-start">
+            <a href="/airdrop-page" className="text-white text-[24px] no-underline relative leading-[120%] font-semibold mb-4">
+              AirDrop
             </a>
-            <a href="#tokenomic" className="block mt-4 text-white text-base no-underline relative leading-[120%] font-semibold">
+            <ScrollLink
+              to="features"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="text-white no-underline cursor-pointer relative leading-[120%] font-semibold mb-4"
+            >
               Token Utility
-            </a>
-            <a href="#" className="block mt-4 mb-4 text-white text-base no-underline relative leading-[120%] font-semibold">
+            </ScrollLink>
+            <a href="https://t.me/Scrobot_Official" target="_blank" className="text-white no-underline relative leading-[120%] font-semibold mb-4">
               Community
             </a>
-            <Button type="primary" size="large" className="p-[16px]" onClick={() => router.push("/airdrop-page")}>
-              Start
-            </Button>
+            {router.pathname == '/' ? (
+              <>
+                <Button type="primary" size="large" className="p-[16px]" onClick={() => router.push("/stake-page")}>
+                  Join Early Access
+                </Button>
+              </>
+            ) : null}
+            {router.pathname !== '/' ? (
+              connectedAddress ? (
+                <p>{truncateAddress(connectedAddress)}</p>
+              ) : (
+                <div>
+                  <Button type="primary" onClick={connectWallet}>
+                    Connect Wallet
+                  </Button>
+                </div>
+              )
+            ) : null}
           </div>
         </div>
+
 
       </div>
      
