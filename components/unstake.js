@@ -19,8 +19,8 @@ const UnStake = ({ connectedAddress }) => {
   const stETHLockedFormat = (stETHLocked / 10**18).toFixed(6);
   const pointBalance = userInfo && userInfo[7];
   const pointBalanceFormat = pointBalance / 10**18;
-  const timeUnstake = userInfo ? timestampToDaysFromNow(userInfo[10]) + 7 : 0;
-  const timeClamReward = userInfo ? timestampToDaysFromNow(userInfo[10]) + 60 : 0;
+  const timeUnstake = userInfo ? Math.max(timestampToDaysFromNow(userInfo[10]) + 7, 0) : 0;
+  const timeClamReward = userInfo ? Math.max(timestampToDaysFromNow(userInfo[10]) + 60, 0) : 0;
 
   function timestampToDaysFromNow(timestamp) {
     const milliseconds = timestamp * 1000;
