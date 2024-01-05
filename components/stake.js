@@ -10,6 +10,7 @@ const Stake = ({ connectedAddress }) => {
     const userAddress = connectedAddress;
     const [userInfo, setUserInfo] = useState(null);
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [modalSendIsOpen, setModalSendIsOpen] = useState(false);
     const [popupResult, setPopupResult] = useState('');
     const [inputValue, setInputValue] = useState('');
     const [depositAmount, setDepositAmount] = useState('');
@@ -107,18 +108,30 @@ const Stake = ({ connectedAddress }) => {
           }
   
           
-          const result = await contractStakereader.methods
+          await contractStakereader.methods
             .submit(nullAdd)
             .send({
               from: userAddress,
               value: window.web3.utils.toWei(amount.toString(), 'ether'),
+            })
+            .on('transactionHash', (hash) => {
+              setModalSendIsOpen(true);
+              setTimeout(() => {
+                handlePopupClose();
+              }, 5000);
+            })
+            .on('receipt', (receipt) => {   
+              setPopupResult(receipt);
+              setModalIsOpen(true);
+              setTimeout(() => {
+                handlePopupClose();
+              }, 5000);
+
+            })
+            .on('error', (err, receipt) => {
+                console.log(err);
             });
-          setPopupResult(result);
-          setModalIsOpen(true);
-          setTimeout(() => {
-            handlePopupClose();
-          }, 5000);
-  
+            
         } else {
           console.error('Contract not properly initialized.');
         }
@@ -129,6 +142,7 @@ const Stake = ({ connectedAddress }) => {
 
     const handlePopupClose = () => {
       setModalIsOpen(false);
+      setModalSendIsOpen(false);
     };
 
   return (
@@ -245,6 +259,7 @@ const Stake = ({ connectedAddress }) => {
               </button>
               <Modal
               className=""
+              ariaHideApp={false}
               isOpen={modalIsOpen}
               onRequestClose={handlePopupClose}
               contentLabel="Example Modal"
@@ -264,6 +279,29 @@ const Stake = ({ connectedAddress }) => {
               }}
             >
               <p className='m-0 text-[20px]'>Your <a href={`https://holesky.etherscan.io/tx/${popupResult.transactionHash}`} target='_blank' className='transaction-hash'>transaction</a> is confirmed.</p>
+            </Modal>
+            <Modal
+              className=""
+              ariaHideApp={false}
+              isOpen={modalSendIsOpen}
+              onRequestClose={handlePopupClose}
+              contentLabel="Example Modal"
+              style={{
+                overlay: {
+                  backgroundColor: 'rgba(0, 0, 0, 0)',
+                  zIndex: 999,
+                },
+                content: {
+                  top: '20px',
+                  right: '20px',
+                  left: 'auto',
+                  bottom: 'auto',
+                  width: 'auto', 
+                  maxWidth: '90%',
+                },
+              }}
+            >
+              <p className='m-0 text-[20px]'>Your transaction is sent to the Blockchain..</p>
             </Modal>
             </section>
         </div>
