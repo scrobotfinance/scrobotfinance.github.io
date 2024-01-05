@@ -16,7 +16,7 @@ module.exports = {
         "apple-style-blue-1": "#2997ff",
         "apple-style-dark-3": "#121212",
         "dark-theme-10-2": "#ffe9bc",
-        "garbi-version-2-30-white-40" : "#666",
+        "garbi-version-2-30-white-40" : "#000",
       },
       spacing: {},
       fontFamily: {
