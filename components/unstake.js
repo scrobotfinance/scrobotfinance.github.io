@@ -324,7 +324,7 @@ const UnStake = ({ connectedAddress }) => {
                 Liquid Ethereum Staking
               </div>
             </div>
-            <div className="self-stretch text-21xl leading-[120%] font-normal text-garbi-version-2-30-white-40 mb-[40px]">
+            <div className="self-stretch text-13xl leading-[120%] font-normal text-brown-text mb-[40px]">
               Revenue share, Earn points, Receive airdrops through our unique fundraising method - Initial Stake Offering (ISO).
             </div>
             <div className="grid grid-cols-6 px-[32px] py-[32px] flex items-center bg-gradient-to-r to-apple-style-white-2/[.6] from-apple-style-blue-1/[.6] gap-x-[10px] gap-y-[20px] rounded-[16px]">
