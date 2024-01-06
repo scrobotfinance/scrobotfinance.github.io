@@ -182,7 +182,7 @@ const Stake = ({ connectedAddress }) => {
                 <div className='bg-garbi-version-2-30-white p-[14px] gap-[4px] border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-xl mb-[7px]'>
                   <div className='flex items-center justify-between mb-[6px] text-[#666]'>
                     <div className='text-left'>
-                      You're staking: $0.00000
+                      You're staking
                     </div>
                     <div className='text-right'>
                       Balance: {ethBalance || "0.00"}
@@ -213,7 +213,7 @@ const Stake = ({ connectedAddress }) => {
                 <div className='bg-garbi-version-2-30-white p-[14px] gap-[4px] border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-xl mt-[7px]'>
                   <div className='flex items-center justify-between mb-[6px] text-[#666]'>
                     <div className=''>
-                      To receive: $0.00000
+                      To receive
                     </div>
                     <div>
                       0% Slippage
