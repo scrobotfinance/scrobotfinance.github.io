@@ -19,6 +19,7 @@ const Stake = ({ connectedAddress }) => {
 
     const stakeAdd = "0x3e787B47BFb853d47d55A7A54D2664676a58B7F7";
     const stakeAbi = contractABIs.stakeABI;
+    const nullAdd = '0x0000000000000000000000000000000000000000';
 
     const fetchData = async () => {
       const contractStakereader = new window.web3.eth.Contract(stakeAbi, stakeAdd);
