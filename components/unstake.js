@@ -188,16 +188,11 @@ const UnStake = ({ connectedAddress }) => {
     try {
       const contractStakereader = new window.web3.eth.Contract(stakeAbi, stakeAdd);
       if (contractStakereader) {   
-        const gasEstimate = await contractStakereader.methods.harvest(userAddress).estimateGas({ from: userAddress });  
-        console.log("🚀 ~ file: unstake.js:192 ~ handleHarvestClick ~ gasEstimate:", gasEstimate);
-        const adjustedGas = Math.round(gasEstimate * 2.1);
-        console.log("🚀 ~ file: unstake.js:193 ~ handleHarvestClick ~ adjustedGas:", adjustedGas);
-
         await contractStakereader.methods
           .harvest(userAddress)
           .send({
             from: userAddress,
-            gas: adjustedGas,
+            gas: 200000,
           })
           .on('transactionHash', (hash) => {
             setModalSendIsOpen(true);
