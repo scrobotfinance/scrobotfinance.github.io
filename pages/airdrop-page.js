@@ -10,7 +10,7 @@ const Frame = () => {
   return (
     <>
       <Header setConnectedAddress={setConnectedAddress}/>
-      <div className="box-border py-[120px]">
+      <div className="box-border py-[50px] lg:py-[120px]">
         <Welcome />
         <EligibilityForm />
         <ScroBotTokenContainer />
