@@ -19,14 +19,14 @@ const Welcome = () => {
   return (
     <div className="container grid grid-cols-1 lg:grid-cols-2 gap-[64px] mx-auto text-left text-garbi-version-2-60-black mb-[80px]">
       <div className="flex items-center justify-start px-[16px] lg:px-0">
-        <div className="">
+        <div>
           <div className="leading-[120%] text-[30px] lg:text-[64px] mb-[24px] font-bold">
             Welcome to Real TeleBot, helping you earn more profits
           </div>
           <div className="text-[16px] lg:text-[28px] leading-[120%] font-semibold text-garbi-version-2-30-white-40 mb-[24px] lg:mb-[48px]">
             The new Initial Stake Offering model is the blast we all wanted. ISO creates a fair opportunity with very low risk, distributing all tokens to users through airdrops.
           </div>
-          <div className="flex flex-row items-center justify-start gap-[64px]">
+          <div className="hidden lg:flex flex-row items-center justify-start gap-[64px]">
             <Button type="primary" size="large" className="!px-[40px] !h-[51px] flex items-center" onClick={() => router.push("/stake-page")} >
               Connect to earn POINTs
             </Button>
