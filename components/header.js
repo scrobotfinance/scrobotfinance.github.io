@@ -248,7 +248,7 @@ const Header = ({ setConnectedAddress }) => {
         {/* Responsive menu */}
         <div className={`text-left container mx-auto ${menuOpen ? 'block' : 'hidden'}`}>
           <div className="px-[16px] lg:px-0 flex flex-col items-start">
-            <a href="/airdrop-page" className="text-white text-[24px] no-underline relative leading-[120%] font-semibold mb-4">
+            <a href="/airdrop-page" className="text-white text-[16px] no-underline relative leading-[120%] font-semibold mb-4">
               AirDrop
             </a>
             <ScrollLink
@@ -257,11 +257,11 @@ const Header = ({ setConnectedAddress }) => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="text-white no-underline cursor-pointer relative leading-[120%] font-semibold mb-4"
+              className="text-white no-underline cursor-pointer relative leading-[120%] text-[16px] font-semibold mb-4"
             >
               Token Utility
             </ScrollLink>
-            <a href="https://t.me/Scrobot_Official" target="_blank" className="text-white no-underline relative leading-[120%] font-semibold mb-4">
+            <a href="https://t.me/Scrobot_Official" target="_blank" className="text-white no-underline relative text-[16px] leading-[120%] font-semibold mb-4">
               Community
             </a>
             {router.pathname == '/' ? (

@@ -19,9 +19,9 @@ const TelegramBotCard = () => {
 
   return (
     <div className="relative w-full h-auto text-center text-[28px] lg:text-13xl text-garbi-version-2-30-white">
-      <div className="bg-garbi-version-2-60-black pb-[219px] w-full h-auto overflow-hidden">
-        <div className="container mx-auto relative">
-          <div className="text-5xl px-[16px] py-[8px] leading-[120%] mb-[24px] font-semibold inline-block border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-[32px]">
+      <div className="bg-garbi-version-2-60-black pb-[50px] lg:pb-[219px] w-full h-auto overflow-hidden">
+        <div className="container mx-auto relative pt-[50px] lg:pt-0">
+          <div className="text-[20px] md:text-5xl px-[16px] py-[4px] lg:py-[8px] leading-[120%] mb-[24px] font-semibold inline-block border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-[32px]">
             Built on  
             <img
                 className="relative rounded-3xs w-5 h-5 overflow-hidden shrink-0 mx-[8px]"
@@ -35,18 +35,18 @@ const TelegramBotCard = () => {
             alt=""
             src="/asset-12x-1@2x.png"
           />
-          <div className=" text-21xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold flex justify-center">
-            <div className="w-fit px-[16px] py-[8px] border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-[32px]">
+          <div className="text-[30px] lg:text-21xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold flex justify-center">
+            <div className="w-fit px-[16px] py-[4px] lg:py-[8px] border-[1px] border-solid border-garbi-version-2-30-white-50 rounded-[32px]">
               ISO TELEGRAM BOT
             </div>
           </div>
-          <div className="text-6xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold inline-block ">
+          <div className="text-[20px] lg:text-5xl px-[16px] lg:px-0 leading-[120%] mb-[24px] font-semibold inline-block ">
             Staking Rewards - Earn POINTs, Receive Airdrop
           </div>
-          <div className="text-5xl leading-[120%] px-[16px] lg:px-0 mb-[24px] font-semibold inline-block ">
+          <div className="text-[20px] lg:text-5xl leading-[120%] px-[16px] lg:px-0 mb-[24px] font-semibold inline-block ">
             Unique Initial Stake Offering (ISO) model seamlessly integrated with TelegramBot, easy and fast trading experience.
           </div>
-          <div className="text-5xl leading-[120%] px-[16px] lg:px-0 mb-[48px] font-semibold block ">
+          <div className="text-[20px] lg:text-5xl leading-[120%] px-[16px] lg:px-0 mb-[48px] font-semibold block ">
             Start Now to claim your airdrop.
           </div>
           <div>

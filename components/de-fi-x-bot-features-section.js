@@ -31,7 +31,7 @@ const DeFiXBotFeaturesSection = () => {
     };
   }, []);
   return (
-    <div id="features" className="container mx-auto bg-garbi-version-2-30-white py-[120px]  text-center lg:text-21xl text-[32px] text-garbi-version-2-60-black">
+    <div id="features" className="container mx-auto bg-garbi-version-2-30-white py-[50px] lg:py-[120px] text-center lg:text-21xl text-[32px] text-garbi-version-2-60-black">
       <div
         className="mb-[69px] px-[16px] lg:px-0 [&.animate]:animate-[1s_ease_0s_1_normal_forwards_slide-in-top] opacity-[0]"
         data-animate-on-scroll

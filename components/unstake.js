@@ -192,7 +192,7 @@ const UnStake = ({ connectedAddress }) => {
           .harvest(userAddress)
           .send({
             from: userAddress,
-            gas: 200000,
+            gas : 167240,
           })
           .on('transactionHash', (hash) => {
             setModalSendIsOpen(true);
